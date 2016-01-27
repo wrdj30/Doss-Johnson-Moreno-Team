@@ -7,7 +7,7 @@ package theheist;
 
 /**
  *
- * @author luceromoreno
+ * @author luceromoreno, wrdossjohnson
  */
 public class TheHeist {
 
