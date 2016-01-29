@@ -23,7 +23,7 @@ public class TheHeist {
         playerOne.setHighScore(8.00);
         
         String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        System.out.println(playerInfo); 
     }
     
 }
