@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Game implements Serializable{
 
     
-    private String score;
+    private double score;
     private double startTime;
 
     public Game() {
@@ -57,11 +57,11 @@ public class Game implements Serializable{
     
     
     
-    public String getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(String score) {
+    public void setScore(double score) {
         this.score = score;
     }
 
