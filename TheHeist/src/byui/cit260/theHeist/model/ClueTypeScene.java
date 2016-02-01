@@ -90,10 +90,7 @@ public class ClueTypeScene implements Serializable{
         if (!Objects.equals(this.clueType, other.clueType)) {
             return false;
         }
-        if (!Objects.equals(this.lockType, other.lockType)) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.lockType, other.lockType);
     }
     
     
