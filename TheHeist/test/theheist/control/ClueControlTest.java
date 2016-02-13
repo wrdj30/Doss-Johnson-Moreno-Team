@@ -162,12 +162,21 @@ public class ClueControlTest {
         result = instance.getJewelAmount(diamonds, rubies, sapphires);
         assertEquals(expResult, result, 0.0);
 
-                System.out.println("getJewelAmount");
-         System.out.println("testCase6");
+        System.out.println("getJewelAmount");
+        System.out.println("testCase6");
         diamonds = 2.0;
         rubies = 8.0;
         sapphires = 1.0;
         expResult = 46.0;
+        result = instance.getJewelAmount(diamonds, rubies, sapphires);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("getJewelAmount");
+         System.out.println("testCase7");
+        diamonds = 6.0;
+        rubies = 3.0;
+        sapphires = 1.0;
+        expResult = 54.0;
         result = instance.getJewelAmount(diamonds, rubies, sapphires);
         assertEquals(expResult, result, 0.0);
 
