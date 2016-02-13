@@ -44,4 +44,5 @@ public class ClueControl {
         double combo = (clueA * clueB + clueC) / clueA;
             return combo;    
     }
+
 }
