@@ -108,5 +108,21 @@ public class ClueControlTest {
         result = instance.getCombination(clueA, clueB, clueC);
         assertEquals(expResult, result, 0.0);
     }
+
+    /**
+     * Test of getJewelAmount method, of class ClueControl.
+     */
+    @Test
+    public void testGetJewelAmount() {
+        System.out.println("getJewelAmount");
+        double diamonds = 7.0;
+        double rubies = 5.0;
+        double sapphires = 3.0;
+        ClueControl instance = new ClueControl();
+        double expResult = 69.0;
+        double result = instance.getJewelAmount(diamonds, rubies, sapphires);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+    }
     
 }
