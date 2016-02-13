@@ -137,13 +137,40 @@ public class ClueControlTest {
         System.out.println("getJewelAmount");
          System.out.println("testCase3");
         diamonds = 7.0;
-        rubies = 6.0;
+        rubies = -6.0;
         sapphires = 3.0;
         expResult = -1.0;
         result = instance.getJewelAmount(diamonds, rubies, sapphires);
         assertEquals(expResult, result, 0.0);
         
+        System.out.println("getJewelAmount");
+         System.out.println("testCase4");
+        diamonds = 7.0;
+        rubies = 5.0;
+        sapphires = -5.0;
+        expResult = -1.0;
+        result = instance.getJewelAmount(diamonds, rubies, sapphires);
+        assertEquals(expResult, result, 0.0);
+
         
+        System.out.println("getJewelAmount");
+         System.out.println("testCase5");
+        diamonds = 1.0;
+        rubies = 4.0;
+        sapphires = 2.0;
+        expResult = 23.0;
+        result = instance.getJewelAmount(diamonds, rubies, sapphires);
+        assertEquals(expResult, result, 0.0);
+
+                System.out.println("getJewelAmount");
+         System.out.println("testCase6");
+        diamonds = 2.0;
+        rubies = 8.0;
+        sapphires = 1.0;
+        expResult = 46.0;
+        result = instance.getJewelAmount(diamonds, rubies, sapphires);
+        assertEquals(expResult, result, 0.0);
+
         // TODO review the generated test code and remove the default call to fail.
     }
     
