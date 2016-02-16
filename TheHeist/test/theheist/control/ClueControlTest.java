@@ -109,10 +109,7 @@ public class ClueControlTest {
         assertEquals(expResult, result, 0.0);
     }
 
-    /**
-     * Test of getJewelAmount method, of class ClueControl.
-     */
-    @Test
+
     public void testGetJewelAmount() {
         System.out.println("getJewelAmount");
         System.out.println("testCase1");
@@ -179,8 +176,5 @@ public class ClueControlTest {
         expResult = 54.0;
         result = instance.getJewelAmount(diamonds, rubies, sapphires);
         assertEquals(expResult, result, 0.0);
-
-        // TODO review the generated test code and remove the default call to fail.
     }
-    
 }
