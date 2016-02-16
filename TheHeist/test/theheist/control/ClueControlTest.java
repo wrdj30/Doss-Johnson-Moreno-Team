@@ -177,4 +177,76 @@ public class ClueControlTest {
         result = instance.getJewelAmount(diamonds, rubies, sapphires);
         assertEquals(expResult, result, 0.0);
     }
+
+    /**
+     * Test of addressClue method, of class ClueControl.
+     */
+    @Test
+    public void testAddressClue() {
+        System.out.println("addressClue");
+        double clueA = 17.0;
+        double clueB = 24.0;
+        double clueC = 3.0;
+        ClueControl instance = new ClueControl();
+        double expResult = 5043.0;
+        double result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        // TODO review the generated test code and remove the default call to fail.
+        
+        System.out.println("addressClue");
+        System.out.println("testCase1");
+        clueA = 0.0;
+        clueB = 24.0;
+        clueC = 3.0;
+        expResult = -1.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("addressClue");
+        System.out.println("testCase2");
+        clueA = 18.0;
+        clueB = 37.0;
+        clueC = 3.0;
+        expResult = -1.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("addressClue");
+        System.out.println("testCase3");
+        clueA = 13.0;
+        clueB = 21.0;
+        clueC = 66.0;
+        expResult = -1.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("addressClue");
+        System.out.println("testCase4");
+        clueA = 15.0;
+        clueB = 24.0;
+        clueC = 3.0;
+        expResult = 4563.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("addressClue");
+        System.out.println("testCase5");
+        clueA = 18.0;
+        clueB = 22.0;
+        clueC = 3.0;
+        expResult = 4800.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+        System.out.println("addressClue");
+        System.out.println("testCase6");
+        clueA = 13.0;
+        clueB = 21.0;
+        clueC = 6.0;
+        expResult = 6936.0;
+        result = instance.addressClue(clueA, clueB, clueC);
+        assertEquals(expResult, result, 0.0);
+        
+    }
+    
 }
