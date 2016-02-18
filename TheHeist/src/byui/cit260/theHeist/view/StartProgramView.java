@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHeist.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author luceromoreno
@@ -47,8 +49,25 @@ public class StartProgramView {
     }
 
     private String getPlayerName() {
-    System.out.println("\n*** getPlayerName() called***");
-    return "Joe";
+        
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+        
+        while (!valid) {
+            System.out.println("\n" + this.promptMessage);
+            
+            value = keyboard.nextLine();
+            value = value.trim();
+            
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;
+        }
+        return value;
+   
     }
 
     private boolean doAction(String playerName) {
