@@ -5,10 +5,17 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.model.Player;
+
 /**
  *
  * @author wr
  */
 public class GameControl {
+
+    public static Player createPlaye(String playerName) {
+        System.out.println("\n createPlayer() function called ***");
+        return new Player();
+    }
     
 }
