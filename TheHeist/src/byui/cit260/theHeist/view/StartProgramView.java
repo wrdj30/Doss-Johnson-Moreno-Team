@@ -33,8 +33,27 @@ public class StartProgramView {
         
     }
 
-    public void displayStartProgramVIew() {
-    System.out.println("\n displayProgramView function called ***");
+    public void displayStartProgramView() {
+        
+        boolean done = false;
+        do {
+            String playerName = this.getPlayerName();
+            if (playerName.toUpperCase().equals("Q"))
+                return;
+            
+            done = this.doAction(playerName);
+           
+        } while (!done);
+    }
+
+    private String getPlayerName() {
+    System.out.println("\n*** getPlayerName() called***");
+    return "Joe";
+    }
+
+    private boolean doAction(String playerName) {
+    System.out.println("\n*** doAction() called***");
+    return true;
     }
     
 }
