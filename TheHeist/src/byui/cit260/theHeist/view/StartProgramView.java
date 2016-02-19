@@ -99,7 +99,7 @@ public class StartProgramView {
                            + "\n Good luck detector!"         
                            + "\n =============================="
         );
-    MainMenuView mainMenuView = new MainMenuView()
+    MainMenuView mainMenuView = new MainMenuView();
     
     mainMenuView.displayMainMenuView();
     }
