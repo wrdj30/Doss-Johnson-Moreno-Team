@@ -12,7 +12,7 @@ package byui.cit260.theHeist.view;
 public class MainMenuView {
 
     void displayMainMenuView() {
-System.out.println("\n");
+System.out.println("\n*** displayMenu() function called ***");
     }
     
 }
