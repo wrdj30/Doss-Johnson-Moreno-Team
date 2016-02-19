@@ -81,7 +81,7 @@ public class StartProgramView {
                     + "The name must be greater than one character in length");
             return false;
         }
-        Player player = GameControl.createPlaye(playerName);
+        Player player = GameControl.createPlayer(playerName);
         if (player == null) {
             System.out.println("\nError creating the player.");
             return false;
