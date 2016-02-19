@@ -6,6 +6,7 @@
 package theheist;
 
 import byui.cit260.theHeist.model.Player;
+import byui.cit260.theHeist.view.StartProgramView;
 
 /**
  *
@@ -17,13 +18,8 @@ public class TheHeist {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
-        
-        playerOne.setName("Brad Moore");
-        playerOne.setHighScore(8.00);
-        
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo); 
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
     }
     
 }
