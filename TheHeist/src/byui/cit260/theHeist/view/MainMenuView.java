@@ -25,7 +25,7 @@ public class MainMenuView
                 + "\n---------------------------";
     }
     void displayMainMenuView() {
-        System.out.println("\nedgh");
+        System.out.println("\n displayMenu() function called ***");
     }
      }
     
