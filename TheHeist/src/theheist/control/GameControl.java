@@ -13,9 +13,17 @@ import byui.cit260.theHeist.model.Player;
  */
 public class GameControl {
 
-    public static Player createPlaye(String playerName) {
-        System.out.println("\n createPlayer() function called ***");
-        return new Player();
+        public static Player createPlayer(String name) {
+        if (name == null) {
+            return null;
+        }
+        Player player = new Player();
+        player.setName(name);
+        
+        MaxZepher.setPlayer(player);
+        
+        return player;
     }
+    
     
 }
