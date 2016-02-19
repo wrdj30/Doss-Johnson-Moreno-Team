@@ -21,7 +21,7 @@ public class MainMenuView
                 + "\n G - Start game            "
                 + "\n H - Help                  "
                 + "\n L - Load game             "
-                + "\n E - Exit                  "
+                + "\n Q - Quit                  "
                 + "\n---------------------------";
     }
     void displayMainMenuView() {
@@ -37,7 +37,7 @@ public class MainMenuView
 
     private String getMenuOption() {
     System.out.println("\n");   
-    return "N";
+    return "G";
     }
 
     private boolean doAction(String menuOption) {
