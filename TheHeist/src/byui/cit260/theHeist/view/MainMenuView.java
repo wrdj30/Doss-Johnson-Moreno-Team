@@ -6,6 +6,7 @@
 package byui.cit260.theHeist.view;
 
 import java.util.Scanner;
+import theheist.control.GameControl;
 
 /**
  *
@@ -63,40 +64,50 @@ public class MainMenuView
         choice = choice.toUpperCase();
         
         switch (choice) {
-        case "G":
-        this.startNewGame();
-        break;
-        case "H":
-            this.getHelp();
-            break;
-        case "L":
-            this.loadGame();
-            break;
-        case "S":
-            this.saveGame();
-            break;
-        default:
-            System.out.println("\n*** Invalid selection*** Try again");
-            break;
+            case "G":
+                this.startNewGame();
+                break;
+            case "H":
+                this.getHelp();
+                break;
+            case "L":
+                this.loadGame();
+                break;
+            case "S":
+                this.saveGame();
+                break;
+            default:
+                System.out.println("\n*** Invalid selection*** Try again");
+                break;
         }
     return false;
     }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
-    }
+        GameControl.creatNewGame(theHeist.getPlayer());
 
-    private void getHelp() {
-        System.out.println("*** getHelp function called ***");
-    }
+            GameMenuView gameMenu = new GameMenuView();
+            gameMenu.displayMenu();
+            System.out.println("*** startNewGame function called ***");
+        }
 
-    private void loadGame() {
-        System.out.println("*** loadGame function called ***");
-    }
+        private void getHelp() {
+            System.out.println("*** getHelp function called ***");
+        }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        private void loadGame() {
+            System.out.println("*** loadGame function called ***");
+        }
+
+        private void saveGame() {
+            System.out.println("*** saveGame function called ***");
+        }
+
+        private static class theHeist {
+
+            public theHeist() {
+            }
     }
-     }
+}
     
 
