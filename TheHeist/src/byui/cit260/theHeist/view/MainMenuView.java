@@ -11,10 +11,8 @@ package byui.cit260.theHeist.view;
  */
 public class MainMenuView
 {
-    private String menu;
-
     void displayMainMenuView() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\nedgh");
     }
      }
     
