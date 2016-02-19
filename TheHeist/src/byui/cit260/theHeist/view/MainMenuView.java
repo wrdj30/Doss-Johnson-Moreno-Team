@@ -9,10 +9,13 @@ package byui.cit260.theHeist.view;
  *
  * @author luceromoreno
  */
-public class MainMenuView {
+public class MainMenuView
+{
+    private String menu;
 
     void displayMainMenuView() {
-System.out.println("\n*** displayMenu() function called ***");
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+     }
     
-}
+
