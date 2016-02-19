@@ -94,7 +94,14 @@ public class StartProgramView {
     
 
     private void displayNextView(Player player) {
-
+        System.out.println("\n================================="
+                           + "\n Welcome to the game" + player.getName()
+                           + "\n Good luck detector!"         
+                           + "\n =============================="
+        );
+    MainMenuView mainMenuView = new MainMenuView()
+    
+    mainMenuView.displayMainMenuView();
     }
 
 }
