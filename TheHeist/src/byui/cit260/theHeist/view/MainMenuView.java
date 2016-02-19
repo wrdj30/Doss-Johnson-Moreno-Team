@@ -11,6 +11,19 @@ package byui.cit260.theHeist.view;
  */
 public class MainMenuView
 {
+    private String menu;
+    
+    public MainMenuView() 
+    {this.menu = "\n"
+                + "\n---------------------------"
+                + "\n | Main Menu              |"
+                + "\n---------------------------"
+                + "\n G - Start game            "
+                + "\n H - Help                  "
+                + "\n L - Load game             "
+                + "\n E - Exit                  "
+                + "\n---------------------------";
+    }
     void displayMainMenuView() {
         System.out.println("\nedgh");
     }
