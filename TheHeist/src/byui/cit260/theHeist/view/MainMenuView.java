@@ -11,7 +11,7 @@ package byui.cit260.theHeist.view;
  */
 public class MainMenuView
 {
-    private String menu;
+    private final String menu;
     
     public MainMenuView() 
     {this.menu = "\n"
@@ -25,7 +25,24 @@ public class MainMenuView
                 + "\n---------------------------";
     }
     void displayMainMenuView() {
-        System.out.println("\n displayMenu() function called ***");
+        boolean done = false;
+        do {
+            
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q"))
+                return;
+            done = this.doAction(menuOption);
+        } while (!done);
+    }
+
+    private String getMenuOption() {
+    System.out.println("\n");   
+    return "N";
+    }
+
+    private boolean doAction(String menuOption) {
+    System.out.println("\n");
+    return true;
     }
      }
     
