@@ -12,10 +12,6 @@ import byui.cit260.theHeist.model.Player;
  * @author wr
  */
 public class GameMenuView {
-    
-    public static void createNewGame(Player player) {
-        System.out.println("/n*** createNewGame stub function called ***");
-    }
 
     void displayMenu() {
         System.out.println("/n*** displayMenu stub function called ***");
