@@ -103,15 +103,7 @@ public class MainMenuView {
             System.out.println("*** saveGame function called ***");
         }
 
-        private static class theHeist {
-
-        private static Player getPlayer() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-            public theHeist() {
-            }
-    }
+           
 }
     
 
