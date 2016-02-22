@@ -7,6 +7,7 @@ package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
+import theheist.TheHeist;
 import theheist.control.GameControl;
 
 /**
@@ -84,7 +85,7 @@ public class MainMenuView {
     }
 
         private void startNewGame() {
-            GameControl.createNewGame(theHeist.getPlayer());
+            GameControl.createNewGame(TheHeist.getPlayer());
 
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.displayMenu();
