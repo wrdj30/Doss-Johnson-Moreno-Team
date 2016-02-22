@@ -18,7 +18,7 @@ public class StartProgramView {
     private String promptMessage;
 
     public StartProgramView() {
-        this.promptMessage = "\nPlease enter yout name: ";
+        this.promptMessage = "\nPlease enter your name: ";
 
         this.displayBanner();
 
@@ -43,9 +43,6 @@ public class StartProgramView {
         boolean done = false;
         do {
             String playerName = this.getPlayerName();
-            if (playerName.toUpperCase().equals("Q")) {
-                return;
-            }
 
             done = this.doAction(playerName);
 
@@ -96,12 +93,20 @@ public class StartProgramView {
     private void displayNextView(Player player) {
         System.out.println("\n================================="
                            + "\n Welcome to the game " + player.getName()
-                           + "\n Good luck detector!"         
-                           + "\n =============================="
-        );
-    MainMenuView mainMenuView = new MainMenuView();
+                           + "\n Good luck detective!"         
+                           + "\n ==============================");
+            MainMenuView mainMenuView = new MainMenuView();
     
-    mainMenuView.displayMainMenuView();
+            mainMenuView.displayMainMenuView();
     }
+    
+    private void displayHelpMenuView(Player player){    
+        System.out.println("/n================================="
+                            + "/n What can we help you with?"
+                            + "/n==============================");
+            HelpMenuView helpMenuView = new HelpMenuView();
+        
+            helpMenuView.displayHelpMenuView();
+    }    
 
 }
