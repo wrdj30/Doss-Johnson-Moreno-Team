@@ -5,6 +5,7 @@
  */
 package theheist;
 
+import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Player;
 import byui.cit260.theHeist.view.StartProgramView;
 
@@ -14,12 +15,30 @@ import byui.cit260.theHeist.view.StartProgramView;
  */
 public class TheHeist {
 
+    private static Game currentGame = null;
+    private static Player player = null;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        TheHeist.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        TheHeist.player = player;
     }
     
 }
