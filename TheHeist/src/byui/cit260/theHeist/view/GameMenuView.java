@@ -4,9 +4,6 @@
  * and open the template in the editor.
  */
 package byui.cit260.theHeist.view;
-
-import byui.cit260.theHeist.model.Player;
-
 /**
  *
  * @author wr
