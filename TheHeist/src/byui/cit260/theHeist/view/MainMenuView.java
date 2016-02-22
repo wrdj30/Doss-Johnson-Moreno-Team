@@ -45,7 +45,7 @@ public class MainMenuView {
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.menu);
 
             value = keyboard.nextLine();
             value = value.trim();
@@ -83,8 +83,8 @@ public class MainMenuView {
     return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(theHeist.getPlayer());
+        private void startNewGame() {
+            GameControl.createNewGame(theHeist.getPlayer());
 
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.displayMenu();
@@ -112,9 +112,6 @@ public class MainMenuView {
             public theHeist() {
             }
     }
-    
-    
-
 }
     
 
