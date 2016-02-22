@@ -99,14 +99,5 @@ public class StartProgramView {
     
             mainMenuView.displayMainMenuView();
     }
-    
-    private void displayHelpMenuView(Player player){    
-        System.out.println("/n================================="
-                            + "/n What can we help you with?"
-                            + "/n==============================");
-            HelpMenuView helpMenuView = new HelpMenuView();
-        
-            helpMenuView.displayHelpMenuView();
-    }    
 
 }
