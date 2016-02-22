@@ -7,6 +7,7 @@ package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
+import theheist.TheHeist;
 import theheist.control.GameControl;
 
 /**
@@ -84,7 +85,7 @@ public class MainMenuView {
     }
 
         private void startNewGame() {
-            GameControl.createNewGame(theHeist.getPlayer());
+            GameControl.createNewGame(TheHeist.getPlayer());
 
             GameMenuView gameMenu = new GameMenuView();
             gameMenu.displayMenu();
@@ -92,7 +93,9 @@ public class MainMenuView {
         }
 
         private void getHelp() {
-            System.out.println("*** getHelp function called ***");
+            HelpMenuView helpMenuView = new HelpMenuView();
+        
+            helpMenuView.displayHelpMenuView();
         }
 
         private void loadGame() {
@@ -102,16 +105,6 @@ public class MainMenuView {
         private void saveGame() {
             System.out.println("*** saveGame function called ***");
         }
-
-        private static class theHeist {
-
-        private static Player getPlayer() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-            public theHeist() {
-            }
-    }
 }
     
 
