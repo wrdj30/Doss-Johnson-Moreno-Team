@@ -5,6 +5,8 @@
  */
 package byui.cit260.theHeist.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author wr
@@ -38,12 +40,26 @@ public class HelpMenuView {
     }
     
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.println("\n" + this.menu);
+
+            value = keyboard.nextLine();
+            value = value.trim();
+
+            if (value.length() < 1) {
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;
+        }
+        return value;
     }
     
     private boolean doAction(String choice) {
-        System.out.println("\n*** doAction() function called ***");
         
         choice = choice.toUpperCase();
         
@@ -62,6 +78,9 @@ public class HelpMenuView {
                 break;
             case "Q":
                 this.quit();
+                break;
+            default:
+                System.out.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
