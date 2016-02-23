@@ -93,7 +93,9 @@ public class MainMenuView {
         }
 
         private void getHelp() {
-            System.out.println("*** getHelp function called ***");
+            HelpMenuView helpMenuView = new HelpMenuView();
+        
+            helpMenuView.displayHelpMenuView();
         }
 
         private void loadGame() {
@@ -103,8 +105,6 @@ public class MainMenuView {
         private void saveGame() {
             System.out.println("*** saveGame function called ***");
         }
-
-           
 }
     
 
