@@ -24,7 +24,6 @@ public class GameControl {
         Player player = new Player();
         player.setName(name);
         
-        MaxZepher.setPlayer(player);
         
         return player;
     }
