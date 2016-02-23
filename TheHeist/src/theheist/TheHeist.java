@@ -30,8 +30,19 @@ public class TheHeist {
         return player;
     }
 
+  
+
     public static void setPlayer(Player player) {
         TheHeist.player = player;
+    }
+    
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
     }
     
 }
