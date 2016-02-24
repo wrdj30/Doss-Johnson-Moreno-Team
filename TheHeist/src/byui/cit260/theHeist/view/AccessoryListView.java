@@ -102,28 +102,28 @@ public class AccessoryListView {
     }
 
     private void useGlasses() {
-        System.out.println("*** characterList function called ***");
+        System.out.println("*** useGlasses function called ***");
     }
 
     private void useMagnifyingGlass() {
-        System.out.println("*** accessoryList function called ***");
+        System.out.println("*** useMagnifyingGlass function called ***");
     }
 
     private void useGloves() {
-        System.out.println("*** transportation function called ***");
+        System.out.println("*** useGloves function called ***");
     }
     
     private void useCellphone() {
-        System.out.println("*** quit function called ***");
+        System.out.println("*** useCellphone function called ***");
     }
     private void useBag() {
-        System.out.println("*** quit function called ***");
+        System.out.println("*** useBag function called ***");
     }
     private void useHandcuffs() {
-        System.out.println("*** quit function called ***");
+        System.out.println("*** useHandcuffs function called ***");
     }
     private void useFlashlight() {
-        System.out.println("*** quit function called ***");
+        System.out.println("*** useFlashlight function called ***");
     }
     private void quit() {
         System.out.println("*** quit function called ***");
