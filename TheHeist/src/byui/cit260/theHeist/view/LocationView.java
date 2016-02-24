@@ -40,28 +40,29 @@ class LocationView {
             case "Howerty":
                 System.out.println("Show Artlin Puzzle");
             case "Inlin":
-                int diamonds = 7;
+               for (int diamonds = 7){
                 if (diamonds == 7) {
                     System.out.println("You got it!");
                 } 
                 else {
                     System.out.println("Try another number");
                 }
-                
-                int rubies =5;
+               }
+               for (int rubies = 5){
                 if (rubies == 5) {System.out.println("You got it!");
                 } 
                 else {
                     System.out.println("Try another number");
                 }
-                
-                int sapphires = 3;
-                if (sapphires != 3) {
+               }
+               for (int sapphires = 3) {
+                if (sapphires == 3) {
                     System.out.println("You got it!");
                 } 
                 else {
                     System.out.println("Try another number");
                 }
+               }
                 System.out.println("Show Artlin Puzzle");
             case "Jawel":
                 System.out.println("Show Artlin Puzzle");
