@@ -11,7 +11,6 @@ package byui.cit260.theHeist.view;
 public class GameMenuView {
 
     void displayMenu() {
-        System.out.println("/n*** displayMenu stub function called ***");
     }
     
 }
