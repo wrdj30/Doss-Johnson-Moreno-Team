@@ -86,15 +86,15 @@ public class CharacterListView {
     }
 
     private void detectiveMax() {
-        System.out.println("*** characterList function called ***");
+        System.out.println("*** detectiveMax function called ***");
     }
 
     private void police() {
-        System.out.println("*** accessoryList function called ***");
+        System.out.println("*** police function called ***");
     }
 
     private void queen() {
-        System.out.println("*** transportation function called ***");
+        System.out.println("*** queen function called ***");
     }
     
     private void quit() {
