@@ -107,11 +107,15 @@ public class GameMenuView {
     }
 
     private void transportation() {
-        System.out.println("*** transportation function called ***");
+        TransportationView transportationView = new TransportationView();
+        
+            transportationView.displayTransportationView();
     }
 
     private void weaponList() {
-        System.out.println("*** weaponList function called ***");
+        WeaponListView weaponListView = new WeaponListView();
+        
+            weaponListView.displayWeaponListView();
     }
 
     private void mapMenu() {
