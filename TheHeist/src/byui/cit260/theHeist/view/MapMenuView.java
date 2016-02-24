@@ -175,6 +175,9 @@ public class MapMenuView {
 
     private void goBoury() {
             System.out.println("*** loadGame function called ***");
+            LocationView locationView = new LocationView();
+            locationView.setLocation("Boury");
+            locationView.showChallenge();
     }
 
     private void goCelnig() {
