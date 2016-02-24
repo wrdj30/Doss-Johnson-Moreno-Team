@@ -101,7 +101,9 @@ public class GameMenuView {
     }
 
     private void accessoryList() {
-        System.out.println("*** accessoryList function called ***");
+        AccessoryListView accessoryListView = new AccessoryListView();
+        
+            accessoryListView.displayAccessoryListView();
     }
 
     private void transportation() {
