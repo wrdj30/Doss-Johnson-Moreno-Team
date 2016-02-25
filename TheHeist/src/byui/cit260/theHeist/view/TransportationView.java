@@ -5,37 +5,30 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
 
 /**
  *
  * @author wr
  */
-public class GameMenuView {
-
+public class TransportationView {
     
-
-
-    
-
     private String menu;
+
     
-    public GameMenuView() { 
+    public TransportationView() { 
         this.menu = "\n"
                 + "\n---------------------------"
-                + "\n | Game Menu              |"
+                + "\n | Transportation         |"
                 + "\n---------------------------"
-                + "\n C - Character List        "
-                + "\n A - Accessory             "
-                + "\n T - transportation        "
-                + "\n W - Weapon List           "
-                + "\n M _ Map Menu              "
+                + "\n P - Plane                 "
+                + "\n C - Car                   " 
+                + "\n W - Walk                 "
                 + "\n Q - Quit                  "
                 + "\n---------------------------";
     }
 
-    public void displayGameMenuView() {
+    public void displayTransportationView() {
         boolean done = false; 
         do {
             String menuOption = this.getMenuOption();
@@ -45,7 +38,6 @@ public class GameMenuView {
             done = this.doAction(menuOption);
             
         }while (!done);
-
     }
     
     private String getMenuOption() {
@@ -73,21 +65,15 @@ public class GameMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
+            case "P":
+                this.flyPlane();
+                break;
             case "C":
-                this.characterList();
-                break;
-            case "A":
-                this.accessoryList();
-                break;
-            case "T":
-                this.transportation();
+                this.driveCar();
                 break;
             case "W":
-                this.weaponList();
-                break;
-            case "M":
-                this.mapMenu();
-                break;
+                this.walk();
+                break;            
             case "Q":
                 this.quit();
                 break;
@@ -99,38 +85,20 @@ public class GameMenuView {
         return false;
     }
 
-    private void characterList() {
-        CharacterListView characterListView = new CharacterListView();
-        
-            characterListView.displayCharacterListView();
+    private void flyPlane() {
+        System.out.println("*** flyPlane function called ***");
     }
 
-    private void accessoryList() {
-        AccessoryListView accessoryListView = new AccessoryListView();
+    private void driveCar() {
+        System.out.println("*** driveCar function called ***");
+    }
+    
+    private void walk() {
+        System.out.println("*** walk function called ***");
+    }
         
-            accessoryListView.displayAccessoryListView();
-    }
-
-    private void transportation() {
-        TransportationView transportationView = new TransportationView();
-        
-            transportationView.displayTransportationView();
-    }
-
-    private void weaponList() {
-        WeaponListView weaponListView = new WeaponListView();
-        
-            weaponListView.displayWeaponListView();
-    }
-
-    private void mapMenu() {
-        System.out.println("*** mapMenu function called ***");
-    }
     private void quit() {
         System.out.println("*** quit function called ***");
     }
-
-        
+    
 }
-
-

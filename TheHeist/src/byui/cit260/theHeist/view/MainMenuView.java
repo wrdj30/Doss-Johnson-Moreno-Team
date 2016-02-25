@@ -87,8 +87,9 @@ public class MainMenuView {
         private void startNewGame() {
             GameControl.createNewGame(TheHeist.getPlayer());
 
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayMenu();
+            GameMenuView gameMenuView = new GameMenuView();
+            
+            gameMenuView.displayGameMenuView();
             System.out.println("*** startNewGame function called ***");
         }
 

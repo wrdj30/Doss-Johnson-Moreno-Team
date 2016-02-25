@@ -5,37 +5,30 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
 
 /**
  *
  * @author wr
  */
-public class GameMenuView {
-
+public class CharacterListView {
     
-
-
-    
-
     private String menu;
+
     
-    public GameMenuView() { 
+    public CharacterListView() { 
         this.menu = "\n"
                 + "\n---------------------------"
-                + "\n | Game Menu              |"
+                + "\n | Character List         |"
                 + "\n---------------------------"
-                + "\n C - Character List        "
-                + "\n A - Accessory             "
-                + "\n T - transportation        "
-                + "\n W - Weapon List           "
-                + "\n M _ Map Menu              "
+                + "\n M - Detective Max         "
+                + "\n P - Police                "
+                + "\n K - Queen                 "              
                 + "\n Q - Quit                  "
                 + "\n---------------------------";
     }
 
-    public void displayGameMenuView() {
+    public void displayCharacterListView() {
         boolean done = false; 
         do {
             String menuOption = this.getMenuOption();
@@ -45,7 +38,6 @@ public class GameMenuView {
             done = this.doAction(menuOption);
             
         }while (!done);
-
     }
     
     private String getMenuOption() {
@@ -73,20 +65,14 @@ public class GameMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-            case "C":
-                this.characterList();
-                break;
-            case "A":
-                this.accessoryList();
-                break;
-            case "T":
-                this.transportation();
-                break;
-            case "W":
-                this.weaponList();
-                break;
             case "M":
-                this.mapMenu();
+                this.detectiveMax();
+                break;
+            case "P":
+                this.police();
+                break;
+            case "K":
+                this.queen();
                 break;
             case "Q":
                 this.quit();
@@ -99,38 +85,22 @@ public class GameMenuView {
         return false;
     }
 
-    private void characterList() {
-        CharacterListView characterListView = new CharacterListView();
-        
-            characterListView.displayCharacterListView();
+    private void detectiveMax() {
+        System.out.println("*** detectiveMax function called ***");
     }
 
-    private void accessoryList() {
-        AccessoryListView accessoryListView = new AccessoryListView();
-        
-            accessoryListView.displayAccessoryListView();
+    private void police() {
+        System.out.println("*** police function called ***");
     }
 
-    private void transportation() {
-        TransportationView transportationView = new TransportationView();
-        
-            transportationView.displayTransportationView();
+    private void queen() {
+        System.out.println("*** queen function called ***");
     }
-
-    private void weaponList() {
-        WeaponListView weaponListView = new WeaponListView();
-        
-            weaponListView.displayWeaponListView();
-    }
-
-    private void mapMenu() {
-        System.out.println("*** mapMenu function called ***");
-    }
+    
     private void quit() {
         System.out.println("*** quit function called ***");
     }
 
-        
 }
-
+    
 

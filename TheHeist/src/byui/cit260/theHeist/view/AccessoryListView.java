@@ -5,37 +5,34 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
 
 /**
  *
  * @author wr
  */
-public class GameMenuView {
-
+public class AccessoryListView {
     
-
-
-    
-
     private String menu;
+
     
-    public GameMenuView() { 
+    public AccessoryListView() { 
         this.menu = "\n"
                 + "\n---------------------------"
-                + "\n | Game Menu              |"
+                + "\n | Accessory List         |"
                 + "\n---------------------------"
-                + "\n C - Character List        "
-                + "\n A - Accessory             "
-                + "\n T - transportation        "
-                + "\n W - Weapon List           "
-                + "\n M _ Map Menu              "
+                + "\n G - Glasses               "
+                + "\n M - Magnifying Glass      "
+                + "\n L - Gloves                "              
+                + "\n C - Cellphone             "
+                + "\n B - Bag                   "
+                + "\n H - Handcuffs             "
+                + "\n F - Flashlight            "
                 + "\n Q - Quit                  "
                 + "\n---------------------------";
     }
 
-    public void displayGameMenuView() {
+    public void displayAccessoryListView() {
         boolean done = false; 
         do {
             String menuOption = this.getMenuOption();
@@ -45,7 +42,6 @@ public class GameMenuView {
             done = this.doAction(menuOption);
             
         }while (!done);
-
     }
     
     private String getMenuOption() {
@@ -73,20 +69,26 @@ public class GameMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-            case "C":
-                this.characterList();
-                break;
-            case "A":
-                this.accessoryList();
-                break;
-            case "T":
-                this.transportation();
-                break;
-            case "W":
-                this.weaponList();
+            case "G":
+                this.useGlasses();
                 break;
             case "M":
-                this.mapMenu();
+                this.useMagnifyingGlass();
+                break;
+            case "L":
+                this.useGloves();
+                break;
+            case "C":
+                this.useCellphone();
+                break;
+            case "B":
+                this.useBag();
+                break;
+            case "H":
+                this.useHandcuffs();
+                break;
+            case "F":
+                this.useFlashlight();
                 break;
             case "Q":
                 this.quit();
@@ -99,38 +101,32 @@ public class GameMenuView {
         return false;
     }
 
-    private void characterList() {
-        CharacterListView characterListView = new CharacterListView();
-        
-            characterListView.displayCharacterListView();
+    private void useGlasses() {
+        System.out.println("*** useGlasses function called ***");
     }
 
-    private void accessoryList() {
-        AccessoryListView accessoryListView = new AccessoryListView();
-        
-            accessoryListView.displayAccessoryListView();
+    private void useMagnifyingGlass() {
+        System.out.println("*** useMagnifyingGlass function called ***");
     }
 
-    private void transportation() {
-        TransportationView transportationView = new TransportationView();
-        
-            transportationView.displayTransportationView();
+    private void useGloves() {
+        System.out.println("*** useGloves function called ***");
     }
-
-    private void weaponList() {
-        WeaponListView weaponListView = new WeaponListView();
-        
-            weaponListView.displayWeaponListView();
+    
+    private void useCellphone() {
+        System.out.println("*** useCellphone function called ***");
     }
-
-    private void mapMenu() {
-        System.out.println("*** mapMenu function called ***");
+    private void useBag() {
+        System.out.println("*** useBag function called ***");
+    }
+    private void useHandcuffs() {
+        System.out.println("*** useHandcuffs function called ***");
+    }
+    private void useFlashlight() {
+        System.out.println("*** useFlashlight function called ***");
     }
     private void quit() {
         System.out.println("*** quit function called ***");
     }
-
-        
+    
 }
-
-
