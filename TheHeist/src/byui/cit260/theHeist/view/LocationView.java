@@ -40,29 +40,6 @@ class LocationView {
             case "Howerty":
                 System.out.println("Show Artlin Puzzle");
             case "Inlin":
-               for (int diamonds = 7){
-                if (diamonds == 7) {
-                    System.out.println("You got it!");
-                } 
-                else {
-                    System.out.println("Try another number");
-                }
-               }
-               for (int rubies = 5){
-                if (rubies == 5) {System.out.println("You got it!");
-                } 
-                else {
-                    System.out.println("Try another number");
-                }
-               }
-               for (int sapphires = 3) {
-                if (sapphires == 3) {
-                    System.out.println("You got it!");
-                } 
-                else {
-                    System.out.println("Try another number");
-                }
-               }
                 System.out.println("Show Artlin Puzzle");
             case "Jawel":
                 System.out.println("Show Artlin Puzzle");
@@ -100,6 +77,7 @@ class LocationView {
                 System.out.println("\n*** Invalid selection*** Try again");
                 break;
         }
-
+        
+          
     
 
