@@ -33,25 +33,6 @@ public class TheHeist {
     public static void setPlayer(Player player) {
         TheHeist.player = player;
     }
-    public static Game getCurrentGame() {
-        return currentGame;
-    }
-
-    public static void setCurrentGame(Game currentGame) {
-        TheHeist.currentGame = currentGame;
-    }
-
-    public static Player getPlayer() {
-        return player;
-    }
-
-    public static void setPlayer(Player player) {
-        TheHeist.player = player;
-    }
-    
-    private static Game currentGame = null;
-    private static Player player = null;
-
     /**
      * @param args the command line arguments
      */
