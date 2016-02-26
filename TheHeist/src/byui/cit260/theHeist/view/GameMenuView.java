@@ -124,7 +124,8 @@ public class GameMenuView {
     }
 
     private void mapMenu() {
-        System.out.println("*** mapMenu function called ***");
+        MapMenuView mapMenuView = new MapMenuView();
+            mapMenuView.displayMapMenuView();
     }
     private void quit() {
         System.out.println("*** quit function called ***");
