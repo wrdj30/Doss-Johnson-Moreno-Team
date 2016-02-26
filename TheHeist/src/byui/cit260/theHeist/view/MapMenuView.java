@@ -232,6 +232,8 @@ public class MapMenuView {
 
     private void goParquin() {
             System.out.println("*** loadGame function called ***");
+            LocationView locationView = new LocationView();
+            locationView.displayLocationView();
     }
 
     private void goRyster() {
