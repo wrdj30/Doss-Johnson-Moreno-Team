@@ -50,10 +50,10 @@ public class LocationView {
     public void displayBanner() {
         System.out.println(
                 "On this level you will use the two numbers you"
-                + "were asked to remember back in the two "
-                + "other locations. Please insert the two "
-                + "numbers you already know, then insert "
-                + "a number from 1-10 for the third number."
+                + "\n were asked to remember back in the two "
+                + "\n other locations. Please insert the two "
+                + "\n numbers you already know, then insert "
+                + "\n a number from 1-10 for the third number."
         );
     }
 
