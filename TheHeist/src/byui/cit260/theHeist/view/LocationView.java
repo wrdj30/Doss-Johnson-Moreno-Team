@@ -72,7 +72,7 @@ public class LocationView {
 
     public void displaySecondNumView() {
         boolean done = false;
-        do {
+       // do {
 
             String menuOption = this.getNum(answer2);
             if (menuOption.toUpperCase().equals("Q")) {
@@ -80,12 +80,12 @@ public class LocationView {
             }
             correctAnswer2 = true;
             //done = this.doAction();
-        } while (!done);
+       // } while (!done);
     }
 
     public void displayThirdNumView() {
         boolean done = false;
-        do {
+        //do {
 
             String menuOption = this.getNum(answer3);
             if (menuOption.toUpperCase().equals("Q")) {
@@ -93,7 +93,7 @@ public class LocationView {
             }
             correctAnswer3 = true;
             //done = this.doAction();
-        } while (!done);
+       // } while (!done);
     }
 
     private String getNum(int answer) {
