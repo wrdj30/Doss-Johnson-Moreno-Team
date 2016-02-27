@@ -15,6 +15,9 @@ import byui.cit260.theHeist.view.StartProgramView;
  */
 public class TheHeist {
 
+    private static Game currentGame = null;
+    private static Player player = null;
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -30,10 +33,6 @@ public class TheHeist {
     public static void setPlayer(Player player) {
         TheHeist.player = player;
     }
-    
-    private static Game currentGame = null;
-    private static Player player = null;
-
     /**
      * @param args the command line arguments
      */
@@ -43,3 +42,7 @@ public class TheHeist {
     }
     
 }
+    /**
+     * @param args the command line arguments
+     */
+

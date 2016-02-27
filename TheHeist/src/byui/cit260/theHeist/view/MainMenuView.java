@@ -29,7 +29,7 @@ public class MainMenuView {
                 + "\n Q - Quit                  "
                 + "\n---------------------------";
     }
-    void displayMainMenuView() {
+   public void displayMainMenuView() {
         boolean done = false;
         do {
             
