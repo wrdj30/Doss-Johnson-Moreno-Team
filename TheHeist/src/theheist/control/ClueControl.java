@@ -46,7 +46,7 @@ public class ClueControl {
     }
 
 
-    public double addressClue(double clueA, double clueB, double clueC) {
+    public static double addressClue(double clueA, double clueB, double clueC) {
         if (clueA <= 0 || clueA > 25) {
             return -1;
         }        
