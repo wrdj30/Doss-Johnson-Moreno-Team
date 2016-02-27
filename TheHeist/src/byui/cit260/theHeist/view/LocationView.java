@@ -91,7 +91,7 @@ public class LocationView {
                 return;
             }
             correctAnswer3 = true;
-            done = this.doAction();
+            //done = this.doAction();
              } while (!done);
         }
     
