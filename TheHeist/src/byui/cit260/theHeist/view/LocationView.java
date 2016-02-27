@@ -122,7 +122,7 @@ public class LocationView {
     }
 
     private boolean doAction() {
-        int worth = (answer1 + answer2 + answer3) - answer3;
+        int worth = ((answer1 * 2) + (answer2 * 3) + (answer3 * 2)) - (answer3 * 2);
 
         System.out.println("Remember this answer: " + worth);
 
