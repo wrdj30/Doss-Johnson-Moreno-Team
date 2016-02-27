@@ -53,6 +53,7 @@ public class LocationView {
                 + "\n other locations. Please insert the two "
                 + "\n numbers you already know, then insert "
                 + "\n a number from 1-10 for the third number."
+                + "\n Enter the first number:"
         );
     }
 
@@ -84,7 +85,7 @@ public class LocationView {
 
     public void displayThirdNumView() {
         boolean done = false;
-        do {
+       // do {
 
             String menuOption = this.getNum(answer3);
             if (menuOption.toUpperCase().equals("Q")) {
@@ -92,10 +93,8 @@ public class LocationView {
             }
             correctAnswer3 = true;
             //done = this.doAction();
-             } while (!done);
-        }
-    
-        
+        //} while (!done);
+    }
 
     private String getNum(int answer) {
         Scanner keyboard = new Scanner(System.in);
@@ -116,7 +115,7 @@ public class LocationView {
                 System.out.println("\nYou got the number right!");
                 valid = true;
             } else {
-                System.out.println("Guess again please");
+                System.out.println("Please quess again");
             }
         }
         return value1;
