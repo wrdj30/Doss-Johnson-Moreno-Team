@@ -7,6 +7,7 @@ package byui.cit260.theHeist.view;
 
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
+
 /**
  *
  * @author luceromoreno
@@ -20,8 +21,6 @@ public class LocationView {
     private boolean correctAnswer1 = false;
     private boolean correctAnswer2 = false;
     private boolean correctAnswer3 = false;
-
-
 
     public LocationView() {
         this.showMessage = "\nYou have entered ";
@@ -61,40 +60,42 @@ public class LocationView {
         boolean done = false;
         //do {
 
-            String menuOption = this.getNum(answer1);
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            correctAnswer1 = true;
-            //done = this.doAction();
+        String menuOption = this.getNum(answer1);
+        if (menuOption.toUpperCase().equals("Q")) {
+            return;
+        }
+        correctAnswer1 = true;
+        //done = this.doAction();
         //} while (!done);
     }
 
     public void displaySecondNumView() {
         boolean done = false;
-       // do {
+        // do {
 
-            String menuOption = this.getNum(answer2);
-            if (menuOption.toUpperCase().equals("Q")) {
-                return;
-            }
-            correctAnswer2 = true;
-            //done = this.doAction();
-       // } while (!done);
+        String menuOption = this.getNum(answer2);
+        if (menuOption.toUpperCase().equals("Q")) {
+            return;
+        }
+        correctAnswer2 = true;
+        //done = this.doAction();
+        // } while (!done);
     }
 
     public void displayThirdNumView() {
         boolean done = false;
-        //do {
+        do {
 
             String menuOption = this.getNum(answer3);
             if (menuOption.toUpperCase().equals("Q")) {
                 return;
             }
             correctAnswer3 = true;
-            //done = this.doAction();
-       // } while (!done);
-    }
+            done = this.doAction();
+             } while (!done);
+        }
+    
+        
 
     private String getNum(int answer) {
         Scanner keyboard = new Scanner(System.in);
