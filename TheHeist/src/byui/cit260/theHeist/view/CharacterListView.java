@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author wr
  */
-public class CharacterListView {
+public class CharacterListView extends View {
     
     private String menu;
 
     
     public CharacterListView() { 
-        this.menu = "\n"
+           super( "\n"
                 + "\n---------------------------"
                 + "\n | Character List         |"
                 + "\n---------------------------"
@@ -25,42 +25,11 @@ public class CharacterListView {
                 + "\n P - Police                "
                 + "\n K - Queen                 "              
                 + "\n Q - Quit                  "
-                + "\n---------------------------";
-    }
-
-    public void displayCharacterListView() {
-        boolean done = false; 
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return; 
-            
-            done = this.doAction(menuOption);
-            
-        }while (!done);
+                + "\n---------------------------");
     }
     
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
