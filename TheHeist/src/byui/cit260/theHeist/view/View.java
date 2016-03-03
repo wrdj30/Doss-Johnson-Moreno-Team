@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     
-    protected String promptMessage;
+    protected String displayMessage;
     
     public View() {        
     }
     
     public View(String message) {
-        this.promptMessage = message;
+        this.displayMessage = message;
     }
 
     @Override
@@ -42,7 +42,7 @@ public abstract class View implements ViewInterface {
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.promptMessage);
+            System.out.println("\n" + this.displayMessage);
 
             value = keyboard.nextLine();
             value = value.trim();
