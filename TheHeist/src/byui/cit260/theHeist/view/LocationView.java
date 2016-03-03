@@ -171,15 +171,6 @@ public class LocationView {
            
     }
     
-    public double doAction(double dClueA, double dClueB, double dClueC) {
-        
-        double addressNumber = ClueControl.addressClue(dClueA, dClueB, dClueC);
-        
-        return addressNumber;
-    }
-       
-        
-
     private String getInput(String promptMessage) {
          Scanner keyboard = new Scanner(System.in);
         String value = "";
@@ -200,8 +191,13 @@ public class LocationView {
         return value;
     
     }
-
     
+    public double doAction(double dClueA, double dClueB, double dClueC) {
+        
+        double addressNumber = ClueControl.addressClue(dClueA, dClueB, dClueC);
+        
+        return addressNumber;
+    }
     
 }
 
