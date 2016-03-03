@@ -58,14 +58,14 @@ public class MainMenuView extends View{
 
             GameMenuView gameMenuView = new GameMenuView();
             
-            gameMenuView.displayGameMenuView();
+            gameMenuView.display();
             System.out.println("*** startNewGame function called ***");
         }
 
         private void getHelp() {
             HelpMenuView helpMenuView = new HelpMenuView();
         
-            helpMenuView.displayHelpMenuView();
+            helpMenuView.display();
         }
 
         private void loadGame() {
