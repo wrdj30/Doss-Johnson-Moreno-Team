@@ -11,13 +11,13 @@ import java.util.Scanner;
  *
  * @author wr
  */
-public class TransportationView {
+public class TransportationView extends View{
     
     private String menu;
 
     
     public TransportationView() { 
-        this.menu = "\n"
+           super( "\n"
                 + "\n---------------------------"
                 + "\n | Transportation         |"
                 + "\n---------------------------"
@@ -25,42 +25,11 @@ public class TransportationView {
                 + "\n C - Car                   " 
                 + "\n W - Walk                 "
                 + "\n Q - Quit                  "
-                + "\n---------------------------";
-    }
-
-    public void displayTransportationView() {
-        boolean done = false; 
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return; 
-            
-            done = this.doAction(menuOption);
-            
-        }while (!done);
+                + "\n---------------------------");
     }
     
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
