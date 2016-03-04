@@ -11,55 +11,24 @@ import java.util.Scanner;
  *
  * @author wr
  */
-public class WeaponListView {
+public class WeaponListView extends View{
     
      private String menu;
 
     
     public WeaponListView() { 
-        this.menu = "\n"
+           super( "\n"
                 + "\n---------------------------"
                 + "\n | Weapon List         |"
                 + "\n---------------------------"
                 + "\n G - Gun                   "
                 + "\n K - Knife                 "              
                 + "\n Q - Quit                  "
-                + "\n---------------------------";
-    }
-
-    public void displayWeaponListView() {
-        boolean done = false; 
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return; 
-            
-            done = this.doAction(menuOption);
-            
-        }while (!done);
+                + "\n---------------------------");
     }
     
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-    
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase();
         
