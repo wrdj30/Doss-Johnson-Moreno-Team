@@ -172,7 +172,7 @@ public class LocationView {
     }
     
     private String getInput(String promptMessage) {
-         Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
 
