@@ -82,18 +82,18 @@ public class GameMenuView extends View {
     private void transportation() {
         TransportationView transportationView = new TransportationView();
         
-            transportationView.displayTransportationView();
+            transportationView.display();
     }
 
     private void weaponList() {
         WeaponListView weaponListView = new WeaponListView();
         
-            weaponListView.displayWeaponListView();
+            weaponListView.display();
     }
 
     private void mapMenu() {
         MapMenuView mapMenuView = new MapMenuView();
-            mapMenuView.displayMapMenuView();
+            mapMenuView.display();
     }
     private void quit() {
         System.out.println("*** quit function called ***");
