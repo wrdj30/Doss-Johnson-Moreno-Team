@@ -14,11 +14,6 @@ import java.util.Scanner;
  */
 public class GameMenuView extends View {
 
-    
-
-
-    
-
     private String menu;
     
     public GameMenuView() { 
@@ -28,7 +23,7 @@ public class GameMenuView extends View {
                 + "\n---------------------------"
                 + "\n C - Character List        "
                 + "\n A - Accessory             "
-                + "\n T - transportation        "
+                + "\n T - Transportation        "
                 + "\n W - Weapon List           "
                 + "\n M _ Map Menu              "
                 + "\n Q - Quit                  "
