@@ -16,9 +16,9 @@ import java.io.Serializable;
  */
 public enum Actor implements Serializable{
     
-    MaxZepher("The detective trying to catch the theif", new Point(1,1)),
-    Queen("The Queen of Inlin", new Point(1,1)),
-    Police("The police of Inlin", new Point(1,1));
+    MaxZepher("The detective trying to catch the thief", new Point(1,1)),
+    Queen("The Queen of Ingland", new Point(1,1)),
+    Police("The police of Ingland", new Point(1,1));
     
     
     private final String description;
