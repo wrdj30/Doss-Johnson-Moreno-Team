@@ -16,9 +16,80 @@ public class Game implements Serializable{
     
     private double score;
     private double startTime;
+    
+    private InventoryType[] inventoryType;
     private Player player;
-    private InventoryType inventory;
+    private TransportationType transportationType;
+    private Map map;
+    private String[] actors;
+    private Location[] location;
+    private ClueTypeScene[] clueTypeScene;
+    private DialogueTypeScene[] dialogueTypeScene;
 
+    public InventoryType[] getInventoryType() {
+        return inventoryType;
+    }
+
+    public void setInventoryType(InventoryType[] inventoryType) {
+        this.inventoryType = inventoryType;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public TransportationType getTransportationType() {
+        return transportationType;
+    }
+
+    public void setTransportationType(TransportationType transportationType) {
+        this.transportationType = transportationType;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public String[] getActors() {
+        return actors;
+    }
+
+    public void setActors(String[] actors) {
+        this.actors = actors;
+    }
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+
+    public ClueTypeScene[] getClueTypeScene() {
+        return clueTypeScene;
+    }
+
+    public void setClueTypeScene(ClueTypeScene[] clueTypeScene) {
+        this.clueTypeScene = clueTypeScene;
+    }
+
+    public DialogueTypeScene[] getDialogueTypeScene() {
+        return dialogueTypeScene;
+    }
+
+    public void setDialogueTypeScene(DialogueTypeScene[] dialogueTypeScene) {
+        this.dialogueTypeScene = dialogueTypeScene;
+    }
+    
     public Game() {
     }
 

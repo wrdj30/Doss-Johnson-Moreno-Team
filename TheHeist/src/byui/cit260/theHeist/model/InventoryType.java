@@ -11,78 +11,29 @@ import java.util.Objects;
  *
  * @author luceromoreno
  */
-public class InventoryType implements Serializable{
+public enum InventoryType implements Serializable{
     
-    private String inventoryType;
+    MagnifyingGlass("Used to closely inspect clues"),
+    Gloves("Used to Handle clues"),
+    Cellphone("Used to phone the Police or the Queen"),
+    Bag("Used to store clues"),
+    Handcuffs("Used to secure the theif"),
+    Flashlight("Used to see in the dark"),
+    Gun("Used for protection and catching the theif"),
+    Knife("Used for protection and for cutting");
+    
     private double quantityInStock;
     private double requiredAmount;
 
-    public InventoryType() {
-    }
-
-    
-    
-    public String getInventoryType() {
-        return inventoryType;
-    }
-
-    public void setInventoryType(String inventoryType) {
-        this.inventoryType = inventoryType;
+    InventoryType(String description) {
     }
 
     public double getQuantityInStock() {
         return quantityInStock;
     }
 
-    public void setQuantityInStock(double quantityInStock) {
-        this.quantityInStock = quantityInStock;
-    }
-
     public double getRequiredAmount() {
         return requiredAmount;
     }
-
-    public void setRequiredAmount(double requiredAmount) {
-        this.requiredAmount = requiredAmount;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 13 * hash + Objects.hashCode(this.inventoryType);
-        hash = 13 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
-        hash = 13 * hash + (int) (Double.doubleToLongBits(this.requiredAmount) ^ (Double.doubleToLongBits(this.requiredAmount) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "InventoryType{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final InventoryType other = (InventoryType) obj;
-        if (Double.doubleToLongBits(this.quantityInStock) != Double.doubleToLongBits(other.quantityInStock)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.requiredAmount) != Double.doubleToLongBits(other.requiredAmount)) {
-            return false;
-        }
-        if (!Objects.equals(this.inventoryType, other.inventoryType)) {
-            return false;
-        }
-        return true;
-    }
-    
-    
+       
 }
