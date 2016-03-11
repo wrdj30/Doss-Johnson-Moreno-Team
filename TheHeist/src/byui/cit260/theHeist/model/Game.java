@@ -16,6 +16,11 @@ public class Game implements Serializable{
     
     private double score;
     private double startTime;
+    
+    private InventoryType inventoryType;
+    private Player player;
+    private TransportationType transportationType;
+    private Map map;
 
     public Game() {
     }
