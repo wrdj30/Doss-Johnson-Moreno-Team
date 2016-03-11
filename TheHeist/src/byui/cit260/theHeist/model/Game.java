@@ -16,6 +16,8 @@ public class Game implements Serializable{
     
     private double score;
     private double startTime;
+    private Player player;
+    private InventoryType inventory;
 
     public Game() {
     }
@@ -72,6 +74,7 @@ public class Game implements Serializable{
     public void setStartTime(double startTime) {
         this.startTime = startTime;
     }
+
 
 
 
