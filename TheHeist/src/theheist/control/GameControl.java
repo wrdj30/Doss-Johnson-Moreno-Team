@@ -7,6 +7,7 @@ package theheist.control;
 
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.InventoryType;
+import byui.cit260.theHeist.model.Map;
 import byui.cit260.theHeist.model.Player;
 import theheist.TheHeist;
 
@@ -22,13 +23,13 @@ public class GameControl {
         TheHeist.setCurrentGame(game);
         game.setPlayer(player);
         
-        InventoryType inventoryList = GameControl.createInventoryList();
-        game.setInventory(inventoryList);
+        InventoryType[] inventoryType = GameControl.createInventoryType();
+        game.setInventoryType(inventoryType);
         
         Map map = MapControl.createMap();
         game.setMap(map);
         
-        MapControl.moveActorsTostartingLocation(map);
+        MapControl.moveActorsToStartingLocation(map);
     }
 
         public static Player createPlayer(String name) {
