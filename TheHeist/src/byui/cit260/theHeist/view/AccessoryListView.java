@@ -20,8 +20,7 @@ public class AccessoryListView extends View {
            super( "\n"
                 + "\n---------------------------"
                 + "\n | Accessory List         |"
-                + "\n---------------------------"
-                + "\n G - Glasses               "
+                + "\n---------------------------"               
                 + "\n M - Magnifying Glass      "
                 + "\n L - Gloves                "              
                 + "\n C - Cellphone             "
@@ -37,10 +36,7 @@ public class AccessoryListView extends View {
         
         choice = choice.toUpperCase();
         
-        switch (choice) {
-            case "G":
-                this.useGlasses();
-                break;
+        switch (choice) {            
             case "M":
                 this.useMagnifyingGlass();
                 break;
@@ -68,10 +64,6 @@ public class AccessoryListView extends View {
         }
         
         return false;
-    }
-
-    private void useGlasses() {
-        System.out.println("*** useGlasses function called ***");
     }
 
     private void useMagnifyingGlass() {
