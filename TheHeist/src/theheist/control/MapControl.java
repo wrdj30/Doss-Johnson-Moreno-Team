@@ -5,10 +5,17 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.model.Map;
+
 /**
  *
  * @author wr
  */
 public class MapControl {
-    
+
+    public static Map createMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
+        
 }
