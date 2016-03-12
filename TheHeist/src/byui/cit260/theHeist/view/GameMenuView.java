@@ -22,7 +22,7 @@ public class GameMenuView extends View {
                 + "\n | Game Menu              |"
                 + "\n---------------------------"
                 + "\n C - Character List        "
-                + "\n A - Accessory             "
+                + "\n A - Accessory List        "
                 + "\n T - Transportation        "
                 + "\n W - Weapon List           "
                 + "\n M _ Map Menu              "
