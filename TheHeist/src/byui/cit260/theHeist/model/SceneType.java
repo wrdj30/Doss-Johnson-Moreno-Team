@@ -12,15 +12,15 @@ import java.util.Objects;
  *
  * @author wr
  */
-public class DialogueTypeScene implements Serializable{
+public class SceneType implements Serializable{
     
     private String description;
     private int travelLenght;
     private String locationSymbol;
     private String lockedScene;
 
-    public DialogueTypeScene() {
-    }
+    /*public DialogueTypeScene() {
+    }*/
 
     public String getDescription() {
         return description;
@@ -30,11 +30,11 @@ public class DialogueTypeScene implements Serializable{
         this.description = description;
     }
 
-    public int getTravelLenght() {
+    public int getTravelLength() {
         return travelLenght;
     }
 
-    public void setTravelLenght(int travelLenght) {
+    public void setTravelLength(int travelLenght) {
         this.travelLenght = travelLenght;
     }
 
@@ -81,7 +81,7 @@ public class DialogueTypeScene implements Serializable{
             return false;
         }
         final DialogueTypeScene other = (DialogueTypeScene) obj;
-        if (this.travelLenght != other.travelLenght) {
+        if (this.travelLength != other.travelLength) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
