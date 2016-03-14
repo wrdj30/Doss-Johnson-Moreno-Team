@@ -13,27 +13,56 @@ import java.util.Objects;
  * @author wr
  */
 public class Location implements Serializable{
-    private String location;
-    private String locationVisited;
+    private int row;
+    private int column;
+    private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public <any> getActors() {
+        return actors;
+    }
+
+    public void setActors(<any> actors) {
+        this.actors = actors;
+    }
 
     public Location() {
     }
 
-    public String getLocation() {
-        return location;
-    }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getLocationVisited() {
-        return locationVisited;
-    }
-
-    public void setLocationVisited(String locationVisited) {
-        this.locationVisited = locationVisited;
-    }
 
     @Override
     public int hashCode() {

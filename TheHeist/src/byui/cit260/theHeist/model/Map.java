@@ -15,13 +15,42 @@ public class Map implements Serializable {
     
     private double rowCount;
     private double columnCount;
+    private Location[][] locations;
     
     // define variable that is a two dimensional array of Location objects
-    
-
     public Map() {
+    } 
+    
+    public Map(int noOfRows, int noOfColumn){
+        if (noOfRows < 1 || noOfColums < 1){
+            Syste,.out.println("The number of rows and columns must be > zero");
+            return;
+        }
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        this.locations = new Locaation[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++){
+            for (int column = 0; column < noOfColumns; column++){
+                
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                locations[row][column] = location;
+            }
+        }
+    }
+    
+    public Location[][] getLocations() {
+        return locations;
     }
 
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
     
     
     public double getRowCount() {
