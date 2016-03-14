@@ -5,35 +5,20 @@
  */
 package byui.cit260.theHeist.model;
 
-import java.io.Serializable;
-import java.util.Objects;
 /**
  *
- * @author luceromoreno
+ * @author wr
  */
-public enum InventoryType implements Serializable{
+public class InventoryType {
+   
+    public enum Item {
+        magnifyingGlass,
+        gloves,
+        cellphone,
+        handcuffs,
+        flashlight,
+        gun,
+        knife;
+    }
     
-    MagnifyingGlass("Used to closely inspect clues"),
-    Gloves("Used to Handle clues"),
-    Cellphone("Used to phone the Police or the Queen"),
-    Bag("Used to store clues"),
-    Handcuffs("Used to secure the theif"),
-    Flashlight("Used to see in the dark"),
-    Gun("Used for protection and catching the theif"),
-    Knife("Used for protection and for cutting");
-    
-    private double quantityInStock;
-    private double requiredAmount;
-
-    InventoryType(String description) {
-    }
-
-    public double getQuantityInStock() {
-        return quantityInStock;
-    }
-
-    public double getRequiredAmount() {
-        return requiredAmount;
-    }
-       
 }

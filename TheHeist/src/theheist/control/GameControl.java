@@ -6,7 +6,8 @@
 package theheist.control;
 
 import byui.cit260.theHeist.model.Game;
-import byui.cit260.theHeist.model.InventoryType;
+import byui.cit260.theHeist.model.InventoryItem;
+import byui.cit260.theHeist.model.InventoryType.Item;
 import byui.cit260.theHeist.model.Map;
 import byui.cit260.theHeist.model.Player;
 import theheist.TheHeist;
@@ -23,8 +24,8 @@ public class GameControl {
         TheHeist.setCurrentGame(game);
         game.setPlayer(player);
         
-        InventoryType[] inventoryType = GameControl.createInventoryType();
-        game.setInventoryType(inventoryType);
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        game.setInventory(inventoryList);
         
         Map map = MapControl.createMap();
         game.setMap(map);
@@ -43,5 +44,54 @@ public class GameControl {
         return player;
     }
     
+    public static InventoryItem[] createInventoryList() {
+        InventoryItem[] inventory = new InventoryItem[7];
+        
+        InventoryItem magnifyingGlass = new InventoryItem();
+        magnifyingGlass.setDescription("Magnifying Glass");
+        magnifyingGlass.setQuantityInStock(1);
+        magnifyingGlass.setRequiredAmount(1);
+        inventory[Item.magnifyingGlass.ordinal()] = magnifyingGlass;
+        
+        InventoryItem gloves = new InventoryItem();
+        gloves.setDescription("Gloves");
+        gloves.setQuantityInStock(1);
+        gloves.setRequiredAmount(1);
+        inventory[Item.gloves.ordinal()] = gloves;
+        
+        InventoryItem cellPhone = new InventoryItem();
+        cellPhone.setDescription("Cellphone");
+        cellPhone.setQuantityInStock(1);
+        cellPhone.setRequiredAmount(1);
+        inventory[Item.cellphone.ordinal()] = cellPhone;
+        
+        InventoryItem handcuffs = new InventoryItem();
+        handcuffs.setDescription("Handcuffs");
+        handcuffs.setQuantityInStock(1);
+        handcuffs.setRequiredAmount(1);
+        inventory[Item.handcuffs.ordinal()] = handcuffs;
+        
+        InventoryItem flashlight = new InventoryItem();
+        flashlight.setDescription("Flashlight");
+        flashlight.setQuantityInStock(1);
+        flashlight.setRequiredAmount(1);
+        inventory[Item.flashlight.ordinal()] = flashlight;
+        
+        InventoryItem gun = new InventoryItem();
+        gun.setDescription("gun");
+        gun.setQuantityInStock(1);
+        gun.setRequiredAmount(1);
+        inventory[Item.gun.ordinal()] = gun;
+        
+        InventoryItem knife = new InventoryItem();
+        knife.setDescription("Knife");
+        knife.setQuantityInStock(1);
+        knife.setRequiredAmount(1);
+        inventory[Item.knife.ordinal()] = knife;
+        
+        return inventory;
+            
+        
+    }    
     
 }

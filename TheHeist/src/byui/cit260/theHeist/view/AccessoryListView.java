@@ -23,8 +23,7 @@ public class AccessoryListView extends View {
                 + "\n---------------------------"               
                 + "\n M - Magnifying Glass      "
                 + "\n L - Gloves                "              
-                + "\n C - Cellphone             "
-                + "\n B - Bag                   "
+                + "\n C - Cellphone             "               
                 + "\n H - Handcuffs             "
                 + "\n F - Flashlight            "
                 + "\n Q - Quit                  "
@@ -45,9 +44,6 @@ public class AccessoryListView extends View {
                 break;
             case "C":
                 this.useCellphone();
-                break;
-            case "B":
-                this.useBag();
                 break;
             case "H":
                 this.useHandcuffs();
@@ -76,9 +72,6 @@ public class AccessoryListView extends View {
     
     private void useCellphone() {
         System.out.println("*** useCellphone function called ***");
-    }
-    private void useBag() {
-        System.out.println("*** useBag function called ***");
     }
     private void useHandcuffs() {
         System.out.println("*** useHandcuffs function called ***");

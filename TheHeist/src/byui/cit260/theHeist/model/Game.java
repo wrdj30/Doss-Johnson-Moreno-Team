@@ -17,7 +17,7 @@ public class Game implements Serializable{
     private double score;
     private double startTime;
     
-    private InventoryType[] inventoryType;
+    private InventoryItem[] inventory;
     private Player player;
     private TransportationType transportationType;
     private Map map;
@@ -26,12 +26,12 @@ public class Game implements Serializable{
     private ClueTypeScene[] clueTypeScene;
     private DialogueTypeScene[] dialogueTypeScene;
 
-    public InventoryType[] getInventoryType() {
-        return inventoryType;
+    public InventoryItem[] getInventory() {
+        return inventory;
     }
 
-    public void setInventoryType(InventoryType[] inventoryType) {
-        this.inventoryType = inventoryType;
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
     }
 
     public Player getPlayer() {

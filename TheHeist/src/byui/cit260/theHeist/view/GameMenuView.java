@@ -5,9 +5,6 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Player;
-import java.util.Scanner;
-
 /**
  *
  * @author wr
@@ -22,7 +19,7 @@ public class GameMenuView extends View {
                 + "\n | Game Menu              |"
                 + "\n---------------------------"
                 + "\n C - Character List        "
-                + "\n A - Accessory             "
+                + "\n A - Accessory List        "
                 + "\n T - Transportation        "
                 + "\n W - Weapon List           "
                 + "\n M _ Map Menu              "
@@ -93,7 +90,6 @@ public class GameMenuView extends View {
     private void quit() {
         System.out.println("*** quit function called ***");
     }
-
         
 }
 
