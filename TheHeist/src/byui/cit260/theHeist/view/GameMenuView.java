@@ -5,9 +5,6 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Player;
-import java.util.Scanner;
-
 /**
  *
  * @author wr
@@ -93,7 +90,6 @@ public class GameMenuView extends View {
     private void quit() {
         System.out.println("*** quit function called ***");
     }
-
         
 }
 
