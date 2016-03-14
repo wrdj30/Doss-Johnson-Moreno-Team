@@ -5,7 +5,8 @@
  */
 package byui.cit260.theHeist.view;
 
-import java.util.Scanner;
+import byui.cit260.theHeist.model.InventoryItem;
+import theheist.control.GameControl;
 
 /**
  *
@@ -29,7 +30,23 @@ public class AccessoryListView extends View {
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
-       
+    
+    private void viewInventory() {
+        
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        
+        System.out.println("\nList of Accessories");
+        System.out.println("Description" + "\t" 
+                           + "Required" + "\t" + 
+                           "In Stock");
+     
+        for (InventoryItem inventoryItem : inventory) {
+            System.out.println(inventoryItem.getDescription() + "\t    " + 
+                               inventoryItem.getRequiredAmount() + "\t   " +
+                               inventoryItem.getQuantityInStock());
+        }
+    }
+    
     @Override
     public boolean doAction(String choice) {
         
@@ -65,11 +82,9 @@ public class AccessoryListView extends View {
     private void useMagnifyingGlass() {
         System.out.println("*** useMagnifyingGlass function called ***");
     }
-
     private void useGloves() {
         System.out.println("*** useGloves function called ***");
-    }
-    
+    }    
     private void useCellphone() {
         System.out.println("*** useCellphone function called ***");
     }
