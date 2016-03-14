@@ -15,7 +15,7 @@ import java.util.Objects;
 public class DialogueTypeScene implements Serializable{
     
     private String description;
-    private int travelLenght;
+    private int travelLength;
     private String locationSymbol;
     private String lockedScene;
 
@@ -30,12 +30,12 @@ public class DialogueTypeScene implements Serializable{
         this.description = description;
     }
 
-    public int getTravelLenght() {
-        return travelLenght;
+    public int getTravelLength() {
+        return travelLength;
     }
 
-    public void setTravelLenght(int travelLenght) {
-        this.travelLenght = travelLenght;
+    public void setTravelLength(int travelLenght) {
+        this.travelLength = travelLength;
     }
 
     public String getLocationSymbol() {
@@ -58,7 +58,7 @@ public class DialogueTypeScene implements Serializable{
     public int hashCode() {
         int hash = 7;
         hash = 29 * hash + Objects.hashCode(this.description);
-        hash = 29 * hash + this.travelLenght;
+        hash = 29 * hash + this.travelLength;
         hash = 29 * hash + Objects.hashCode(this.locationSymbol);
         hash = 29 * hash + Objects.hashCode(this.lockedScene);
         return hash;
@@ -66,7 +66,7 @@ public class DialogueTypeScene implements Serializable{
 
     @Override
     public String toString() {
-        return "DialogueTypeScene{" + "description=" + description + ", travelLenght=" + travelLenght + ", locationSymbol=" + locationSymbol + ", lockedScene=" + lockedScene + '}';
+        return "DialogueTypeScene{" + "description=" + description + ", travelLenght=" + travelLength + ", locationSymbol=" + locationSymbol + ", lockedScene=" + lockedScene + '}';
     }
 
     @Override
@@ -81,7 +81,7 @@ public class DialogueTypeScene implements Serializable{
             return false;
         }
         final DialogueTypeScene other = (DialogueTypeScene) obj;
-        if (this.travelLenght != other.travelLenght) {
+        if (this.travelLength != other.travelLength) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
