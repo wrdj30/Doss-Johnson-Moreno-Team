@@ -228,7 +228,7 @@ public class MapControl {
         Scene finishScene = new Scene();
         finishScene.setDescription(
                     "Welcome to Zinta."
-                    + "Thanks for helping us resolve the mystery");
+                    + "Thanks for helping us solve the mystery");
         finishScene.setMapSymbol("Z");
         finishScene.setBlocked(false);
         finishScene.setTravelTime(Double.POSITIVE_INFINITY);

@@ -65,11 +65,9 @@ public class AccessoryListView extends View {
     private void useMagnifyingGlass() {
         System.out.println("*** useMagnifyingGlass function called ***");
     }
-
     private void useGloves() {
         System.out.println("*** useGloves function called ***");
-    }
-    
+    }    
     private void useCellphone() {
         System.out.println("*** useCellphone function called ***");
     }
