@@ -53,7 +53,34 @@ public class ClueTypeScene implements Serializable{
     public void setLockType(String lockType) {
         this.lockType = lockType;
     }
+public enum SceneType{
+    start,
+    boury,
+    celnig,
+    duvin,
+    estrip,
+    fargin,
+    goverie,
+    howerty,
+    inlin,
+    jawel,
+    kinte,
+    lerly,
+     murtan,
+    nolafe,
+    opstera,
+    parquin,
+    ryster,
+    swerlin,
+    terwalt,
+    urtlin,
+    verlu,
+    webel,
+    xina,
+    yaster,
+    finish;
 
+}
     @Override
     public int hashCode() {
         int hash = 5;

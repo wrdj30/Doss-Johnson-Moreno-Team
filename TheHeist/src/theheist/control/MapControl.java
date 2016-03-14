@@ -5,6 +5,8 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.model.ClueTypeScene;
+import byui.cit260.theHeist.model.ClueTypeScene.SceneType;
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Map;
 import theheist.TheHeist;
@@ -19,223 +21,195 @@ public class MapControl {
 
         Map map = new Map(25, 25);
 
-        Scene[] scenes = createScenes();
+        ClueTypeScene[] scenes = createScenes();
         GameControl.assignScenesToLocations(map, scenes);
         return map;
     }
 
-    private static Scene[] createScenes() {
+    private static ClueTypeScene[] createScenes() {
         Game game = TheHeist.getCurrentGame();
 
-        Scene[] scenes = new Scene[SceneType.values().length];
-
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        ClueTypeScene[] scenes = new ClueTypeScene[SceneType.values().length];
+    
+        Scene arlinScene = new ClueTypeScene();
+        arlinScene.setDescription(
                             "\nYou will begin your adventure here"
                             + "and then you will move on to another "
                             + "location.");
-        startingScene.setMapSymbol("A");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        arlinScene.setMapSymbol("A");
+        arlinScene.setBlocked(false);
+        scenes[SceneType.start.ordinal()] = arlinScene;
         
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene bouryScene = new ClueTypeScene();
+        bouryScene.setDescription(
                             "\nWelcome to Boury");
-        startingScene.setMapSymbol("B");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        bouryScene.setMapSymbol("B");
+        bouryScene.setBlocked(false);
+        scenes[SceneType.boury.ordinal()] = bouryScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene celnigScene = new ClueTypeScene();
+        celnigScene.setDescription(
                             "\nWelcome to Celnig");
-        startingScene.setMapSymbol("C");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        celnigScene.setMapSymbol("C");
+        celnigScene.setBlocked(false);
+        scenes[SceneType.celnig.ordinal()] = celnigScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene duvinScene = new ClueTypeScene();
+        duvinScene.setDescription(
                             "\nWelcome to Duvin");
-        startingScene.setMapSymbol("D");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        duvinScene.setMapSymbol("D");
+        duvinScene.setBlocked(false);
+        scenes[SceneType.duvin.ordinal()] = duvinScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene estripScene = new ClueTypeScene();
+        estripScene.setDescription(
                             "\nWelcome to Estrip");
-        startingScene.setMapSymbol("E");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        estripScene.setMapSymbol("E");
+        estripScene.setBlocked(false);
+        scenes[SceneType.estrip.ordinal()] = estripScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene farginScene = new ClueTypeScene();
+        farginScene.setDescription(
                             "\nWelcome to Fargin");
-        startingScene.setMapSymbol("F");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        farginScene.setMapSymbol("F");
+        farginScene.setBlocked(false);
+        scenes[SceneType.fargin.ordinal()] = farginScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene goverieScene = new ClueTypeScene();
+        goverieScene.setDescription(
                             "\nWelcome to Goverie");
-        startingScene.setMapSymbol("G");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        goverieScene.setMapSymbol("G");
+        goverieScene.setBlocked(false);
+        scenes[SceneType.goverie.ordinal()] = goverieScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene howertyScene = new ClueTypeScene();
+        howertyScene.setDescription(
                             "\nWelcome to Howerty");
-        startingScene.setMapSymbol("H");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        howertyScene.setMapSymbol("H");
+        howertyScene.setBlocked(false);
+        scenes[SceneType.howerty.ordinal()] = howertyScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene inlinScene = new ClueTypeScene();
+        inlinScene.setDescription(
                             "\nWelcome to Inlin");
-        startingScene.setMapSymbol("I");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        inlinScene.setMapSymbol("I");
+        inlinScene.setBlocked(false);
+        scenes[SceneType.inlin.ordinal()] = inlinScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene jawelScene = new ClueTypeScene();
+        jawelScene.setDescription(
                             "\nWelcome to Jawel");
-        startingScene.setMapSymbol("J");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        jawelScene.setMapSymbol("J");
+        jawelScene.setBlocked(false);
+        scenes[SceneType.jawel.ordinal()] = jawelScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene kinteScene = new ClueTypeScene();
+        kinteScene.setDescription(
                             "\nWelcome to Kinte");
-        startingScene.setMapSymbol("K");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        kinteScene.setMapSymbol("K");
+        kinteScene.setBlocked(false);
+        scenes[SceneType.kinte.ordinal()] = kinteScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene lerlyScene = new ClueTypeScene();
+        lerlyScene.setDescription(
                             "\nWelcome to Lerly.");
-        startingScene.setMapSymbol("L");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        lerlyScene.setMapSymbol("L");
+        lerlyScene.setBlocked(false);
+        scenes[SceneType.lerly.ordinal()] = lerlyScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene murtanScene = new ClueTypeScene();
+        murtanScene.setDescription(
                             "\nWelcome to Murtan.");
-        startingScene.setMapSymbol("M");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        murtanScene.setMapSymbol("M");
+        murtanScene.setBlocked(false);
+        scenes[SceneType.murtan.ordinal()] = murtanScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene nolafeScene = new ClueTypeScene();
+        nolafeScene.setDescription(
                             "\nWelcome to Nolafe.");
-        startingScene.setMapSymbol("N");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        nolafeScene.setMapSymbol("N");
+        nolafeScene.setBlocked(false);
+        scenes[SceneType.nolafe.ordinal()] = nolafeScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene opsteraScene = new ClueTypeScene();
+        opsteraScene.setDescription(
                             "\nWelcome to Opstera.");
-        startingScene.setMapSymbol("O");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        opsteraScene.setMapSymbol("O");
+        opsteraScene.setBlocked(false);
+        scenes[SceneType.opstera.ordinal()] = opsteraScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene parquinScene = new ClueTypeScene();
+        parquinScene.setDescription(
                             "\nWelcome to Parquin.");
-        startingScene.setMapSymbol("P");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        parquinScene.setMapSymbol("P");
+        parquinScene.setBlocked(false);
+        scenes[SceneType.parquin.ordinal()] = parquinScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene rysterScene = new ClueTypeScene();
+        rysterScene.setDescription(
                             "\nWelcome to Ryster.");
-        startingScene.setMapSymbol("R");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        rysterScene.setMapSymbol("R");
+        rysterScene.setBlocked(false);
+        scenes[SceneType.ryster.ordinal()] = rysterScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene swerlinScene = new ClueTypeScene();
+        swerlinScene.setDescription(
                             "\nWelcome to Swerlin.");
-        startingScene.setMapSymbol("S");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        swerlinScene.setMapSymbol("S");
+        swerlinScene.setBlocked(false);
+        scenes[SceneType.swerlin.ordinal()] = swerlinScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene terwaltScene = new ClueTypeScene();
+        terwaltScene.setDescription(
                             "\nWelcome to Terwalt.");
-        startingScene.setMapSymbol("T");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        terwaltScene.setMapSymbol("T");
+        terwaltScene.setBlocked(false);
+        scenes[SceneType.terwalt.ordinal()] = terwaltScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene urtlinScene = new ClueTypeScene();
+        urtlinScene.setDescription(
                             "\nWelcome to Urtlin.");
-        startingScene.setMapSymbol("U");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        urtlinScene.setMapSymbol("U");
+        urtlinScene.setBlocked(false);
+        scenes[SceneType.urtlin.ordinal()] = urtlinScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene verluScene = new ClueTypeScene();
+        verluScene.setDescription(
                             "\nWelcome to Verlu.");
-        startingScene.setMapSymbol("V");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        verluScene.setMapSymbol("V");
+        verluScene.setBlocked(false);
+        scenes[SceneType.verlu.ordinal()] = verluScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene webelScene = new ClueTypeScene();
+        webelScene.setDescription(
                             "\nWelcome to Webel.");
-        startingScene.setMapSymbol("W");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        webelScene.setMapSymbol("W");
+        webelScene.setBlocked(false);
+        scenes[SceneType.webel.ordinal()] = webelScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene xinaScene = new ClueTypeScene();
+        xinaScene.setDescription(
                             "\nWelcome to Xina.");
-        startingScene.setMapSymbol("X");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        xinaScene.setMapSymbol("X");
+        xinaScene.setBlocked(false);
+        scenes[SceneType.xina.ordinal()] = xinaScene;
         
-        Scene startingScene = new Scene();
-        startingScene.setDescription(
+        Scene yasterScene = new ClueTypeScene();
+        yasterScene.setDescription(
                             "\nWelcome to Yaster.");
-        startingScene.setMapSymbol("Y");
-        startingScene.setBlocked(false);
-        startingScene.setTravelTime(240);
-        scenes[SceneType.start.ordinal()] = startingScene;
+        yasterScene.setMapSymbol("Y");
+        yasterScene.setBlocked(false);
+        scenes[SceneType.yaster.ordinal()] = yasterScene;
         
         
-        Scene finishScene = new Scene();
+        Scene finishScene = new ClueTypeScene();
         finishScene.setDescription(
                     "Welcome to Zinta."
                     + "Thanks for helping us resolve the mystery");
         finishScene.setMapSymbol("Z");
         finishScene.setBlocked(false);
-        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
         scenes[SceneType.finish.ordinal()] = finishScene;
         
-    }
-
-    
-        
 }
+
