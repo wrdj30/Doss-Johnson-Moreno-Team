@@ -39,5 +39,21 @@ public class InventoryItem implements Serializable{
     public void setRequiredAmount(double requiredAmount) {
         this.requiredAmount = requiredAmount;
     }
+
+    public double getQuantityInStock() {
+        return quantityInStock;
+    }
+
+    public double getRequiredAmount() {
+        return requiredAmount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+    
+    
+
+   
        
 }
