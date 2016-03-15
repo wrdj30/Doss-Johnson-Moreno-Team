@@ -13,30 +13,30 @@ import java.io.Serializable;
  */
 public class Map implements Serializable {
     
-    private double rowCount;
-    private double columnCount;
+    private double noOfRows;
+    private double noOfColumns;
     private Location[][] locations;
     
     // define variable that is a two dimensional array of Location objects
     public Map() {
     } 
     
-    public Map(int noOfRows, int noOfColumn){
-        if (noOfRows < 1 || noOfColums < 1){
+    public Map(int noOfRows, int noOfColumns){
+        if (noOfRows < 1 || noOfColumns < 1){
             Syste,.out.println("The number of rows and columns must be > zero");
             return;
         }
         this.noOfRows = noOfRows;
         this.noOfColumns = noOfColumns;
         
-        this.locations = new Locaation[noOfRows][noOfColumns];
+        this.locations = new Location[noOfRows][noOfColumns];
         
         for (int row = 0; row < noOfRows; row++){
             for (int column = 0; column < noOfColumns; column++){
                 
                 Location location = new Location();
-                location.setColumn(column);
-                location.setRow(row);
+                location.setnoOfColumns(column);
+                location.setnoOfRows(row);
                 location.setVisited(false);
                 
                 locations[row][column] = location;
@@ -53,20 +53,20 @@ public class Map implements Serializable {
     }
     
     
-    public double getRowCount() {
-        return rowCount;
+    public double getnoOfRows() {
+        return noOfRows;
     }
 
-    public void setRowCount(double rowCount) {
-        this.rowCount = rowCount;
+    public void setnoOfRows(double noOfRows) {
+        this.noOfRows = noOfRows;
     }
 
-    public double getColumnCount() {
-        return columnCount;
+    public double getnoOfColumns() {
+        return noOfColumns;
     }
 
-    public void setColumnCount(double columnCount) {
-        this.columnCount = columnCount;
+    public void setnoOfColumns(double noOfColumns) {
+        this.noOfColumns = noOfColumns;
     }
 
     @Override
