@@ -92,7 +92,13 @@ public class GameControl {
         inventory[Item.knife.ordinal()] = knife;
 
         return inventory;
-
+                   
+    }    
+    
+    public static InventoryItem[] getSortedInventoryList() {
+       
+        System.out.println("\n*** getSortedInventoryList stub function called ***");
+                return null;
     }
 
     public static InventoryItem[] getSortedInventoryList() {

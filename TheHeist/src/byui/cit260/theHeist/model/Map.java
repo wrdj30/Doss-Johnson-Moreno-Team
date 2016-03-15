@@ -13,29 +13,29 @@ import java.io.Serializable;
  */
 public class Map implements Serializable {
     
-    private double noOfRows;
-    private double noOfColumns;
+    private int rowCount;
+    private int columnCount;
     private Location[][] locations;
     
     // define variable that is a two dimensional array of Location objects
     public Map() {
     } 
     
-    public Map(int noOfRows, int noOfColumns){
+    public Map(int noOfRows, int noOfColumn){
         if (noOfRows < 1 || noOfColumns < 1){
             System.out.println("The number of rows and columns must be > zero");
             return;
         }
-        this.noOfRows = noOfRows;
-        this.noOfColumns = noOfColumns;
+        this.rowCount = noOfRows;
+        this.columnCount = noOfColumn;
         
-        this.locations = new Location[noOfRows][noOfColumns];
+        this.locations = new Location[rowCount][columnCount];
         
-        for (int row = 0; row < noOfRows; row++){
-            for (int column = 0; column < noOfColumns; column++){
+        for (int row = 0; row < rowCount; row++){
+            for (int column = 0; column < columnCount; column++){
                 
                 Location location = new Location();
-                location.setnoOfColumns(column);
+                location.Locations(column);
                 location.setnoOfRows(row);
                 location.setVisited(false);
                 
@@ -53,21 +53,21 @@ public class Map implements Serializable {
     }
     
     
-    public double getnoOfRows() {
-        return noOfRows;
+    public int getnoOfRows() {
+        return rowCount;
     }
 
-    public void setnoOfRows(double noOfRows) {
-        this.noOfRows = noOfRows;
+    /*public void setRowCount(int rowCount) {
+        this.rowCount = rowCount;
+    }*/
+
+    public double getnoOfColumn() {
+        return columnCount;
     }
 
-    public double getnoOfColumns() {
-        return noOfColumns;
-    }
-
-    public void setnoOfColumns(double noOfColumns) {
-        this.noOfColumns = noOfColumns;
-    }
+    /*public void setColumnCount(int columnCount) {
+        this.columnCount = columnCount;
+    }*/
 
     @Override
     public int hashCode() {
