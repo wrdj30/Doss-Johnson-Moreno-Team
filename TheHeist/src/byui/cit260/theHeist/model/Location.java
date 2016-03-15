@@ -8,6 +8,7 @@ package byui.cit260.theHeist.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
+import javafx.scene.Scene;
 
 /**
  *
@@ -19,6 +20,9 @@ public class Location implements Serializable{
     private boolean visited;
     private ClueTypeScene scene;
     private ArrayList<Actor> actors;
+    String location;
+    String locationVisited;
+    
 
     public int getRow() {
         return row;

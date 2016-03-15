@@ -66,7 +66,7 @@ public class DialogueTypeScene implements Serializable{
 
     @Override
     public String toString() {
-        return "DialogueTypeScene{" + "description=" + description + ", travelLenght=" + travelLength + ", locationSymbol=" + locationSymbol + ", lockedScene=" + lockedScene + '}';
+        return "DialogueTypeScene{" + "description=" + description + ", travelLength=" + travelLength + ", locationSymbol=" + locationSymbol + ", lockedScene=" + lockedScene + '}';
     }
 
     @Override
