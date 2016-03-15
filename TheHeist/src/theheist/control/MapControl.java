@@ -41,7 +41,7 @@ public class MapControl {
         scenes[SceneType.start.ordinal()] = arlinScene;
         
         
-        ScenClueTypeScenee bouryScene = new ClueTypeScene();
+        ClueTypeScene bouryScene = new ClueTypeScene();
         bouryScene.setDescription(
                             "\nWelcome to Boury");
         bouryScene.setMapSymbol("B");
