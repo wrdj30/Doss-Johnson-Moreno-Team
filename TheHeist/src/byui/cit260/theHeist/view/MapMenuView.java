@@ -246,14 +246,14 @@ public class MapMenuView extends View{
     
     private void displayMap() {
         
-        Location[] location = GameControl.getLocation();
+        Location[] location = GameControl.getLocations();
         
         System.out.println("\nTitle");
         System.out.println("Description" + "\t" 
                            + "Required" + "\t" + 
                            "In Stock");
      
-        for (InventoryItem inventoryItem : inventory) {
+        for (int row = 0; row < rowCount; row++) {
             System.out.println(location.getDescription() + "\t    " + 
                                inventoryItem.getRequiredAmount() + "\t   " +
                                inventoryItem.getQuantityInStock());

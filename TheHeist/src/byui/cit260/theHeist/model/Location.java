@@ -55,13 +55,13 @@ public class Location implements Serializable{
         this.scene = scene;
     }
 
-    public <any> getActors() {
+    /*public <any> getActors() {
         return actors;
     }
 
     public void setActors(<any> actors) {
         this.actors = actors;
-    }
+    }*/
 
     public Location() {
     }
