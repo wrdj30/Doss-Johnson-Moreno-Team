@@ -98,6 +98,8 @@ public class Location implements Serializable{
         }
         return Objects.equals(this.locationVisited, other.locationVisited);
     }
+
+    
     
     
     
