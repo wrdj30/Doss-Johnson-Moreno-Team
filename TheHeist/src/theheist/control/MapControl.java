@@ -29,7 +29,7 @@ public class MapControl {
     private static ClueTypeScene[] createScenes() {
         Game game = TheHeist.getCurrentGame();
 
-        ClueTypeScene[] scenes = new ClueTypeScene[SceneType.values().length];
+        ClueTypeScene[] scene = new ClueTypeScene[SceneType.values().length];
     
         ClueTypeScene arlinScene = new ClueTypeScene();
         arlinScene.setDescription(
