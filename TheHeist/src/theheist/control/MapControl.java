@@ -16,6 +16,8 @@ import theheist.TheHeist;
  * @author wr
  */
 public class MapControl {
+    
+    static ClueTypeScene[] scenes;
 
     public static Map createMap() {
 
@@ -240,8 +242,12 @@ public class MapControl {
     }
 
     static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        System.out.println("\n*** moveActorsToStartingLocation stub function called ***");
+        
     }
+
+    
 
     
         

@@ -35,8 +35,8 @@ public class Map implements Serializable {
             for (int column = 0; column < columnCount; column++){
                 
                 Location location = new Location();
-                location.Locations(column);
-                location.setnoOfRows(row);
+                location.setNoOfColumn(column);
+                location.setNoOfRows(row);
                 location.setVisited(false);
                 
                 locations[row][column] = location;
