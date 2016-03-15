@@ -17,6 +17,8 @@ import theheist.control.GameControl;
 public class MapMenuView extends View{
     private String menu;
     private String promptMessage;
+    private int rowCount;
+    private int columnCount;
     
     public MapMenuView() { 
            super( "\n"
@@ -249,14 +251,15 @@ public class MapMenuView extends View{
         Location[] location = GameControl.getLocations();
         
         System.out.println("\nTitle");
-        System.out.println("Description" + "\t" 
-                           + "Required" + "\t" + 
-                           "In Stock");
-     
-        for (int row = 0; row < rowCount; row++) {
-            System.out.println(location.getDescription() + "\t    " + 
-                               inventoryItem.getRequiredAmount() + "\t   " +
-                               inventoryItem.getQuantityInStock());
+             
+        for (int row = 0; row < rowCount; ++ row) {
+           System.out.println("+-+-+-+-+-+-+-+-+-+-+-+");
+           
+           for (int column = 0; column < columnCount; ++ column) {
+               System.out.println("|");
+               location = location [][];
+           }
         }
+    }       
     
 }
