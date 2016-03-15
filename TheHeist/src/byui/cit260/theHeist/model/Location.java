@@ -6,6 +6,7 @@
 package byui.cit260.theHeist.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -16,7 +17,7 @@ public class Location implements Serializable{
     private int row;
     private int column;
     private boolean visited;
-    private Scene scene;
+    private ClueTypeScene scene;
     private ArrayList<Actor> actors;
 
     public int getRow() {
@@ -43,11 +44,11 @@ public class Location implements Serializable{
         this.visited = visited;
     }
 
-    public Scene getScene() {
+    public ClueTypeScene getScene() {
         return scene;
     }
 
-    public void setScene(Scene scene) {
+    public void setScene(ClueTypeScene scene) {
         this.scene = scene;
     }
 
