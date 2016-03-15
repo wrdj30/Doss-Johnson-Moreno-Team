@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.model.Location;
 import java.util.Scanner;
 import theheist.TheHeist;
 import theheist.control.GameControl;
@@ -243,5 +244,19 @@ public class MapMenuView extends View{
             System.out.println("*** loadGame function called ***");
     }
     
+    private void displayMap() {
+        
+        Location[] location = GameControl.getLocation();
+        
+        System.out.println("\nList of Accessories");
+        System.out.println("Description" + "\t" 
+                           + "Required" + "\t" + 
+                           "In Stock");
+     
+        for (InventoryItem inventoryItem : inventory) {
+            System.out.println(inventoryItem.getDescription() + "\t    " + 
+                               inventoryItem.getRequiredAmount() + "\t   " +
+                               inventoryItem.getQuantityInStock());
+        }
     
 }
