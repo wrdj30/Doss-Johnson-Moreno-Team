@@ -66,11 +66,11 @@ public class Game implements Serializable{
         this.actors = actors;
     }
 
-    public Location[] getLocation() {
+    public Location[] getLocations() {
         return location;
     }
 
-    public void setLocation(Location[] location) {
+    public void setLocations(Location[] location) {
         this.location = location;
     }
 

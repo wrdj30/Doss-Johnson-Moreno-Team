@@ -94,7 +94,8 @@ public class GameControl {
     }    
     
     public static InventoryItem[] getSortedInventoryList() {
-        System.out.println("\n*** getSortedInventoryList stub function called" ***);
+       
+        System.out.println("\n*** getSortedInventoryList stub function called ***");
                 return null;
     }
     

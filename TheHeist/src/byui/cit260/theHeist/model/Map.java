@@ -13,8 +13,8 @@ import java.io.Serializable;
  */
 public class Map implements Serializable {
     
-    private double rowCount;
-    private double columnCount;
+    private int rowCount;
+    private int columnCount;
     private Location[][] locations;
     
     // define variable that is a two dimensional array of Location objects
@@ -22,17 +22,17 @@ public class Map implements Serializable {
     } 
     
     public Map(int noOfRows, int noOfColumn){
-        if (noOfRows < 1 || noOfColums < 1){
-            Syste,.out.println("The number of rows and columns must be > zero");
+        if (noOfRows < 1 || noOfColumn < 1){
+            System.out.println("The number of rows and columns must be > zero");
             return;
         }
-        this.noOfRows = noOfRows;
-        this.noOfColumns = noOfColumns;
+        this.rowCount = noOfRows;
+        this.columnCount = noOfColumn;
         
-        this.locations = new Locaation[noOfRows][noOfColumns];
+        this.locations = new Location[rowCount][columnCount];
         
-        for (int row = 0; row < noOfRows; row++){
-            for (int column = 0; column < noOfColumns; column++){
+        for (int row = 0; row < rowCount; row++){
+            for (int column = 0; column < columnCount; column++){
                 
                 Location location = new Location();
                 location.setColumn(column);
@@ -57,17 +57,17 @@ public class Map implements Serializable {
         return rowCount;
     }
 
-    public void setRowCount(double rowCount) {
+    /*public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
-    }
+    }*/
 
     public double getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(double columnCount) {
+    /*public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
-    }
+    }*/
 
     @Override
     public int hashCode() {

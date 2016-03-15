@@ -8,7 +8,6 @@ package byui.cit260.theHeist.model;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
-import javafx.scene.Scene;
 
 /**
  *
