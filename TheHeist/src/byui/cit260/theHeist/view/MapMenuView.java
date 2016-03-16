@@ -253,13 +253,16 @@ public class MapMenuView extends View{
         System.out.println("\nTitle");
              
         for (int row = 0; row < rowCount; ++ row) {
-           System.out.println("+-+-+-+-+-+-+-+-+-+-+-+");
+           System.out.println("+-+-+-+-+-+");
            
            for (int column = 0; column < columnCount; ++ column) {
                System.out.println("|");
-               location = location [][];
+               location = locations [][]; 
+               if (location = locationVisited; System.out.println();); 
            }
+           
         }
+        
     }       
     
 }

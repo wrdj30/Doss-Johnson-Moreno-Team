@@ -101,11 +101,6 @@ public class GameControl {
                 return null;
     }
 
-    public static InventoryItem[] getSortedInventoryList() {
-        System.out.println("\n*** getSortedInventoryList stub function called" * * *);
-        return null;
-    }
-
     static void assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
         Location[][] locations = map.getLocations();
 locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
