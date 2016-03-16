@@ -9,7 +9,7 @@ package theheist.control;
  *
  * @author luceromoreno
  */
-public class addJewelCost {
+public class checkJewelCost {
    
   public static void costOfJewels(String args[]) {
    int costs[] = new int[]{32000, 45000, 67000};
@@ -24,8 +24,12 @@ public class addJewelCost {
        else if(costs[i] < mostExp)
            mostExp = costs[i];
    }
-   System.out.println("The most expensive jewel costs: " + mostExp);
-   System.out.println("The least expensive jewel costs: " + leastExp);
+   System.out.println("The most expensive jewel costs: $" + mostExp);
+   System.out.println("The least expensive jewel costs: $" + leastExp);
 
   }
+
+    public void display() {
+         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
