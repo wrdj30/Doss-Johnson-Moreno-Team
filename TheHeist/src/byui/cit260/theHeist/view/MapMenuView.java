@@ -6,9 +6,7 @@
 package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.Location;
-import java.util.Scanner;
 import theheist.TheHeist;
-import theheist.control.GameControl;
 
 /**
  *
@@ -248,18 +246,18 @@ public class MapMenuView extends View{
     
     private void displayMap() {
         
-        Location[] location = GameControl.getLocations();
+        Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
         
         System.out.println("\nTitle");
              
         for (int row = 0; row < rowCount; ++ row) {
-           System.out.println("+-+-+-+-+-+");
+           System.out.println("-----");
            
            for (int column = 0; column < columnCount; ++ column) {
                System.out.println("|");
                location = locations [][]; 
-               if (location = locationVisited; System.out.println();); 
-           }
+               if (location = locationVisited; System.out.println("mapSymbol");); 
+            }
            
         }
         
