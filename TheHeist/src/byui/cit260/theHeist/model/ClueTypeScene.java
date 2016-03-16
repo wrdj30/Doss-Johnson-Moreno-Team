@@ -12,12 +12,21 @@ import java.util.Objects;
  *
  * @author wr
  */
-public class ClueTypeScene implements Serializable{
-    
+public class ClueTypeScene implements Serializable {
+
     private String description;
     private int travelLength;
     private String clueType;
     private String lockType;
+    private String mapSymbol;
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
 
     public ClueTypeScene() {
     }
@@ -96,8 +105,5 @@ public class ClueTypeScene implements Serializable{
     public void setLockType(boolean b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
-    
-    
+
 }
