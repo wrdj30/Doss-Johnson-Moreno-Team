@@ -11,7 +11,7 @@ package theheist.control;
  */
 public class addJewelCost {
    
-  public static void main(String args[]) {
+  public static void costOfJewels(String args[]) {
    int costs[] = new int[]{32000, 45000, 67000};
 
    int mostExp = costs[0];
