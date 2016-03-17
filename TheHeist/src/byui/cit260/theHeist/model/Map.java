@@ -35,8 +35,8 @@ public class Map implements Serializable {
             for (int column = 0; column < columnCount; column++){
                 
                 Location location = new Location();
-                location.setNoOfColumn(column);
-                location.setNoOfRows(row);
+                location.setColumn(column);
+                location.setRow(row);
                 location.setVisited(false);
                 
                 locations[row][column] = location;
@@ -53,7 +53,7 @@ public class Map implements Serializable {
     }
     
     
-    public int getnoOfRows() {
+    public int getNoOfRows() {
         return rowCount;
     }
 
@@ -61,7 +61,7 @@ public class Map implements Serializable {
         this.rowCount = rowCount;
     }*/
 
-    public double getnoOfColumn() {
+    public int getNoOfColumn() {
         return columnCount;
     }
 

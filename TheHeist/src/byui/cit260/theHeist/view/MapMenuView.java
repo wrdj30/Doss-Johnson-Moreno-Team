@@ -248,17 +248,29 @@ public class MapMenuView extends View{
         
         Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
         
+        int rowCount = TheHeist.getCurrentGame().getMap().getNoOfRows();
+        int columnCount = TheHeist.getCurrentGame().getMap().getNoOfColumn();
+        
         System.out.println("\nTitle");
              
-        for (int row = 0; row < rowCount; ++ row) {
-           System.out.println("-----");
+        for (int row = 0; row < rowCount; row++) {
+           System.out.println("-");
+           System.out.println(row);
            
-           for (int column = 0; column < columnCount; ++ column) {
+           for (int column = 0; column < columnCount; column++) {
                System.out.println("|");
-               location = locations [][]; 
-               if (location = locationVisited; System.out.println("mapSymbol");); 
+               System.out.println(column);
+                             
+               
+               if (locations [row][column].getVisited())
+                System.out.println("mapSymbol");
+               
+               else 
+                System.out.println("??"); 
+               
+               System.out.println("|");               
             }
-           
+           System.out.println("-");
         }
         
     }       
