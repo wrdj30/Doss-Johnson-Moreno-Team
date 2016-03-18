@@ -55,43 +55,49 @@ public class GameControl {
         magnifyingGlass.setDescription("Magnifying Glass");
         magnifyingGlass.setQuantityInStock(1);
         magnifyingGlass.setRequiredAmount(1);
-        magnifyingGlass.setCost(100);
+        magnifyingGlass.setCost(10);
         inventory[Item.magnifyingGlass.ordinal()] = magnifyingGlass;
 
         InventoryItem gloves = new InventoryItem();
         gloves.setDescription("Gloves");
         gloves.setQuantityInStock(1);
         gloves.setRequiredAmount(1);
+        gloves.setCost(18);
         inventory[Item.gloves.ordinal()] = gloves;
 
         InventoryItem cellPhone = new InventoryItem();
         cellPhone.setDescription("Cellphone");
         cellPhone.setQuantityInStock(1);
         cellPhone.setRequiredAmount(1);
+        cellPhone.setCost(350);
         inventory[Item.cellphone.ordinal()] = cellPhone;
 
         InventoryItem handcuffs = new InventoryItem();
         handcuffs.setDescription("Handcuffs");
         handcuffs.setQuantityInStock(1);
         handcuffs.setRequiredAmount(1);
+        handcuffs.setCost(60);
         inventory[Item.handcuffs.ordinal()] = handcuffs;
 
         InventoryItem flashlight = new InventoryItem();
         flashlight.setDescription("Flashlight");
         flashlight.setQuantityInStock(1);
         flashlight.setRequiredAmount(1);
+        flashlight.setCost(25);
         inventory[Item.flashlight.ordinal()] = flashlight;
 
         InventoryItem gun = new InventoryItem();
         gun.setDescription("gun");
         gun.setQuantityInStock(1);
         gun.setRequiredAmount(1);
+        gun.setCost(270);
         inventory[Item.gun.ordinal()] = gun;
 
         InventoryItem knife = new InventoryItem();
         knife.setDescription("Knife");
         knife.setQuantityInStock(1);
         knife.setRequiredAmount(1);
+        knife.setCost(160);
         inventory[Item.knife.ordinal()] = knife;
 
         return inventory;
