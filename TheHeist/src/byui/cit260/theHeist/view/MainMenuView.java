@@ -8,8 +8,8 @@ package byui.cit260.theHeist.view;
 import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
 import theheist.TheHeist;
+import theheist.control.ClueControl;
 import theheist.control.GameControl;
-import theheist.control.checkJewelCost;
 
 /**
  *
@@ -47,9 +47,6 @@ public class MainMenuView extends View {
             case "S":
                 this.saveGame();
                 break;
-            case "A":
-                this.jewelCost();
-                break;
             default:
                 System.out.println("\n*** Invalid selection*** Try again");
                 break;
@@ -73,15 +70,12 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-        System.out.println("*** loadGame function called ***");
+       //call jewelCost from the ClueControl
+       //call the function once user enters the letter L
     }
 
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
     }
 
-    private void jewelCost() {
-        checkJewelCost checkJewelCost = new checkJewelCost();
-        checkJewelCost.display();
-    }
 }

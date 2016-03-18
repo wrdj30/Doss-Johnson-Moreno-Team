@@ -5,7 +5,9 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.InventoryItem;
+import theheist.control.ClueControl;
 import theheist.control.GameControl;
 
 /**
@@ -68,6 +70,9 @@ public class AccessoryListView extends View {
             case "F":
                 this.useFlashlight();
                 break;
+            case "I":
+                this.seeInventoryCost();
+                break;
             case "Q":
                 this.quit();
                 break;
@@ -93,6 +98,10 @@ public class AccessoryListView extends View {
     }
     private void useFlashlight() {
         System.out.println("*** useFlashlight function called ***");
+    }
+    private void seeInventoryCost() {
+        ClueControl clueControl = new ClueControl();
+        clueControl.costOfJewels(Game.getInventory());
     }
     private void quit() {
         System.out.println("*** quit function called ***");
