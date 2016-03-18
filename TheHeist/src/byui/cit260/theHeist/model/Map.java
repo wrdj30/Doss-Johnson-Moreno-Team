@@ -61,7 +61,7 @@ public class Map implements Serializable {
         this.rowCount = rowCount;
     }*/
 
-    public int getNoOfColumn() {
+    public int getNoOfColumns() {
         return columnCount;
     }
 
