@@ -249,7 +249,7 @@ public class MapMenuView extends View{
         Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
         
         int rowCount = TheHeist.getCurrentGame().getMap().getNoOfRows();
-        int columnCount = TheHeist.getCurrentGame().getMap().getNoOfColumn();
+        int columnCount = TheHeist.getCurrentGame().getMap().getNoOfColumns();
         
         System.out.println("\nTitle");
              

@@ -9,7 +9,7 @@ package byui.cit260.theHeist.exceptions;
  *
  * @author wr
  */
-public class mapControlExceptions extends Exception {
+public class mapControlExceptions extends Exception{
 
     public mapControlExceptions() {
     }
@@ -29,5 +29,7 @@ public class mapControlExceptions extends Exception {
     public mapControlExceptions(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+    
+    
     
 }

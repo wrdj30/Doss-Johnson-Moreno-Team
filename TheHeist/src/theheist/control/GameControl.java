@@ -33,7 +33,7 @@ public class GameControl {
         Map map = MapControl.createMap();
         game.setMap(map);
 
-        MapControl.moveActorsToStartingLocation(map);
+        /*moveActorsToStartingLocation(map);*/
     }
 
     public static Player createPlayer(String name) {

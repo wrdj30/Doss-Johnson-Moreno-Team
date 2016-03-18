@@ -5,10 +5,13 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.mapControlExceptions;
+import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.SceneType;
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Map;
+import java.awt.Point;
 import theheist.TheHeist;
 
 /**
@@ -264,9 +267,19 @@ public class MapControl {
         return scenes;
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-
-        System.out.println("\n*** moveActorsToStartingLocation stub function called ***");
+    public static void moveActorsToStartingLocation(Actor actor, Point coordinates) 
+        throws mapControlExceptions {
+        
+        Map map = TheHeist.getCurrentGame().getMap();
+        int newRow = coordinates.x-1;
+        int newColumn = coordinates.y-1;
+        
+        if (newRow < 0 || newRow >= map.getNoOfRows() || 
+            newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+            throw new mapControlExceptions("Actor cannot be moved to location"
+                                          + coordinates.x + ", " + coordinates.y
+                                          + " that city is locked at the moment." );
+        }
 
     }
 
