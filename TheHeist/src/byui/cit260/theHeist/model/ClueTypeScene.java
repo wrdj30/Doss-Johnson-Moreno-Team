@@ -102,8 +102,4 @@ public class ClueTypeScene implements Serializable {
         return Objects.equals(this.lockType, other.lockType);
     }
 
-    public void setLockType(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

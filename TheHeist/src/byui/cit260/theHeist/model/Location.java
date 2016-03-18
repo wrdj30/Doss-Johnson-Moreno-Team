@@ -18,7 +18,7 @@ public class Location implements Serializable{
     private int column;
     private boolean visited;
     private ClueTypeScene scene;
-    private ArrayList<Actor> actors;
+    private ArrayList<Actor> actors = new ArrayList<>();
     String location;
     String locationVisited;
     
@@ -39,7 +39,7 @@ public class Location implements Serializable{
         this.column = column;
     }
 
-    public boolean isVisited() {
+    public boolean getVisited() {
         return visited;
     }
 

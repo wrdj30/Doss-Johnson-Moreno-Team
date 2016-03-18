@@ -21,7 +21,7 @@ public class MapControl {
 
     public static Map createMap() {
 
-        Map map = new Map(4, 4);
+        Map map = new Map(5, 5);
 
         ClueTypeScene[] scenes = createScenes();
         GameControl.assignScenesToLocations(map, scenes);
@@ -130,7 +130,7 @@ public class MapControl {
                 "\nWelcome to Kinte");
         kinteScene.setMapSymbol("K");
         kinteScene.setTravelLength(3);
-        kinteScene.setLockType(false);
+        kinteScene.setLockType("locked");
         kinteScene.setClueType("puzzle");
         scenes[SceneType.kinte.ordinal()] = kinteScene;
 
