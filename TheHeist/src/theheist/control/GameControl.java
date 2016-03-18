@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.InventoryItem;
@@ -13,6 +14,7 @@ import byui.cit260.theHeist.model.Location;
 import byui.cit260.theHeist.model.Map;
 import byui.cit260.theHeist.model.Player;
 import byui.cit260.theHeist.model.SceneType;
+import java.awt.Point;
 import theheist.TheHeist;
 
 /**
@@ -34,6 +36,19 @@ public class GameControl {
         game.setMap(map);
 
         /*moveActorsToStartingLocation(map);*/
+    }
+    
+    public static int moveActorsToStartingLocation(Map map) {    
+        Actor[] actors = Actor.values();
+        
+        for (Actor actor : actors) {
+            Point coordinates = actor.getCoordinates();
+            int returnValue = MapControl.moveActorToLocation(actor, coordinates);
+            if (returnValue < 0) {
+                return returnValue;
+            }
+        }
+        return 0;
     }
 
     public static Player createPlayer(String name) {
@@ -103,33 +118,32 @@ public class GameControl {
 
     static void assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
         Location[][] locations = map.getLocations();
-locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
-locations[1][3].setScene(scenes[SceneType.boury.ordinal()]);
-locations[2][2].setScene(scenes[SceneType.celnig.ordinal()]);
-locations[0][4].setScene(scenes[SceneType.duvin.ordinal()]);
-locations[3][1].setScene(scenes[SceneType.estrip.ordinal()]);
-locations[4][0].setScene(scenes[SceneType.fargin.ordinal()]);
-locations[0][3].setScene(scenes[SceneType.goverie.ordinal()]);
-locations[1][2].setScene(scenes[SceneType.howerty.ordinal()]);
-locations[2][0].setScene(scenes[SceneType.inlin.ordinal()]);
-locations[3][3].setScene(scenes[SceneType.jawel.ordinal()]);
-locations[1][4].setScene(scenes[SceneType.kinte.ordinal()]);
-locations[4][2].setScene(scenes[SceneType.lerly.ordinal()]);
-locations[1][1].setScene(scenes[SceneType.murtan.ordinal()]);
-locations[0][1].setScene(scenes[SceneType.nolafe.ordinal()]);
-locations[1][1].setScene(scenes[SceneType.opstera.ordinal()]);
-locations[2][3].setScene(scenes[SceneType.parquin.ordinal()]);
-locations[4][3].setScene(scenes[SceneType.ryster.ordinal()]);
-locations[2][1].setScene(scenes[SceneType.swerlin.ordinal()]);
-locations[3][2].setScene(scenes[SceneType.terwalt.ordinal()]);
-locations[2][4].setScene(scenes[SceneType.urtlin.ordinal()]);
-locations[3][0].setScene(scenes[SceneType.verlu.ordinal()]);
-locations[0][2].setScene(scenes[SceneType.webel.ordinal()]);
-locations[3][4].setScene(scenes[SceneType.xina.ordinal()]);
-locations[4][1].setScene(scenes[SceneType.yaster.ordinal()]);
-locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);
+        locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        locations[1][3].setScene(scenes[SceneType.boury.ordinal()]);
+        locations[2][2].setScene(scenes[SceneType.celnig.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.duvin.ordinal()]);
+        locations[3][1].setScene(scenes[SceneType.estrip.ordinal()]);
+        locations[4][0].setScene(scenes[SceneType.fargin.ordinal()]);
+        locations[0][3].setScene(scenes[SceneType.goverie.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.howerty.ordinal()]);
+        locations[2][0].setScene(scenes[SceneType.inlin.ordinal()]);
+        locations[3][3].setScene(scenes[SceneType.jawel.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.kinte.ordinal()]);
+        locations[4][2].setScene(scenes[SceneType.lerly.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.murtan.ordinal()]);
+        locations[0][1].setScene(scenes[SceneType.nolafe.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.opstera.ordinal()]);
+        locations[2][3].setScene(scenes[SceneType.parquin.ordinal()]);
+        locations[4][3].setScene(scenes[SceneType.ryster.ordinal()]);
+        locations[2][1].setScene(scenes[SceneType.swerlin.ordinal()]);
+        locations[3][2].setScene(scenes[SceneType.terwalt.ordinal()]);
+        locations[2][4].setScene(scenes[SceneType.urtlin.ordinal()]);
+        locations[3][0].setScene(scenes[SceneType.verlu.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.webel.ordinal()]);
+        locations[3][4].setScene(scenes[SceneType.xina.ordinal()]);
+        locations[4][1].setScene(scenes[SceneType.yaster.ordinal()]);
+        locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);
 
+        }
 
     }
-
-}
