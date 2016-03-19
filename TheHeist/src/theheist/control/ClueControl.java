@@ -63,7 +63,7 @@ public class ClueControl {
 
     }
 
-    public void costOfJewels(InventoryItem[] items) {
+    public void costOfItems(InventoryItem[] items) {
 
 //   int costs[] = new int[]{32000, 45000, 67000};
 //

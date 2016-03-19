@@ -101,7 +101,7 @@ public class AccessoryListView extends View {
     }
     private void seeInventoryCost() {
         ClueControl clueControl = new ClueControl();
-        clueControl.costOfJewels(Game.getInventory());
+        clueControl.costOfItems(Game.getInventory());
     }
     private void quit() {
         System.out.println("*** quit function called ***");

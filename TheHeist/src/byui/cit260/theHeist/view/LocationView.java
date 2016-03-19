@@ -8,6 +8,7 @@ package byui.cit260.theHeist.view;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
 import theheist.control.ClueControl;
+import static java.lang.Integer.parseInt;
 
 /**
  *
