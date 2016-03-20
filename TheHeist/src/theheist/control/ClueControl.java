@@ -5,63 +5,95 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.model.InventoryItem;
+
 /**
  *
  * @author wr
  */
 public class ClueControl {
-    
-    public double getJewelAmount(double diamonds, double rubies, double sapphires){
-      if (diamonds <=0  || diamonds > 8){
-	return -1;
-                }
-      if (rubies  <=0 || rubies > 8){
-	return -1;
+
+    public double getJewelAmount(double diamonds, double rubies, double sapphires) {
+        if (diamonds <= 0 || diamonds > 8) {
+            return -1;
         }
-      if (sapphires <= 0 || sapphires > 8){
-	return -1;
-      }
-      
- 
-      double worth = (int) ((7 * diamonds + 4 * rubies + 4 * sapphires) - (4 * sapphires));
-      return worth;
+        if (rubies <= 0 || rubies > 8) {
+            return -1;
+        }
+        if (sapphires <= 0 || sapphires > 8) {
+            return -1;
+        }
+
+        double worth = (int) ((7 * diamonds + 4 * rubies + 4 * sapphires) - (4 * sapphires));
+        return worth;
     }
 
-
-    public double getCombination(double clueA, double clueB, double clueC){
-        if (clueA <= 0 || clueA > 25){
-            return -1;
-        }    
-                
-        if (clueB <= 0 || clueB > 25){
-            return -1;
-        }    
-                
-        if (clueC <= 0 || clueC > 25){
-            return -1;
-        }    
-            
-        double combo = (clueA * clueB + clueC) / clueA;
-            return combo;    
-    }
-
-
-    public static double addressClue(double clueA, double clueB, double clueC) {
+    public double getCombination(double clueA, double clueB, double clueC) {
         if (clueA <= 0 || clueA > 25) {
             return -1;
-        }        
+        }
 
         if (clueB <= 0 || clueB > 25) {
             return -1;
         }
 
-        if (clueC <= 0 || clueC > 25) { 
+        if (clueC <= 0 || clueC > 25) {
+            return -1;
+        }
+
+        double combo = (clueA * clueB + clueC) / clueA;
+        return combo;
+    }
+
+    public static double addressClue(double clueA, double clueB, double clueC) {
+        if (clueA <= 0 || clueA > 25) {
+            return -1;
+        }
+
+        if (clueB <= 0 || clueB > 25) {
+            return -1;
+        }
+
+        if (clueC <= 0 || clueC > 25) {
             return -1;
         }
 
         double addressNumber = Math.pow(clueA + clueB, 2) * clueC;
-            return addressNumber;
+        return addressNumber;
 
     }
-    
+
+    public void costOfJewels(InventoryItem[] items) {
+
+//   int costs[] = new int[]{32000, 45000, 67000};
+//
+//   int mostExp = costs[0];
+//   int leastExp = costs[0];
+//   
+//   for(int i = 1; i <costs.length; i++)
+//   {
+//       if(costs[i] > leastExp)
+//           leastExp = costs[i];
+//       else if(costs[i] < mostExp)
+//           mostExp = costs[i];
+//   }
+        InventoryItem mostExp = items[0];
+        InventoryItem leastExp = items[0];
+
+        for (int i = 1; i < items.length; i++) {
+            if (items[i].getCost() > mostExp.getCost()) {
+                mostExp = items[i];
+            } else if (items[i].getCost() < leastExp.getCost()) {
+                leastExp = items[i];
+            }
+        }
+
+        System.out.println("The most expensive item " + mostExp.getDescription() + ", costs: $" + mostExp.getCost());
+        System.out.println("The least expensive item " + mostExp.getDescription() + ",costs: $" + leastExp.getCost());
+
+    }
+
+    public void display() {
+        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

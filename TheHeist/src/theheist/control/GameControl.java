@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.mapControlExceptions;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Game;
@@ -38,17 +39,20 @@ public class GameControl {
         /*moveActorsToStartingLocation(map);*/
     }
     
-    public static int moveActorsToStartingLocation(Map map) {    
+    public static void moveActorsToStartingLocation(Map map) throws mapControlExceptions {    
         Actor[] actors = Actor.values();
         
         for (Actor actor : actors) {
             Point coordinates = actor.getCoordinates();
-            int returnValue = MapControl.moveActorToLocation(actor, coordinates);
-            if (returnValue < 0) {
-                return returnValue;
+            try {
+                MapControl.moveActorToLocation(actor, coordinates);
+            }
+            catch (mapControlExceptions me) {
+                System.out.println(me.getMessage());
+                throw me;
             }
         }
-        return 0;
+
     }
 
     public static Player createPlayer(String name) {
@@ -64,56 +68,65 @@ public class GameControl {
     public static InventoryItem[] createInventoryList() {
         InventoryItem[] inventory = new InventoryItem[7];
 
+        //InventoryItem(double quantityInStock, double requiredAmount, String description, double cost)
+        //InventoryItem magnifyingGlass = new InventoryItem(1, 1, "Magnifying Glass", 100);
         InventoryItem magnifyingGlass = new InventoryItem();
         magnifyingGlass.setDescription("Magnifying Glass");
         magnifyingGlass.setQuantityInStock(1);
         magnifyingGlass.setRequiredAmount(1);
+        magnifyingGlass.setCost(10);
         inventory[Item.magnifyingGlass.ordinal()] = magnifyingGlass;
 
         InventoryItem gloves = new InventoryItem();
         gloves.setDescription("Gloves");
         gloves.setQuantityInStock(1);
         gloves.setRequiredAmount(1);
+        gloves.setCost(18);
         inventory[Item.gloves.ordinal()] = gloves;
 
         InventoryItem cellPhone = new InventoryItem();
         cellPhone.setDescription("Cellphone");
         cellPhone.setQuantityInStock(1);
         cellPhone.setRequiredAmount(1);
+        cellPhone.setCost(350);
         inventory[Item.cellphone.ordinal()] = cellPhone;
 
         InventoryItem handcuffs = new InventoryItem();
         handcuffs.setDescription("Handcuffs");
         handcuffs.setQuantityInStock(1);
         handcuffs.setRequiredAmount(1);
+        handcuffs.setCost(60);
         inventory[Item.handcuffs.ordinal()] = handcuffs;
 
         InventoryItem flashlight = new InventoryItem();
         flashlight.setDescription("Flashlight");
         flashlight.setQuantityInStock(1);
         flashlight.setRequiredAmount(1);
+        flashlight.setCost(25);
         inventory[Item.flashlight.ordinal()] = flashlight;
 
         InventoryItem gun = new InventoryItem();
         gun.setDescription("gun");
         gun.setQuantityInStock(1);
         gun.setRequiredAmount(1);
+        gun.setCost(270);
         inventory[Item.gun.ordinal()] = gun;
 
         InventoryItem knife = new InventoryItem();
         knife.setDescription("Knife");
         knife.setQuantityInStock(1);
         knife.setRequiredAmount(1);
+        knife.setCost(160);
         inventory[Item.knife.ordinal()] = knife;
 
         return inventory;
-                   
-    }    
-    
+
+    }
+
     public static InventoryItem[] getSortedInventoryList() {
-       
+
         System.out.println("\n*** getSortedInventoryList stub function called ***");
-                return null;
+        return null;
     }
 
     static void assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
@@ -144,6 +157,6 @@ public class GameControl {
         locations[4][1].setScene(scenes[SceneType.yaster.ordinal()]);
         locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);
 
-        }
-
     }
+
+}

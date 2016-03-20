@@ -8,16 +8,17 @@ package byui.cit260.theHeist.view;
 import byui.cit260.theHeist.model.Player;
 import java.util.Scanner;
 import theheist.TheHeist;
+import theheist.control.ClueControl;
 import theheist.control.GameControl;
 
 /**
  *
  * @author luceromoreno
  */
-public class MainMenuView extends View{
-    
-    public MainMenuView() { 
-            super("\n"
+public class MainMenuView extends View {
+
+    public MainMenuView() {
+        super("\n"
                 + "\n---------------------------"
                 + "\n | Main Menu              |"
                 + "\n---------------------------"
@@ -27,12 +28,12 @@ public class MainMenuView extends View{
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
- 
+
     @Override
     public boolean doAction(String choice) {
-    
+
         choice = choice.toUpperCase();
-        
+
         switch (choice) {
             case "G":
                 this.startNewGame();
@@ -50,31 +51,31 @@ public class MainMenuView extends View{
                 System.out.println("\n*** Invalid selection*** Try again");
                 break;
         }
-    return false;
+        return false;
     }
 
-        private void startNewGame() {
-            GameControl.createNewGame(TheHeist.getPlayer());
+    private void startNewGame() {
+        GameControl.createNewGame(TheHeist.getPlayer());
 
-            GameMenuView gameMenuView = new GameMenuView();
-            
-            gameMenuView.display();
-            System.out.println("*** startNewGame function called ***");
-        }
+        GameMenuView gameMenuView = new GameMenuView();
 
-        private void getHelp() {
-            HelpMenuView helpMenuView = new HelpMenuView();
-        
-            helpMenuView.display();
-        }
+        gameMenuView.display();
+        System.out.println("*** startNewGame function called ***");
+    }
 
-        private void loadGame() {
-            System.out.println("*** loadGame function called ***");
-        }
+    private void getHelp() {
+        HelpMenuView helpMenuView = new HelpMenuView();
 
-        private void saveGame() {
-            System.out.println("*** saveGame function called ***");
-        }
+        helpMenuView.display();
+    }
+
+    private void loadGame() {
+       //call jewelCost from the ClueControl
+       //call the function once user enters the letter L
+    }
+
+    private void saveGame() {
+        System.out.println("*** saveGame function called ***");
+    }
+
 }
-    
-

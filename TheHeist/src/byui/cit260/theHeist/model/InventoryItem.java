@@ -21,13 +21,30 @@ public class InventoryItem implements Serializable{
     Knife("Used for protection and for cutting");*/
     
     private double quantityInStock;
-    private double requiredAmount;
+    private double requiredAmount;    
     private String description;
+    private double cost;
+    
 
-    /*InventoryItem(String description) {
-        
-    }*/
+    public InventoryItem(double quantityInStock, double requiredAmount, String description, double cost) {
+        this.quantityInStock = quantityInStock;
+        this.requiredAmount = requiredAmount;
+        this.description = description;
+        this.cost = cost;
+    }
 
+    public InventoryItem() {
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+   
+    
     public void setDescription(String description) {
         this.description = description;
     }
@@ -51,9 +68,5 @@ public class InventoryItem implements Serializable{
     public String getDescription() {
         return description;
     }
-    
-    
-
-   
-       
+           
 }
