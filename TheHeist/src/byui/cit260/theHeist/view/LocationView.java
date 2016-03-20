@@ -188,6 +188,7 @@ public class LocationView {
             System.out.println("\nInvalid number please enter a new one");
         }
         
+        
         addressNumber = this.doAction(dClueA, dClueB, dClueC);
            
     }
