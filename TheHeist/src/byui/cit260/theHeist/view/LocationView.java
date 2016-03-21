@@ -171,21 +171,21 @@ public class LocationView {
             dClueA = Double.parseDouble(clueA);
         }
         catch (NumberFormatException nf) {
-            System.out.println("\nInvalid number please enter a new one");
+            System.out.println("\nThe first clue is invalid please enter a new one");
         }
         
         try {
             dClueB = Double.parseDouble(clueB);
         }
         catch (NumberFormatException nf) {
-            System.out.println("\nInvalid number please enter a new one");
+            System.out.println("\nThe second clue is invalid please enter a new one");
         }
         
         try {
             dClueC = Double.parseDouble(clueC);
         }
         catch (NumberFormatException nf) {
-            System.out.println("\nInvalid number please enter a new one");
+            System.out.println("\nThe third clue is invalid please enter a new one");
         }
         
         
