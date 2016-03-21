@@ -267,7 +267,7 @@ public class MapControl {
         return scenes;
     }
 
-    public static void moveActorsToStartingLocation(Actor actor, Point coordinates) 
+    public static void moveActorToLocation(Actor actor, Point coordinates) 
         throws mapControlExceptions {
         
         Map map = TheHeist.getCurrentGame().getMap();
@@ -282,5 +282,7 @@ public class MapControl {
         }
 
     }
+
+    
 
 }

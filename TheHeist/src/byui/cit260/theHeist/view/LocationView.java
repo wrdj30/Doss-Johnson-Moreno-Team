@@ -168,6 +168,28 @@ public class LocationView {
         double dClueB = Double.parseDouble(clueB);
         double dClueC = Double.parseDouble(clueC);
         
+        try {
+            dClueA = Double.parseDouble(clueA);
+        }
+        catch (NumberFormatException nf) {
+            System.out.println("\nInvalid number please enter a new one");
+        }
+        
+        try {
+            dClueB = Double.parseDouble(clueB);
+        }
+        catch (NumberFormatException nf) {
+            System.out.println("\nInvalid number please enter a new one");
+        }
+        
+        try {
+            dClueC = Double.parseDouble(clueC);
+        }
+        catch (NumberFormatException nf) {
+            System.out.println("\nInvalid number please enter a new one");
+        }
+        
+        
         addressNumber = this.doAction(dClueA, dClueB, dClueC);
            
     }

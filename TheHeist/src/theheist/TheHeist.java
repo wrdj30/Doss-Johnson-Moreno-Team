@@ -18,6 +18,20 @@ public class TheHeist {
     private static Game currentGame = null;
     private static Player player = null;
     
+    public static void main(String[] args) {
+                
+        StartProgramView startProgramView = new StartProgramView();
+    try {    
+        startProgramView.display();
+    }
+    catch (Throwable te) {
+        System.out.println(te.getMessage());
+        te.printStackTrace();
+        startProgramView.display();
+    }
+    
+    }
+    
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -33,16 +47,7 @@ public class TheHeist {
     public static void setPlayer(Player player) {
         TheHeist.player = player;
     }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
-    }
-    
+       
 }
-    /**
-     * @param args the command line arguments
-     */
+    
 

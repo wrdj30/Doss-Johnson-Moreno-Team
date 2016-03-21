@@ -62,6 +62,15 @@ public class ClueControl {
         return addressNumber;
 
     }
+    public double getInventoryCount(InventoryItem[] items) {
+        double totalCount = 0;
+        
+        for(InventoryItem item : items) {                
+            totalCount = item.getQuantityInStock() + totalCount;
+        }
+        
+        return totalCount;
+    }
 
     public void costOfItems(InventoryItem[] items) {
 
@@ -93,7 +102,7 @@ public class ClueControl {
 
     }
 
-    public void display() {
+    /*public void display() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 }

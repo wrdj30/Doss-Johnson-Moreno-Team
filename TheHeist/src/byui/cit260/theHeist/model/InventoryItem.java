@@ -68,9 +68,5 @@ public class InventoryItem implements Serializable{
     public String getDescription() {
         return description;
     }
-    
-    
-
-   
-       
+           
 }
