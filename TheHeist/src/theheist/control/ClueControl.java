@@ -14,7 +14,7 @@ import byui.cit260.theHeist.model.InventoryItem;
  */
 public class ClueControl {
 
-    public static void getJewelAmount(double diamonds, double rubies, double sapphires) {
+    public static double getJewelAmount(double diamonds, double rubies, double sapphires) {
         throws mapControlException {
         if (diamonds <= 0 || diamonds > 8) {
         }
