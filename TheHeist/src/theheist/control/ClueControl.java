@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.mapControlExceptions;
 import byui.cit260.theHeist.model.InventoryItem;
 
 /**
@@ -13,21 +14,18 @@ import byui.cit260.theHeist.model.InventoryItem;
  */
 public class ClueControl {
 
-    public double getJewelAmount(double diamonds, double rubies, double sapphires) {
+    public static void getJewelAmount(double diamonds, double rubies, double sapphires) {
+        throws mapControlException {
         if (diamonds <= 0 || diamonds > 8) {
-            return -1;
         }
         if (rubies <= 0 || rubies > 8) {
-            return -1;
         }
         if (sapphires <= 0 || sapphires > 8) {
-            return -1;
         }
 
         double worth = (int) ((7 * diamonds + 4 * rubies + 4 * sapphires) - (4 * sapphires));
-        return worth;
     }
-
+    }
     public double getCombination(double clueA, double clueB, double clueC) {
         if (clueA <= 0 || clueA > 25) {
             return -1;
