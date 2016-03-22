@@ -5,7 +5,7 @@
  */
 package theheist.control;
 
-import byui.cit260.theHeist.exceptions.mapControlExceptions;
+import byui.cit260.theHeist.exceptions.mapControlException;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.SceneType;
@@ -268,7 +268,7 @@ public class MapControl {
     }
 
     public static void moveActorToLocation(Actor actor, Point coordinates) 
-        throws mapControlExceptions {
+        throws mapControlException {
         
         Map map = TheHeist.getCurrentGame().getMap();
         int newRow = coordinates.x-1;
@@ -276,7 +276,7 @@ public class MapControl {
         
         if (newRow < 0 || newRow >= map.getNoOfRows() || 
             newColumn < 0 || newColumn >= map.getNoOfColumns()) {
-            throw new mapControlExceptions("Actor cannot be moved to location"
+            throw new mapControlException("Actor cannot be moved to location"
                                           + coordinates.x + ", " + coordinates.y
                                           + " that city is locked at the moment." );
         }

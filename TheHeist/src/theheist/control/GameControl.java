@@ -5,7 +5,7 @@
  */
 package theheist.control;
 
-import byui.cit260.theHeist.exceptions.mapControlExceptions;
+import byui.cit260.theHeist.exceptions.mapControlException;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Game;
@@ -39,7 +39,7 @@ public class GameControl {
         /*moveActorsToStartingLocation(map);*/
     }
     
-    public static void moveActorsToStartingLocation(Map map) throws mapControlExceptions {    
+    public static void moveActorsToStartingLocation(Map map) throws mapControlException {    
         Actor[] actors = Actor.values();
         
         for (Actor actor : actors) {
@@ -47,7 +47,7 @@ public class GameControl {
             try {
                 MapControl.moveActorToLocation(actor, coordinates);
             }
-            catch (mapControlExceptions me) {
+            catch (mapControlException me) {
                 System.out.println(me.getMessage());
                 throw me;
             }

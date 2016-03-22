@@ -5,7 +5,7 @@
  */
 package theheist.control;
 
-import byui.cit260.theHeist.exceptions.mapControlExceptions;
+import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.InventoryItem;
 
 /**
@@ -14,8 +14,8 @@ import byui.cit260.theHeist.model.InventoryItem;
  */
 public class ClueControl {
 
-    public static double getJewelAmount(double diamonds, double rubies, double sapphires) {
-        throws mapControlException {
+    public static double getJewelAmount(double diamonds, double rubies, double sapphires) 
+        throws ClueControlException {
         if (diamonds <= 0 || diamonds > 8) {
         }
         if (rubies <= 0 || rubies > 8) {
@@ -24,36 +24,38 @@ public class ClueControl {
         }
 
         double worth = (int) ((7 * diamonds + 4 * rubies + 4 * sapphires) - (4 * sapphires));
+        return worth;
     }
-    }
-    public double getCombination(double clueA, double clueB, double clueC) {
+        
+  
+    public static double getCombination(double clueA, double clueB, double clueC) throws ClueControlException { 
+        
         if (clueA <= 0 || clueA > 25) {
-            return -1;
+        throw new ClueControlException("The first clue is incorrect.");
         }
 
         if (clueB <= 0 || clueB > 25) {
-            return -1;
+        throw new ClueControlException("The second clue is incorrect.");
         }
 
         if (clueC <= 0 || clueC > 25) {
-            return -1;
+        throw new ClueControlException("The third clue is incorrect.");
         }
 
         double combo = (clueA * clueB + clueC) / clueA;
         return combo;
     }
 
-    public static double addressClue(double clueA, double clueB, double clueC) {
+    public static double addressClue(double clueA, double clueB, double clueC) 
+        throws ClueControlException {
+
         if (clueA <= 0 || clueA > 25) {
-            return -1;
         }
 
         if (clueB <= 0 || clueB > 25) {
-            return -1;
         }
 
         if (clueC <= 0 || clueC > 25) {
-            return -1;
         }
 
         double addressNumber = Math.pow(clueA + clueB, 2) * clueC;

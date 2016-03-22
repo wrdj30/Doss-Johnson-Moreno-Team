@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.ClueControlException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,7 +42,7 @@ public class ClueControlTest {
      * Test of getCombination method, of class ClueControl.
      */
     @Test
-    public void testGetCombination() {
+    public void testGetCombination() throws ClueControlException {
         System.out.println("getCombination");
         System.out.println("testCase1");
         double clueA = 2.0;
