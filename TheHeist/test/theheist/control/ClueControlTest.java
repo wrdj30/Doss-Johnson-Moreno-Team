@@ -111,7 +111,7 @@ public class ClueControlTest {
     }
 
 
-    public void testGetJewelAmount() {
+    public void testGetJewelAmount() throws ClueControlException {
         System.out.println("getJewelAmount");
         System.out.println("testCase1");
 
@@ -183,7 +183,7 @@ public class ClueControlTest {
      * Test of addressClue method, of class ClueControl.
      */
     @Test
-    public void testAddressClue() {
+    public void testAddressClue() throws ClueControlException {
         System.out.println("addressClue");
         double clueA = 17.0;
         double clueB = 24.0;
