@@ -183,6 +183,8 @@ public class LocationView {
         }
         catch (NumberFormatException nf) {
             System.out.println("\nThe first clue is invalid please enter a new one");      
+        } catch (ClueControlException ex) {
+            Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
         }            
     }
     
@@ -207,7 +209,7 @@ public class LocationView {
     
     }
     
-    public double doAction(double dClueA, double dClueB, double dClueC) {
+    public double doAction(double dClueA, double dClueB, double dClueC) throws ClueControlException {
         
         double addressNumber = 0;
         try {
