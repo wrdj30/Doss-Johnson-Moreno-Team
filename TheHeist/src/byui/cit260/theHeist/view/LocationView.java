@@ -5,10 +5,13 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.exceptions.ClueControlException;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
 import theheist.control.ClueControl;
 import static java.lang.Integer.parseInt;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -206,7 +209,12 @@ public class LocationView {
     
     public double doAction(double dClueA, double dClueB, double dClueC) {
         
-        double addressNumber = ClueControl.addressClue(dClueA, dClueB, dClueC);
+        double addressNumber = 0;
+        try {
+            addressNumber = ClueControl.addressClue(dClueA, dClueB, dClueC);
+        } catch (ClueControlException ex) {
+            Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         return addressNumber;
     }
