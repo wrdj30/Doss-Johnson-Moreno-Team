@@ -9,25 +9,27 @@ package byui.cit260.theHeist.exceptions;
  *
  * @author wr
  */
-public class NumberFormatExceptions extends Exception {
+public class mapControlException extends Exception{
 
-    public NumberFormatExceptions() {
+    public mapControlException() {
     }
 
-    public NumberFormatExceptions(String message) {
+    public mapControlException(String message) {
         super(message);
     }
 
-    public NumberFormatExceptions(String message, Throwable cause) {
+    public mapControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public NumberFormatExceptions(Throwable cause) {
+    public mapControlException(Throwable cause) {
         super(cause);
     }
 
-    public NumberFormatExceptions(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public mapControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
+    
+    
     
 }

@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.InventoryItem;
 
 /**
@@ -28,17 +29,18 @@ public class ClueControl {
         return worth;
     }
 
-    public double getCombination(double clueA, double clueB, double clueC) {
+    public static double getCombination(double clueA, double clueB, double clueC) throws ClueControlException { 
+        
         if (clueA <= 0 || clueA > 25) {
-            return -1;
+        throw new ClueControlException("The first clue is incorrect.");
         }
 
         if (clueB <= 0 || clueB > 25) {
-            return -1;
+        throw new ClueControlException("The second clue is incorrect.");
         }
 
         if (clueC <= 0 || clueC > 25) {
-            return -1;
+        throw new ClueControlException("The third clue is incorrect.");
         }
 
         double combo = (clueA * clueB + clueC) / clueA;

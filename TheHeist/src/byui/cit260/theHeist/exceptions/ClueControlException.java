@@ -9,27 +9,25 @@ package byui.cit260.theHeist.exceptions;
  *
  * @author wr
  */
-public class mapControlExceptions extends Exception{
+public class ClueControlException extends Exception {
 
-    public mapControlExceptions() {
+    public ClueControlException() {
     }
 
-    public mapControlExceptions(String message) {
+    public ClueControlException(String message) {
         super(message);
     }
 
-    public mapControlExceptions(String message, Throwable cause) {
+    public ClueControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public mapControlExceptions(Throwable cause) {
+    public ClueControlException(Throwable cause) {
         super(cause);
     }
 
-    public mapControlExceptions(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public ClueControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
-    
     
 }

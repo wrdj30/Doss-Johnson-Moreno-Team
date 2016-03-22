@@ -112,11 +112,16 @@ public class LocationView {
             }
 
             System.out.println("\n" + this.showMessage + value1);
+            try{
             if (parseInt(value1) == answer) {
                 System.out.println("\nYou got the number right!");
                 valid = true;
             } else {
                 System.out.println("Please quess again");
+            }
+            }
+            catch(NumberFormatException nfe) {
+                System.out.println("Sorry '" +value1+ "' is not a valid integer.");
             }
         }
         return value1;
@@ -163,34 +168,18 @@ public class LocationView {
                 
         String clueC = this.getInput("Enter the third address clue.");
         
-        double dClueA = Double.parseDouble(clueA);
-        double dClueB = Double.parseDouble(clueB);
-        double dClueC = Double.parseDouble(clueC);
+        
         
         try {
-            dClueA = Double.parseDouble(clueA);
+            double dClueA = Double.parseDouble(clueA);
+            double dClueB = Double.parseDouble(clueB);
+            double dClueC = Double.parseDouble(clueC);
+            
+            addressNumber = this.doAction(dClueA, dClueB, dClueC);
         }
         catch (NumberFormatException nf) {
-            System.out.println("\nThe first clue is invalid please enter a new one");
-        }
-        
-        try {
-            dClueB = Double.parseDouble(clueB);
-        }
-        catch (NumberFormatException nf) {
-            System.out.println("\nThe second clue is invalid please enter a new one");
-        }
-        
-        try {
-            dClueC = Double.parseDouble(clueC);
-        }
-        catch (NumberFormatException nf) {
-            System.out.println("\nThe third clue is invalid please enter a new one");
-        }
-        
-        
-        addressNumber = this.doAction(dClueA, dClueB, dClueC);
-           
+            System.out.println("\nThe first clue is invalid please enter a new one");      
+        }            
     }
     
     private String getInput(String promptMessage) {

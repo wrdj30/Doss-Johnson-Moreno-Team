@@ -5,8 +5,6 @@
  */
 package byui.cit260.theHeist.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author wr
