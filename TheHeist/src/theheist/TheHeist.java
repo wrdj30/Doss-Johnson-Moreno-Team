@@ -8,6 +8,12 @@ package theheist;
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Player;
 import byui.cit260.theHeist.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,17 +23,37 @@ public class TheHeist {
 
     private static Game currentGame = null;
     private static Player player = null;
+
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
     
     public static void main(String[] args) {
-                
-        StartProgramView startProgramView = new StartProgramView();
-    try {    
+    
+    try { 
+        TheHeist.inFile = new BufferedReader (new InputStreamReader(System.in));
+        TheHeist.outFile = new PrintWriter(System.out, true);
+        
+        StartProgramView startProgramView = new StartProgramView();        
         startProgramView.display();
     }
     catch (Throwable te) {
         System.out.println(te.getMessage());
         te.printStackTrace();
-        startProgramView.display();
+        /*TheHeist.startProgramView.display();*/
+    }
+    
+    finally {
+        try {
+            if (TheHeist.inFile != null)
+            TheHeist.inFile.close();
+            if (TheHeist.outFile != null)
+            TheHeist.outFile.close();
+        } 
+        catch (IOException ex) {
+            System.out.println("Error closing files");
+            return;
+        }
+        
     }
     
     }
@@ -47,6 +73,24 @@ public class TheHeist {
     public static void setPlayer(Player player) {
         TheHeist.player = player;
     }
+
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        TheHeist.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        TheHeist.inFile = inFile;
+    }
+    
+    
        
 }
     
