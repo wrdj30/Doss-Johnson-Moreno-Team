@@ -24,7 +24,7 @@ public class Map implements Serializable {
     
     public Map(int noOfRows, int noOfColumn) throws mapControlException{
         if (noOfRows < 1 || noOfColumn < 1){
-            this.console.println("The number of rows and columns must be > zero");
+            System.out.println("TheHeist, The number of rows and columns must be > zero");
             return;
         }
         this.rowCount = noOfRows;
