@@ -47,7 +47,7 @@ public class BouryView extends View {
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -55,7 +55,7 @@ public class BouryView extends View {
     }
 
     private void goToCrimeScene() {
-        System.out.println("*** goToCrimeScene function called ***");
+        this.console.println("*** goToCrimeScene function called ***");
     }
 
     private void getHelp() {
@@ -65,7 +65,7 @@ public class BouryView extends View {
     }
         
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
    
 }
