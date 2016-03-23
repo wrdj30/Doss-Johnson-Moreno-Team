@@ -12,8 +12,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -27,11 +25,16 @@ public class TheHeist {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
-    public static void main(String[] args) {
+    private static PrintWriter logFile = null;
+    
+    public static void main(String[] args) {   
     
     try { 
         TheHeist.inFile = new BufferedReader (new InputStreamReader(System.in));
         TheHeist.outFile = new PrintWriter(System.out, true);
+        
+        String filePath = "log.txt";
+        TheHeist.logFile = new PrintWriter(filePath);
         
         StartProgramView startProgramView = new StartProgramView();        
         startProgramView.display();
@@ -56,6 +59,13 @@ public class TheHeist {
         
     }
     
+    }
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+    
+    public static void setLogFile(PrintWriter logFile) {
+        TheHeist.logFile = logFile;
     }
     
     public static Game getCurrentGame() {
