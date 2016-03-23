@@ -15,12 +15,15 @@ import theheist.TheHeist;
 public class ErrorView {
     
     private static final PrintWriter errorFile = TheHeist.getOutFile();
+    private static final PrintWriter logFile = TheHeist.getLogFile();
     
     public static void display(String className, String errorMessage) {
         
         errorFile.println("----------------------------------------------"
                          +"\n- ERROR - " + errorMessage
                          +"\n----------------------------------------------");
+        
+        logFile.println(className + " - " + errorMessage);
     }
     
 }

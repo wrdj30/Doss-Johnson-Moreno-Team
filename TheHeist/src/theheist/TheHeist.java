@@ -48,9 +48,12 @@ public class TheHeist {
     finally {
         try {
             if (TheHeist.inFile != null)
-            TheHeist.inFile.close();
+                TheHeist.inFile.close();
             if (TheHeist.outFile != null)
-            TheHeist.outFile.close();
+                TheHeist.outFile.close();
+            
+            if (TheHeist.logFile != null)
+                TheHeist.logFile.close();
         } 
         catch (IOException ex) {
             System.out.println("Error closing files");
