@@ -7,6 +7,7 @@ package theheist;
 
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Player;
+import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -45,21 +46,9 @@ public class TheHeist {
         /*TheHeist.startProgramView.display();*/
     }
     
-    finally {
-        try {
-            TheHeist.inFile = new BufferedReader(new InputStreamReader(System.in));
-            TheHeist.outFile = new PrintWriter(System.out, true);
-
-            String filePath = "log.txt";
-            TheHeist.logFile = new PrintWriter(filePath);
-
-            StartProgramView startProgramView = new StartProgramView();
-            startProgramView.display();
-        } catch (Throwable te) {
-            System.out.println(te.getMessage());
-            te.printStackTrace();
+   
             /*TheHeist.startProgramView.display();*/
-        } finally {
+        finally {
             try {
                 if (TheHeist.inFile != null) 
                     TheHeist.inFile.close();

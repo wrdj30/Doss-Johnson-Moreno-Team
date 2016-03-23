@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.model;
 
+import byui.cit260.theHeist.exceptions.mapControlException;
 import java.io.Serializable;
 
 /**
@@ -21,7 +22,7 @@ public class Map implements Serializable {
     public Map() {
     } 
     
-    public Map(int noOfRows, int noOfColumn){
+    public Map(int noOfRows, int noOfColumn) throws mapControlException{
         if (noOfRows < 1 || noOfColumn < 1){
             this.console.println("The number of rows and columns must be > zero");
             return;
