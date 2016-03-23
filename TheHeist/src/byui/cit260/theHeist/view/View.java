@@ -50,7 +50,7 @@ public abstract class View implements ViewInterface {
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.displayMessage);
+            this.console.println("\n" + this.displayMessage);
 
             try {
                 value = this.keyboard.readLine();
@@ -60,7 +60,7 @@ public abstract class View implements ViewInterface {
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
+                this.console.println("\nInvalid value: value can not be blank");
                 continue;
             }
             break;

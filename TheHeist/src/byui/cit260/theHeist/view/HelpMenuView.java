@@ -47,7 +47,7 @@ public class HelpMenuView extends View{
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -55,22 +55,22 @@ public class HelpMenuView extends View{
     }
 
     private void getInstructions() {
-        System.out.println("*** getInstructions function called ***");
+        this.console.println("*** getInstructions function called ***");
     }
 
     private void moveThroughMap() {
-        System.out.println("*** moveThroughMap function called ***");
+        this.console.println("*** moveThroughMap function called ***");
     }
 
     private void accessLists() {
-        System.out.println("*** accessLists function called ***");
+        this.console.println("*** accessLists function called ***");
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        this.console.println("*** saveGame function called ***");
     }
 
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
 }

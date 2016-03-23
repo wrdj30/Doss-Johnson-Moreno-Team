@@ -37,13 +37,13 @@ public class AccessoryListView extends View {
         
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
-        System.out.println("\nList of Accessories");
-        System.out.println("Description" + "\t" 
+        this.console.println("\nList of Accessories");
+        this.console.println("Description" + "\t" 
                            + "Required" + "\t" + 
                            "In Stock");
      
         for (InventoryItem inventoryItem : inventory) {
-            System.out.println(inventoryItem.getDescription() + "\t    " + 
+            this.console.println(inventoryItem.getDescription() + "\t    " + 
                                inventoryItem.getRequiredAmount() + "\t   " +
                                inventoryItem.getQuantityInStock());
         }
@@ -77,7 +77,7 @@ public class AccessoryListView extends View {
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -85,26 +85,26 @@ public class AccessoryListView extends View {
     }
 
     private void useMagnifyingGlass() {
-        System.out.println("*** useMagnifyingGlass function called ***");
+        this.console.println("*** useMagnifyingGlass function called ***");
     }
     private void useGloves() {
-        System.out.println("*** useGloves function called ***");
+        this.console.println("*** useGloves function called ***");
     }    
     private void useCellphone() {
-        System.out.println("*** useCellphone function called ***");
+        this.console.println("*** useCellphone function called ***");
     }
     private void useHandcuffs() {
-        System.out.println("*** useHandcuffs function called ***");
+        this.console.println("*** useHandcuffs function called ***");
     }
     private void useFlashlight() {
-        System.out.println("*** useFlashlight function called ***");
+        this.console.println("*** useFlashlight function called ***");
     }
     private void seeInventoryCost() {
         ClueControl clueControl = new ClueControl();
         clueControl.costOfItems(Game.getInventory());
     }
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
     
 }

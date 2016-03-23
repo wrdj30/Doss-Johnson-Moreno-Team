@@ -43,7 +43,7 @@ public class WeaponListView extends View{
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -51,15 +51,15 @@ public class WeaponListView extends View{
     }
 
     private void useGun() {
-        System.out.println("*** useGun function called ***");
+        this.console.println("*** useGun function called ***");
     }
 
     private void useKnife() {
-        System.out.println("*** useKnife function called ***");
+        this.console.println("*** useKnife function called ***");
     }
         
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
 
     

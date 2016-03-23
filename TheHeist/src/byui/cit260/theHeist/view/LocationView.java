@@ -53,7 +53,7 @@ public class LocationView extends View{
     }
 
     public void displayBanner() {
-        System.out.println(
+        this.console.println(
                 "On this level you will use the two numbers you"
                 + "\n were asked to remember back in the two "
                 + "\n other locations. Please insert the two "
@@ -119,17 +119,17 @@ public class LocationView extends View{
                 return value1;
             }
 
-            System.out.println("\n" + this.showMessage + value1);
+            this.console.println("\n" + this.showMessage + value1);
             try{
             if (parseInt(value1) == answer) {
-                System.out.println("\nYou got the number right!");
+                this.console.println("\nYou got the number right!");
                 valid = true;
             } else {
-                System.out.println("Please quess again");
+                this.console.println("Please quess again");
             }
             }
             catch(NumberFormatException nfe) {
-                System.out.println("Sorry '" +value1+ "' is not a valid integer.");
+                this.console.println("Sorry '" +value1+ "' is not a valid integer.");
             }
         }
         return value1;
@@ -138,7 +138,7 @@ public class LocationView extends View{
     private boolean doAction() {
         int worth = ((answer1 * 2) + (answer2 * 3) + (answer3 * 2)) - (answer3 * 2);
 
-        System.out.println("Remember this answer: " + worth);
+        this.console.println("Remember this answer: " + worth);
 
         return true;
     }
@@ -155,7 +155,7 @@ public class LocationView extends View{
     double addressNumber;
     
     public void displayAddressClueBanner() {
-        System.out.println(
+        this.console.println(
                 "\n************************************************************************************"
                 + "\n* Write dialogue for this end user story       *"
                 + "\n*                          *"
@@ -186,7 +186,7 @@ public class LocationView extends View{
             addressNumber = this.doAction(dClueA, dClueB, dClueC);
         }
         catch (NumberFormatException nf) {
-            System.out.println("\nThe first clue is invalid please enter a new one");      
+            this.console.println("\nThe first clue is invalid please enter a new one");      
         } catch (ClueControlException ex) {
             Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
         }            
@@ -197,7 +197,7 @@ public class LocationView extends View{
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + promptMessage);
+            this.console.println("\n" + promptMessage);
 
             try {
                 value = this.keyboard.readLine();
@@ -207,7 +207,7 @@ public class LocationView extends View{
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid value: value can not be blank");
+                this.console.println("\nInvalid value: value can not be blank");
                 continue;
             }
             break;

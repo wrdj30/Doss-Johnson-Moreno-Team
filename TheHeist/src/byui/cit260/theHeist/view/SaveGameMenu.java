@@ -44,7 +44,7 @@ public class SaveGameMenu extends View {
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -52,18 +52,18 @@ public class SaveGameMenu extends View {
     }
 
     private void gameMenu() {
-        System.out.println("*** gameMenu function called ***");
+        this.console.println("*** gameMenu function called ***");
     }
 
     private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+        this.console.println("*** saveGame function called ***");
     }
 
     private void mapMenu() {
-        System.out.println("*** mapMenu function called ***");
+        this.console.println("*** mapMenu function called ***");
     }
 
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
 }

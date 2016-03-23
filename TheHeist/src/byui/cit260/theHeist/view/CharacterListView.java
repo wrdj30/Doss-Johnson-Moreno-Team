@@ -45,7 +45,7 @@ public class CharacterListView extends View {
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -53,19 +53,19 @@ public class CharacterListView extends View {
     }
 
     private void detectiveMax() {
-        System.out.println("*** detectiveMax function called ***");
+        this.console.println("*** detectiveMax function called ***");
     }
 
     private void police() {
-        System.out.println("*** police function called ***");
+        this.console.println("*** police function called ***");
     }
 
     private void queen() {
-        System.out.println("*** queen function called ***");
+        this.console.println("*** queen function called ***");
     }
     
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
 
 }

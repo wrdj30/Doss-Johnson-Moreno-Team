@@ -24,7 +24,7 @@ public class StartProgramView extends View{
     }
 
     public void displayBanner() {
-        System.out.println(
+        this.console.println(
                 "\n************************************************************************************"
                 + "\n* Welcome to the Heist! It’s your chance to help us solve the great mystery.       *"
                 + "\n* Someone has stolen diamonds from the Queen of Ingland and we cannot solve        *"
@@ -43,13 +43,13 @@ public class StartProgramView extends View{
     public boolean doAction(String playerName) {
 
         if (playerName.length() < 2) {
-            System.out.println("Invalid players name: "
+            this.console.println("Invalid players name: "
                     + "The name must be greater than one character in length");
             return false;
         }
         Player player = GameControl.createPlayer(playerName);
         if (player == null) {
-            System.out.println("\nError creating the player.");
+            this.console.println("\nError creating the player.");
             return false;
         }
         this.displayNextView(player);
@@ -60,7 +60,7 @@ public class StartProgramView extends View{
     
 
     private void displayNextView(Player player) {
-        System.out.println("\n================================="
+        this.console.println("\n================================="
                            + "\n Welcome to the game " + player.getName()
                            + "\n Good luck detective!"         
                            + "\n ==============================");

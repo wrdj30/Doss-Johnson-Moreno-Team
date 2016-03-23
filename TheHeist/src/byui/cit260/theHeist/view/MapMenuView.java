@@ -134,7 +134,7 @@ public class MapMenuView extends View{
                 this.goZinta();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
     return false;
@@ -142,106 +142,106 @@ public class MapMenuView extends View{
 
 
     private void goArtlin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goBoury() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
                     
     }
 
     private void goCelnig() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goDuvin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goEstrip() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goFargin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goGoverie() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goHowerty() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goInlin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goJawel() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goKinte() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goLerly() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goMurtan() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goNolafe() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goOpstera() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goParquin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
             LocationView locationView = new LocationView();
             locationView.displayLocationView();
     }
 
     private void goRyster() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goSwerlin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goTerwalt() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goUrtlin() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goVerlu() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goWebel() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goXina() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goYaster() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
 
     private void goZinta() {
-            System.out.println("*** loadGame function called ***");
+            this.console.println("*** loadGame function called ***");
     }
     
     private void displayMap() {
@@ -251,26 +251,26 @@ public class MapMenuView extends View{
         int rowCount = TheHeist.getCurrentGame().getMap().getNoOfRows();
         int columnCount = TheHeist.getCurrentGame().getMap().getNoOfColumns();
         
-        System.out.println("\nTitle");
+        this.console.println("\nTitle");
              
         for (int row = 0; row < rowCount; row++) {
-           System.out.println("-");
-           System.out.println(row);
+           this.console.println("-");
+           this.console.println(row);
            
            for (int column = 0; column < columnCount; column++) {
-               System.out.println("|");
-               System.out.println(column);
+               this.console.println("|");
+               this.console.println(column);
                              
                
                if (locations [row][column].getVisited())
-                System.out.println("mapSymbol");
+                this.console.println("mapSymbol");
                
                else 
-                System.out.println("??"); 
+                this.console.println("??"); 
                
-               System.out.println("|");               
+               this.console.println("|");               
             }
-           System.out.println("-");
+           this.console.println("-");
         }
         
     }       

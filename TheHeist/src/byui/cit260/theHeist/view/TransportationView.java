@@ -47,7 +47,7 @@ public class TransportationView extends View{
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -55,19 +55,19 @@ public class TransportationView extends View{
     }
 
     private void flyPlane() {
-        System.out.println("*** flyPlane function called ***");
+        this.console.println("*** flyPlane function called ***");
     }
 
     private void driveCar() {
-        System.out.println("*** driveCar function called ***");
+        this.console.println("*** driveCar function called ***");
     }
     
     private void walk() {
-        System.out.println("*** walk function called ***");
+        this.console.println("*** walk function called ***");
     }
         
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
     
 }

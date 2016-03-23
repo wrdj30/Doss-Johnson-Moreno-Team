@@ -52,7 +52,7 @@ public class GameMenuView extends View {
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                this.console.println("\n*** Invalid selection*** Try again");
                 break;
         }
         
@@ -88,7 +88,7 @@ public class GameMenuView extends View {
             mapMenuView.display();
     }
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
         
 }
