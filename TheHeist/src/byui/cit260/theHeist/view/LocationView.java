@@ -6,6 +6,7 @@
 package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.exceptions.ClueControlException;
+import java.io.IOException;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
 import theheist.control.ClueControl;
@@ -17,7 +18,7 @@ import java.util.logging.Logger;
  *
  * @author luceromoreno
  */
-public class LocationView {
+public class LocationView extends View{
 
     private final String showMessage;
     private final int answer1;
@@ -102,13 +103,16 @@ public class LocationView {
     }
 
     private String getNum(int answer) {
-        Scanner keyboard = new Scanner(System.in);
-        String value1 = "";
+        String value1 = null;
         boolean valid = false;
 
         while (!valid) {
 
-            value1 = keyboard.nextLine();
+            try {
+                value1 = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value1 = value1.trim();
 
             if (value1.toUpperCase().equals("Q")) {
@@ -189,14 +193,17 @@ public class LocationView {
     }
     
     private String getInput(String promptMessage) {
-        Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
 
         while (!valid) {
             System.out.println("\n" + promptMessage);
 
-            value = keyboard.nextLine();
+            try {
+                value = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim();
 
             if (value.length() < 1) {
@@ -219,6 +226,11 @@ public class LocationView {
         }
         
         return addressNumber;
+    }
+
+    @Override
+    public boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
