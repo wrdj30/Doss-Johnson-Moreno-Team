@@ -26,38 +26,51 @@ public class TheHeist {
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
-    
+
+    private static PrintWriter logFile = null;
+
     public static void main(String[] args) {
-    
-    try { 
-        TheHeist.inFile = new BufferedReader (new InputStreamReader(System.in));
-        TheHeist.outFile = new PrintWriter(System.out, true);
-        
-        StartProgramView startProgramView = new StartProgramView();        
-        startProgramView.display();
-    }
-    catch (Throwable te) {
-        System.out.println(te.getMessage());
-        te.printStackTrace();
-        /*TheHeist.startProgramView.display();*/
-    }
-    
-    finally {
+
         try {
-            if (TheHeist.inFile != null)
-            TheHeist.inFile.close();
-            if (TheHeist.outFile != null)
-            TheHeist.outFile.close();
-        } 
-        catch (IOException ex) {
-            System.out.println("Error closing files");
-            return;
+            TheHeist.inFile = new BufferedReader(new InputStreamReader(System.in));
+            TheHeist.outFile = new PrintWriter(System.out, true);
+
+            String filePath = "log.txt";
+            TheHeist.logFile = new PrintWriter(filePath);
+
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            /*TheHeist.startProgramView.display();*/
+        } finally {
+            try {
+                if (TheHeist.inFile != null) 
+                    TheHeist.inFile.close();
+                
+                if (TheHeist.outFile != null) 
+                    TheHeist.outFile.close();
+                
+                if (TheHeist.logFile !=null)
+                    TheHeist.logFile.close();
+            } catch (IOException ex) {
+                System.out.println("Error closing files");
+                return;
+            }
+
         }
-        
+
     }
-    
+
+    public static PrintWriter getLogFile() {
+        return logFile;
     }
-    
+
+    public static void setLogFile(PrintWriter logFile) {
+        TheHeist.logFile = logFile;
+    }
+
     public static Game getCurrentGame() {
         return currentGame;
     }
@@ -89,9 +102,5 @@ public class TheHeist {
     public static void setInFile(BufferedReader inFile) {
         TheHeist.inFile = inFile;
     }
-    
-    
-       
-}
-    
 
+}

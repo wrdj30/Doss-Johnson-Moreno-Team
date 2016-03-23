@@ -5,7 +5,10 @@
  */
 package byui.cit260.theHeist.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import theheist.TheHeist;
 
 /**
  *
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
     
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = TheHeist.getInFile();
+    protected final PrintWriter console = TheHeist.getOutFile();
     
     public View() {        
     }
