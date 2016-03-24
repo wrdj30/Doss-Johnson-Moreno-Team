@@ -52,7 +52,7 @@ public class GameMenuView extends View {
                 this.quit();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("GameMenuView", "*** Invalid selection*** Try again");
                 break;
         }
         

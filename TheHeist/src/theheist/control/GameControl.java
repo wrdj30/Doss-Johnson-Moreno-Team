@@ -24,7 +24,7 @@ import theheist.TheHeist;
  */
 public class GameControl {
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(Player player) throws mapControlException {
 
         Game game = new Game();
         TheHeist.setCurrentGame(game);

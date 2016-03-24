@@ -134,7 +134,7 @@ public class MapMenuView extends View{
                 this.goZinta();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("MapMenuView", "*** Invalid selection*** Try again");
                 break;
         }
     return false;

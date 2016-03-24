@@ -7,6 +7,7 @@ package theheist.control;
 
 import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.InventoryItem;
+import java.util.ArrayList;
 
 /**
  *
@@ -72,7 +73,7 @@ public class ClueControl {
         return totalCount;
     }
 
-    public void costOfItems(InventoryItem[] items) {
+    public ArrayList<InventoryItem> costOfItems(InventoryItem[] items) {
 
 //   int costs[] = new int[]{32000, 45000, 67000};
 //
@@ -97,8 +98,17 @@ public class ClueControl {
             }
         }
 
-        System.out.println("The most expensive item " + mostExp.getDescription() + ", costs: $" + mostExp.getCost());
-        System.out.println("The least expensive item " + mostExp.getDescription() + ",costs: $" + leastExp.getCost());
+        //create new array list 
+        ArrayList<InventoryItem> costList = new ArrayList();
+        
+        //add the least expensive item to the list
+        costList.add(leastExp);
+        //add the most expensive item to the list
+        costList.add(mostExp);
+        // return the list
+        return costList;
+        
+        
 
     }
 

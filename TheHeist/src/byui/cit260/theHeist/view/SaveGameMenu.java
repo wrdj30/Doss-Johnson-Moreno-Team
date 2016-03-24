@@ -44,7 +44,7 @@ public class SaveGameMenu extends View {
                 this.quit();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("SaveGameView", "*** Invalid selection*** Try again");
                 break;
         }
         

@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.view.provinces;
 
+import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.HelpMenuView;
 import byui.cit260.theHeist.view.View;
 
@@ -46,7 +47,7 @@ public class ZintaView extends View{
                 this.quit();
                 break;
             default:
-                System.out.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("ZintaView", "*** Invalid selection*** Try again");
                 break;
         }
         
@@ -54,7 +55,7 @@ public class ZintaView extends View{
     }
 
     private void goToCrimeScene() {
-        System.out.println("*** goToCrimeScene function called ***");
+        this.console.println("*** goToCrimeScene function called ***");
     }
 
     private void getHelp() {
@@ -64,7 +65,7 @@ public class ZintaView extends View{
     }
         
     private void quit() {
-        System.out.println("*** quit function called ***");
+        this.console.println("*** quit function called ***");
     }
     
 }

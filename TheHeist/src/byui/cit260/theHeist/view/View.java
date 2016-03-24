@@ -8,7 +8,6 @@ package byui.cit260.theHeist.view;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import theheist.TheHeist;
@@ -64,7 +63,7 @@ public abstract class View implements ViewInterface {
             value = value.trim();
 
             if (value.length() < 1) {
-                this.console.println("\nInvalid value: value can not be blank");
+                ErrorView.display("MainMenuView", "Invalid value: value can not be blank");
                 continue;
             }
             break;

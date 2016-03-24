@@ -7,7 +7,6 @@ package theheist;
 
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Player;
-import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.StartProgramView;
 import java.io.BufferedReader;
 import java.io.IOException;
