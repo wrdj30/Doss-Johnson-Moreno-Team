@@ -12,6 +12,8 @@ import byui.cit260.theHeist.model.SceneType;
 import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Map;
 import java.awt.Point;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import theheist.TheHeist;
 
 /**
@@ -24,7 +26,12 @@ public class MapControl {
 
     public static Map createMap() {
 
-        Map map = new Map(5, 5);
+        Map map = null;
+        try {
+            map = new Map(5, 5);
+        } catch (mapControlException ex) {
+            Logger.getLogger(MapControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         ClueTypeScene[] scenes = createScenes();
         GameControl.assignScenesToLocations(map, scenes);
