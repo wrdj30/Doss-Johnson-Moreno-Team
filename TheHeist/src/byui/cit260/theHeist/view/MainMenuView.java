@@ -78,12 +78,12 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-       //call jewelCost from the ClueControl
-       //call the function once user enters the letter L
+        //call jewelCost from the ClueControl
+        //call the function once user enters the letter L
     }
 
     private void saveGame() {
-        this.console.println("*** saveGame function called ***");
+        GameControl saveGame = new GameControl();
     }
 
     private void quit() {
