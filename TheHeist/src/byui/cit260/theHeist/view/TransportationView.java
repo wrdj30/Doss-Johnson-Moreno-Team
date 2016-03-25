@@ -47,7 +47,7 @@ public class TransportationView extends View{
                 this.quit();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("TransportationView", "*** Invalid selection*** Try again");
                 break;
         }
         

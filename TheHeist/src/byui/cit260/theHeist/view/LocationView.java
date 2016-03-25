@@ -125,7 +125,7 @@ public class LocationView extends View{
                 this.console.println("\nYou got the number right!");
                 valid = true;
             } else {
-                this.console.println("Please quess again");
+                this.console.println("Please guess again");
             }
             }
             catch(NumberFormatException nfe) {
@@ -207,7 +207,8 @@ public class LocationView extends View{
             value = value.trim();
 
             if (value.length() < 1) {
-                this.console.println("\nInvalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid value: value can not be blank");
                 continue;
             }
             break;

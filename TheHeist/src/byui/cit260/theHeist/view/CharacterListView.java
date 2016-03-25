@@ -45,7 +45,7 @@ public class CharacterListView extends View {
                 this.quit();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("CharacterListVIew", "Invalid selection, Try again");
                 break;
         }
         

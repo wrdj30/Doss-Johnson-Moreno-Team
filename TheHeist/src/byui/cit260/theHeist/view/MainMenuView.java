@@ -22,6 +22,7 @@ public class MainMenuView extends View {
                 + "\n G - Start game            "
                 + "\n H - Help                  "
                 + "\n L - Load game             "
+                + "\n L - Save game             "
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
@@ -44,8 +45,11 @@ public class MainMenuView extends View {
             case "S":
                 this.saveGame();
                 break;
+            case "Q":
+                this.quit();
+                break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("MainMenuView", "Invalid selection, Try again");
                 break;
         }
         return false;
@@ -73,6 +77,10 @@ public class MainMenuView extends View {
 
     private void saveGame() {
         this.console.println("*** saveGame function called ***");
+    }
+
+    private void quit() {
+        this.console.println("*** quit function called ***");
     }
 
 }
