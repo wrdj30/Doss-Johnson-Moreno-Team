@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.view.provinces;
 
+import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.HelpMenuView;
 import byui.cit260.theHeist.view.View;
 
@@ -47,7 +48,7 @@ public class BouryView extends View {
                 this.quit();
                 break;
             default:
-                this.console.println("\n*** Invalid selection*** Try again");
+                ErrorView.display("BouryView", "*** Invalid selection*** Try again");
                 break;
         }
         
