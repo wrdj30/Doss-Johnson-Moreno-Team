@@ -5,6 +5,9 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.exceptions.mapControlException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import theheist.TheHeist;
 import theheist.control.GameControl;
 
@@ -49,14 +52,18 @@ public class MainMenuView extends View {
                 this.quit();
                 break;
             default:
-                ErrorView.display("MainMenuView", "Invalid selection, Try again");
+                ErrorView.display("MainMenuView", "*** Invalid selection*** Try again");
                 break;
         }
         return false;
     }
 
     private void startNewGame() {
-        GameControl.createNewGame(TheHeist.getPlayer());
+        try {
+            GameControl.createNewGame(TheHeist.getPlayer());
+        } catch (mapControlException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         GameMenuView gameMenuView = new GameMenuView();
 

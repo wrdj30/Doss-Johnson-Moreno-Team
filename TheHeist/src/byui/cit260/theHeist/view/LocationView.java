@@ -7,8 +7,6 @@ package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.exceptions.ClueControlException;
 import java.io.IOException;
-import static java.lang.Integer.parseInt;
-import java.util.Scanner;
 import theheist.control.ClueControl;
 import static java.lang.Integer.parseInt;
 import java.util.logging.Level;
@@ -129,7 +127,8 @@ public class LocationView extends View{
             }
             }
             catch(NumberFormatException nfe) {
-                this.console.println("Sorry '" +value1+ "' is not a valid integer.");
+                ErrorView.display("locationView", "Sorry '" +value1+ 
+                                  "' is not a valid integer.");
             }
         }
         return value1;
@@ -186,8 +185,9 @@ public class LocationView extends View{
             addressNumber = this.doAction(dClueA, dClueB, dClueC);
         }
         catch (NumberFormatException nf) {
-            this.console.println("\nThe first clue is invalid please enter a new one");      
-        } catch (ClueControlException ex) {
+            ErrorView.display("LocationView", "The first clue is invalid please enter a new one");      
+        } 
+        catch (ClueControlException ex) {
             Logger.getLogger(LocationView.class.getName()).log(Level.SEVERE, null, ex);
         }            
     }
@@ -228,7 +228,7 @@ public class LocationView extends View{
         
         return addressNumber;
     }
-
+   
     @Override
     public boolean doAction(String value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

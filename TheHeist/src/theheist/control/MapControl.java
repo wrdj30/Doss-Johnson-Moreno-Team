@@ -24,7 +24,7 @@ public class MapControl {
 
     static ClueTypeScene[] scenes;
 
-    public static Map createMap() {
+    public static Map createMap() throws mapControlException {
 
         Map map = null;
         try {
