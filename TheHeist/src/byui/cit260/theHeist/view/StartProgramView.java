@@ -49,7 +49,7 @@ public class StartProgramView extends View{
         }
         Player player = GameControl.createPlayer(playerName);
         if (player == null) {
-            ErrorView.display("StartProgramView", "Error creating the player.");
+            ErrorView.display("StartProgramView", "\nError creating the player.");
             return false;
         }
         this.displayNextView(player);

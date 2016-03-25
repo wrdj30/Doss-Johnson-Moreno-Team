@@ -43,7 +43,7 @@ public class WeaponListView extends View{
                 this.quit();
                 break;
             default:
-                ErrorView.display("WeaponView", "*** Invalid selection*** Try again");
+                ErrorView.display("WeaponListView", "*** Invalid selection*** Try again");
                 break;
         }
         

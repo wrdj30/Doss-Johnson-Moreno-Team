@@ -78,7 +78,7 @@ public class AccessoryListView extends View {
                 this.quit();
                 break;
             default:
-                ErrorView.display("AccessoryListView", "*** Invalid selection*** Try again");
+                ErrorView.display("AccessoryListView", "***Invalid selection*** Try again");
                 break;
         }
         

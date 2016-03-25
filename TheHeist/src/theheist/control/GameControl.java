@@ -19,7 +19,10 @@ import byui.cit260.theHeist.model.SceneType;
 import java.awt.Point;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import theheist.TheHeist;
 
 /**
@@ -42,16 +45,15 @@ public class GameControl {
 
         /*moveActorsToStartingLocation(map);*/
     }
-    
-    public static void moveActorsToStartingLocation(Map map) throws mapControlException {    
+
+    public static void moveActorsToStartingLocation(Map map) throws mapControlException {
         Actor[] actors = Actor.values();
-        
+
         for (Actor actor : actors) {
             Point coordinates = actor.getCoordinates();
             try {
                 MapControl.moveActorToLocation(actor, coordinates);
-            }
-            catch (mapControlException me) {
+            } catch (mapControlException me) {
                 System.out.println(me.getMessage());
                 throw me;
             }
@@ -159,13 +161,7 @@ public class GameControl {
         locations[0][2].setScene(scenes[SceneType.webel.ordinal()]);
         locations[3][4].setScene(scenes[SceneType.xina.ordinal()]);
         locations[4][1].setScene(scenes[SceneType.yaster.ordinal()]);
-        locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);
-
-    }
-    
-    public static void saveGame(Game game, String filepath) 
-            throws GameControlException {
-        
+        locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);   
         
     }
     
@@ -194,4 +190,17 @@ public class GameControl {
     }
          
 
-}
+    public static void saveGame(Game currentGame, String filepath) 
+            throws GameControlException {
+        
+            try (FileOutputStream fops = new FileOutputStream(filepath)) {
+                ObjectOutputStream output = new ObjectOutputStream(fops);
+
+                output.writeObject(currentGame);
+            } catch (IOException e) {
+                throw new GameControlException(e.getMessage());
+            }
+        }
+    }
+
+

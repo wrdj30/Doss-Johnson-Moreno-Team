@@ -25,6 +25,7 @@ public class MainMenuView extends View {
                 + "\n G - Start game            "
                 + "\n H - Help                  "
                 + "\n L - Load game             "
+                + "\n L - Save game             "
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
@@ -46,6 +47,9 @@ public class MainMenuView extends View {
                 break;
             case "S":
                 this.saveGame();
+                break;
+            case "Q":
+                this.quit();
                 break;
             default:
                 ErrorView.display("MainMenuView", "*** Invalid selection*** Try again");
@@ -74,6 +78,7 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
+
        //prompt for and get the name of the file to save the game in
        this.console.println("log.txt");
        
@@ -90,10 +95,25 @@ public class MainMenuView extends View {
        //display the game menu
        GameMenuView gameMenu = new GameMenuView();
        gameMenu.display();
+
+        //call jewelCost from the ClueControl
+        //call the function once user enters the letter L
+
     }
 
     private void saveGame() {
-        this.console.println("*** saveGame function called ***");
+    this.console.println("\n\nEnter the file path for file where the game"
+                + "is to be saved");
+        String filePath = this.getInput();
+
+        try {
+            GameControl.saveGame(TheHeist.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }    }
+
+    private void quit() {
+        this.console.println("*** quit function called ***");
     }
 
 }

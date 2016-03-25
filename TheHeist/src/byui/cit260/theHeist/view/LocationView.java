@@ -207,7 +207,8 @@ public class LocationView extends View{
             value = value.trim();
 
             if (value.length() < 1) {
-                ErrorView.display("LocationView", "Invalid value: value can not be blank");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid value: value can not be blank");
                 continue;
             }
             break;

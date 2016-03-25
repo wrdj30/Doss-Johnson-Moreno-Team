@@ -6,13 +6,15 @@
 package byui.cit260.theHeist.model;
 
 import byui.cit260.theHeist.exceptions.mapControlException;
+import byui.cit260.theHeist.view.ErrorView;
+import byui.cit260.theHeist.view.View;
 import java.io.Serializable;
 
 /**
  *
  * @author luceromoreno
  */
-public class Map implements Serializable {
+public class Map extends View{
     
     private int rowCount;
     private int columnCount;
@@ -24,7 +26,7 @@ public class Map implements Serializable {
     
     public Map(int noOfRows, int noOfColumn) throws mapControlException{
         if (noOfRows < 1 || noOfColumn < 1){
-            System.out.println("TheHeist, The number of rows and columns must be > zero");
+            ErrorView.display(this.getClass().getName(),"The number of rows and columns must be > zero");
             return;
         }
         this.rowCount = noOfRows;
@@ -102,6 +104,11 @@ public class Map implements Serializable {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

@@ -7,6 +7,7 @@ package byui.cit260.theHeist.exceptions;
 
 /**
  *
+<<<<<<< HEAD
  * @author wr
  */
 public class GameControlException extends Exception {
@@ -30,6 +31,5 @@ public class GameControlException extends Exception {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     
-    
-    
-}
+}    
+
