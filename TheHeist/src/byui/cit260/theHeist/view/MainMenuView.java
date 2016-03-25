@@ -83,8 +83,15 @@ public class MainMenuView extends View {
     }
 
     private void saveGame() {
-        GameControl saveGame = new GameControl();
-    }
+    this.console.println("\n\nEnter the file path for file where the game"
+                + "is to be saved");
+        String filePath = this.getInput();
+
+        try {
+            GameControl.saveGame(TheHeist.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }    }
 
     private void quit() {
         this.console.println("*** quit function called ***");
