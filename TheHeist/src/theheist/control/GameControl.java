@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.GameControlException;
 import byui.cit260.theHeist.exceptions.mapControlException;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
@@ -16,6 +17,9 @@ import byui.cit260.theHeist.model.Map;
 import byui.cit260.theHeist.model.Player;
 import byui.cit260.theHeist.model.SceneType;
 import java.awt.Point;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import theheist.TheHeist;
 
 /**
@@ -38,16 +42,15 @@ public class GameControl {
 
         /*moveActorsToStartingLocation(map);*/
     }
-    
-    public static void moveActorsToStartingLocation(Map map) throws mapControlException {    
+
+    public static void moveActorsToStartingLocation(Map map) throws mapControlException {
         Actor[] actors = Actor.values();
-        
+
         for (Actor actor : actors) {
             Point coordinates = actor.getCoordinates();
             try {
                 MapControl.moveActorToLocation(actor, coordinates);
-            }
-            catch (mapControlException me) {
+            } catch (mapControlException me) {
                 System.out.println(me.getMessage());
                 throw me;
             }
@@ -159,4 +162,17 @@ public class GameControl {
 
     }
 
-}
+    public static void saveGame(Game currentGame, String filepath) 
+            throws GameControlException {
+        
+            try (FileOutputStream fops = new FileOutputStream(filepath)) {
+                ObjectOutputStream output = new ObjectOutputStream(fops);
+
+                output.writeObject(currentGame);
+            } catch (IOException e) {
+                throw new GameControlException(e.getMessage());
+            }
+        }
+    }
+
+

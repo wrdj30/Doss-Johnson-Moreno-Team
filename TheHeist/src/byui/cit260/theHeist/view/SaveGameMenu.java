@@ -5,6 +5,9 @@
  */
 package byui.cit260.theHeist.view;
 
+import theheist.TheHeist;
+import theheist.control.GameControl;
+
 /**
  *
  * @author luceromoreno
@@ -12,9 +15,9 @@ package byui.cit260.theHeist.view;
 public class SaveGameMenu extends View {
 
     private String menu;
-    
-    public SaveGameMenu() { 
-           super( "\n"
+
+    public SaveGameMenu() {
+        super("\n"
                 + "\n---------------------------"
                 + "\n | Menu                   |"
                 + "\n---------------------------"
@@ -24,12 +27,12 @@ public class SaveGameMenu extends View {
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
-    
+
     @Override
     public boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase();
-        
+
         switch (choice) {
             case "T":
                 this.gameMenu();
@@ -47,7 +50,7 @@ public class SaveGameMenu extends View {
                 ErrorView.display("SaveGameMenu", "*** Invalid selection*** Try again");
                 break;
         }
-        
+
         return false;
     }
 
@@ -56,7 +59,15 @@ public class SaveGameMenu extends View {
     }
 
     private void saveGame() {
-        this.console.println("*** saveGame function called ***");
+        this.console.println("\n\nEnter the file path for file where the game"
+                + "is to be saved");
+        String filePath = this.getInput();
+
+        try {
+            GameControl.saveGame(TheHeist.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     private void mapMenu() {
