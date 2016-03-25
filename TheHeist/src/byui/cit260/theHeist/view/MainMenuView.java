@@ -74,8 +74,22 @@ public class MainMenuView extends View {
     }
 
     private void loadGame() {
-       //call jewelCost from the ClueControl
-       //call the function once user enters the letter L
+       //prompt for and get the name of the file to save the game in
+       this.console.println("log.txt");
+       
+       String filePath = this.getInput();
+       
+       try {
+       //start the saved game
+       GameControl.loadGame(filePath);
+       }
+       catch(Exception ex) {
+           ErrorView.display("MainMenuView", ex.getMessage());
+       }
+       
+       //display the game menu
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.display();
     }
 
     private void saveGame() {

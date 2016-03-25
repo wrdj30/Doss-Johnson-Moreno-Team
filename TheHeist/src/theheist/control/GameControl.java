@@ -5,6 +5,7 @@
  */
 package theheist.control;
 
+import byui.cit260.theHeist.exceptions.GameControlException;
 import byui.cit260.theHeist.exceptions.mapControlException;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
@@ -16,6 +17,9 @@ import byui.cit260.theHeist.model.Map;
 import byui.cit260.theHeist.model.Player;
 import byui.cit260.theHeist.model.SceneType;
 import java.awt.Point;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.ObjectInputStream;
 import theheist.TheHeist;
 
 /**
@@ -158,5 +162,36 @@ public class GameControl {
         locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);
 
     }
+    
+    public static void saveGame(Game game, String filepath) 
+            throws GameControlException {
+        
+        
+    }
+    
+    public static void loadGame(String filepath)
+            throws GameControlException {
+        Game game = null;
+        
+        //Open an input byte stream for the specified file in the file path
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream output = new ObjectInputStream(fips);
+            
+            game = (Game) output.readObject(); // read the objects from file
+        }       
+        //Read all the related game objects to memory
+        catch(FileNotFoundException fnfe) {
+            throw new GameControlException(fnfe.getMessage());
+        }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }       
+        //Close the file
+        TheHeist.setCurrentGame(game);//Save in TheHeist
+        
+        //Set the current game
+        
+    }
+         
 
 }
