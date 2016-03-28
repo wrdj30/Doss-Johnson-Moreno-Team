@@ -21,7 +21,7 @@ public class MapMenuView extends View{
     public MapMenuView() { 
            super( "\n"
                 + "\n---------------------------"
-                + "\n | Main Menu              |"
+                + "\n | Map Menu              |"
                 + "\n---------------------------"
                 + "\n A - Artlin                "
                 + "\n B - Boury                 "

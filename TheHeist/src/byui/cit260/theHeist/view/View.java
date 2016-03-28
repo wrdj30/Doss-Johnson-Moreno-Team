@@ -55,7 +55,7 @@ public abstract class View implements ViewInterface {
 
             try {
                 value = this.keyboard.readLine();
-                value = keyboard.readLine();
+                
 
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
