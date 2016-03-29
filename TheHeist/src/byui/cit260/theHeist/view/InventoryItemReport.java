@@ -7,10 +7,13 @@ package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.InventoryItem;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import theheist.control.GameControl;
 
 /**
@@ -20,33 +23,24 @@ import theheist.control.GameControl;
 public abstract class InventoryItemReport extends View{
     
     
-    public double printItemReport(InventoryItem[] items) throws IOException {
-        InventoryItem[] inventory = GameControl.getSortedInventoryList();
-        BufferedReader inputStream = null;
-        PrintWriter outputStream = null;
+    
+    public void printItemReport(InventoryItem[] item, String outputLocation) {
         
-        double totalCount = 0;
-        
-    try {    
-        inputStream = new  BufferedReader(new FileReader("inputItemfile.txt"));
-        outputStream = new PrintWriter (new FileWriter("ItemReport.txt"));
-        
-        this.console.println("Inventory Report");
-        this.console.println("Item" + "\t     " + "Item Amount");
-        
-        for(InventoryItem item : items) {                
-            totalCount = item.getQuantityInStock() + totalCount;
-        }        
-        return totalCount;
-        this.console.println(inventoryItem.getDescription() + "\t     " + 
-                             inventoryItem.getQuantityInStock());
-    }            
-    finally {
-        if (inputStream != null){
-            inputStream.close();           
+        //Create BufferedReader object for input file
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+            
+            //Print title and column headings
+            out.println("\n\n           Item Report           ");
+            out.println("%n%-20s%10s", "Description", "Quantity");
+            out.println("%n%-20s%10s", "-----------", "--------");
+            
+            for (InventoryItem inventoryItem : item){
+                out.println("%n%-20s%7d", inventoryItem.getDescription()
+                                        , inventoryItem.getQuantityInStock());
+            }
+            
+        } catch (IOException ex) {
+            ErrorView.dispay("I/O Error: " + ex.getMessage());
         }
-        if (outputStream != null){
-            outputStream.close();
-        }    
-    }        
+    }
 }
