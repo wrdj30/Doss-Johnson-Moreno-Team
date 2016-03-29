@@ -11,4 +11,6 @@ package theheist.control;
  */
 public class InventoryControl {
     
+    
+    
 }
