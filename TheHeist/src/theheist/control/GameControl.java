@@ -151,7 +151,7 @@ public class GameControl {
         locations[4][2].setScene(scenes[SceneType.lerly.ordinal()]);
         locations[1][1].setScene(scenes[SceneType.murtan.ordinal()]);
         locations[0][1].setScene(scenes[SceneType.nolafe.ordinal()]);
-        locations[1][1].setScene(scenes[SceneType.opstera.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.opstera.ordinal()]);
         locations[2][3].setScene(scenes[SceneType.parquin.ordinal()]);
         locations[4][3].setScene(scenes[SceneType.ryster.ordinal()]);
         locations[2][1].setScene(scenes[SceneType.swerlin.ordinal()]);

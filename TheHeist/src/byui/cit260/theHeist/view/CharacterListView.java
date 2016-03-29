@@ -21,7 +21,8 @@ public class CharacterListView extends View {
                 + "\n---------------------------"
                 + "\n M - Detective Max         "
                 + "\n P - Police                "
-                + "\n K - Queen                 "              
+                + "\n K - Queen                 "    
+                + "\n C - Character Report      "              
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
@@ -41,6 +42,9 @@ public class CharacterListView extends View {
             case "K":
                 this.queen();
                 break;
+            case "C":
+                this.characterReport();
+                break;
             case "Q":
                 this.quit();
                 break;
@@ -48,7 +52,6 @@ public class CharacterListView extends View {
                 ErrorView.display("CharacterListView", "*** Invalid selection*** Try again");
                 break;
         }
-        
         return false;
     }
 
@@ -68,6 +71,38 @@ public class CharacterListView extends View {
         this.console.println("*** quit function called ***");
     }
 
+    private void characterReport() {
+        this.console.println("    LIST OF ACTORS    "
+                    + "NAME         LOCATION"
+                    + "Police          4, 4 "
+                    + "Queen           0, 0 "
+                    + "Max Zepher      0, 0 "
+                    + "                1, 3 "
+                    + "                2, 2 "
+                    + "                0, 4 "
+                    + "                3, 1 "
+                    + "                4, 0 "
+                    + "                0, 3 "
+                    + "                1, 2 "
+                    + "                2, 0 "
+                    + "                3, 3 "
+                    + "                1, 4 "
+                    + "                4, 2 "
+                    + "                1, 1 "
+                    + "                0, 1 "
+                    + "                1, 0 "
+                    + "                2, 3 "
+                    + "                4, 3 "
+                    + "                2, 1 "
+                    + "                3, 2 "
+                    + "                2, 4 "
+                    + "                3, 0 "
+                    + "                0, 2 "
+                    + "                3, 4 "
+                    + "                4, 1 "
+                    + "                4, 4 ");
+
+    }
 }
     
 
