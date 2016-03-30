@@ -6,15 +6,8 @@
 package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.InventoryItem;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import theheist.control.GameControl;
 
 /**
  *
@@ -31,16 +24,16 @@ public abstract class InventoryItemReport extends View{
             
             //Print title and column headings
             out.println("\n\n           Item Report           ");
-            out.println("%n%-20s%10s", "Description", "Quantity");
-            out.println("%n%-20s%10s", "-----------", "--------");
+            out.printf("%n%-20s%10s", "Description", "Quantity");
+            out.printf("%n%-20s%10s", "-----------", "--------");
             
             for (InventoryItem inventoryItem : item){
-                out.println("%n%-20s%7d", inventoryItem.getDescription()
+                out.printf("%n%-20s%7d", inventoryItem.getDescription()
                                         , inventoryItem.getQuantityInStock());
             }
             
         } catch (IOException ex) {
-            ErrorView.dispay("I/O Error: " + ex.getMessage());
+            ErrorView.display("InventoryItemReport", "I/O Error: " + ex.getMessage());
         }
     }
 }

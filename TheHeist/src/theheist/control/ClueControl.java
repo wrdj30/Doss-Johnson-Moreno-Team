@@ -106,11 +106,17 @@ public class ClueControl {
         //add the most expensive item to the list
         costList.add(mostExp);
         // return the list
-        return costList;
-        
-        
-
+        return costList;        
     }
+    
+    public static String riddleOne(String RAnswerOne) {
+        String RAnswerOne = "nothing";
+        //If statements for all the possible answers for riddle question
+        if ()            
+    }
+        //Make the riddle question
+    
+        //Return the clue
 
     /*public void display() {
         System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
