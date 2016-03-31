@@ -9,6 +9,7 @@ import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.InventoryItem;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author wr
@@ -109,16 +110,4 @@ public class ClueControl {
         return costList;        
     }
     
-    public static String riddleOne(String RAnswerOne) {
-        String RAnswerOne = "nothing";
-        //If statements for all the possible answers for riddle question
-        if ()            
-    }
-        //Make the riddle question
-    
-        //Return the clue
-
-    /*public void display() {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
 }
