@@ -9,6 +9,7 @@ import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.InventoryItem;
 import java.util.ArrayList;
 
+
 /**
  *
  * @author wr
@@ -106,13 +107,7 @@ public class ClueControl {
         //add the most expensive item to the list
         costList.add(mostExp);
         // return the list
-        return costList;
-        
-        
-
+        return costList;        
     }
-
-    /*public void display() {
-        System.out.println("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }*/
+    
 }
