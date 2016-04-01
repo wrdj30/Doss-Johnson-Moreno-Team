@@ -135,7 +135,7 @@ public class LocationView extends View{
     }
 
     private boolean doAction() {
-        int worth = ((answer1 * 2) + (answer2 * 3) + (answer3 * 2)) - (answer3 * 2);
+        int worth = ((answer1 * 76000) + (answer2 * 45000) + (answer3 * 42000)) / (answer3 * 42000);
 
         this.console.println("Remember this answer: " + worth);
 

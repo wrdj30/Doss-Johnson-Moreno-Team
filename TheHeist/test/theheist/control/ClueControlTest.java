@@ -11,6 +11,9 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import theheist.control.ClueControl;
+import theheist.control.ClueControl;
+import theheist.control.ClueControl;
 import static org.junit.Assert.*;
 
 /**
