@@ -33,6 +33,14 @@ public class ClueTypeView extends View{
 
     @Override
     public boolean doAction(String answer) {
+        
+        //unlock the next view           
+            //Display congratulations message                        
+            //display the new location            
+            //When not correct        
+            //display wrong answer try again            
+            //return false
+        
         try {
             //is this the correct answer
             Location nextLocation = ClueControl.clockRiddle(this.clueScene, answer);
@@ -49,27 +57,210 @@ public class ClueTypeView extends View{
                 this.console.println("Sorry wrong answer try again");
                 return false;
             }
-            
-            //unlock the next view
-            
-            //Display congratulations message
-            
-            
-            //display the new location
-            
-            //When not correct
+                                               
+        } 
+        catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-            //display wrong answer try again
+        try {
+        Location nextLocation = ClueControl.matchRiddle(this.clueScene, answer);
             
-            //return false
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;            
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } 
+        catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+        Location nextLocation = ClueControl.pawnsRiddle(this.clueScene, answer);
             
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        }
+        catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+        Location nextLocation = ClueControl.mushroomRiddle(this.clueScene, answer);
             
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+         try {
+        Location nextLocation = ClueControl.nameRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+        Location nextLocation = ClueControl.brainRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+         try {
+        Location nextLocation = ClueControl.brainRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+         
+        try {
+        Location nextLocation = ClueControl.russiansRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
+        try {
+        Location nextLocation = ClueControl.eggRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
         } catch (ClueControlException ex) {
             Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         try {
-            ClueControl.
+        Location nextLocation = ClueControl.glovesRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+        Location nextLocation = ClueControl.terrapinsRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+        Location nextLocation = ClueControl.twoRiddle(this.clueScene, answer);
+            
+            if (nextLocation != null) {
+                this.console.println("Congratulations you got the correct answer");
+                ClueTypeScene nextClueScene = nextLocation.getScene();
+                ClueTypeView nextView = new ClueTypeView(nextClueScene);
+                nextView.display();
+                return true;              
+            }
+            else {
+                this.console.println("Sorry wrong answer try again");
+                return false;
+            }            
+        } catch (ClueControlException ex) {
+            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
