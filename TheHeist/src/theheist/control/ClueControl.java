@@ -6,9 +6,12 @@
 package theheist.control;
 
 import byui.cit260.theHeist.exceptions.ClueControlException;
+import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.InventoryItem;
+import byui.cit260.theHeist.model.Location;
+import java.awt.Point;
 import java.util.ArrayList;
-
+import theheist.TheHeist;
 
 /**
  *
@@ -16,8 +19,8 @@ import java.util.ArrayList;
  */
 public class ClueControl {
 
-    public static double getJewelAmount(double diamonds, double rubies, double sapphires) 
-        throws ClueControlException {
+    public static double getJewelAmount(double diamonds, double rubies, double sapphires)
+            throws ClueControlException {
         if (diamonds <= 0 || diamonds > 8) {
         }
         if (rubies <= 0 || rubies > 8) {
@@ -28,28 +31,27 @@ public class ClueControl {
         double worth = (int) ((7 * diamonds + 4 * rubies + 4 * sapphires) - (4 * sapphires));
         return worth;
     }
-        
-  
-    public static double getCombination(double clueA, double clueB, double clueC) throws ClueControlException { 
-        
+
+    public static double getCombination(double clueA, double clueB, double clueC) throws ClueControlException {
+
         if (clueA <= 0 || clueA > 25) {
-        throw new ClueControlException("The first clue is incorrect.");
+            throw new ClueControlException("The first clue is incorrect.");
         }
 
         if (clueB <= 0 || clueB > 25) {
-        throw new ClueControlException("The second clue is incorrect.");
+            throw new ClueControlException("The second clue is incorrect.");
         }
 
         if (clueC <= 0 || clueC > 25) {
-        throw new ClueControlException("The third clue is incorrect.");
+            throw new ClueControlException("The third clue is incorrect.");
         }
 
         double combo = (clueA * clueB + clueC) / clueA;
         return combo;
     }
 
-    public static double addressClue(double clueA, double clueB, double clueC) 
-        throws ClueControlException {
+    public static double addressClue(double clueA, double clueB, double clueC)
+            throws ClueControlException {
 
         if (clueA <= 0 || clueA > 25) {
         }
@@ -64,13 +66,14 @@ public class ClueControl {
         return addressNumber;
 
     }
+
     public double getInventoryCount(InventoryItem[] items) {
         double totalCount = 0;
-        
-        for(InventoryItem item : items) {                
+
+        for (InventoryItem item : items) {
             totalCount = item.getQuantityInStock() + totalCount;
         }
-        
+
         return totalCount;
     }
 
@@ -101,13 +104,37 @@ public class ClueControl {
 
         //create new array list 
         ArrayList<InventoryItem> costList = new ArrayList();
-        
+
         //add the least expensive item to the list
         costList.add(leastExp);
         //add the most expensive item to the list
         costList.add(mostExp);
         // return the list
-        return costList;        
+        return costList;
     }
-    
+
+    public static Location clockRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+
+        if (answer.equals(clueScene.getAnswer())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;           
+        }
+        else{
+            return null;
+        }
+    }
+
 }

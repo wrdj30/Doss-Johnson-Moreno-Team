@@ -21,6 +21,8 @@ public class Location implements Serializable{
     private ArrayList<Actor> actors = new ArrayList<>();
     String location;
     String locationVisited;
+    boolean locked;
+    
     
 
     public int getRow() {
@@ -54,6 +56,42 @@ public class Location implements Serializable{
     public void setScene(ClueTypeScene scene) {
         this.scene = scene;
     }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public void setLocked(boolean locked) {
+        this.locked = locked;
+    }
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getLocationVisited() {
+        return locationVisited;
+    }
+
+    public void setLocationVisited(String locationVisited) {
+        this.locationVisited = locationVisited;
+    }
+
+   
+    
+    
 
     /*public <any> getActors() {
         return actors;

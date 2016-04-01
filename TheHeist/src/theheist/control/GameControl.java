@@ -137,7 +137,8 @@ public class GameControl {
 
     static void assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
         Location[][] locations = map.getLocations();
-        locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        
+        locations[0][0].setScene(scenes[SceneType.start.ordinal()]);           
         locations[1][3].setScene(scenes[SceneType.boury.ordinal()]);
         locations[2][2].setScene(scenes[SceneType.celnig.ordinal()]);
         locations[0][4].setScene(scenes[SceneType.duvin.ordinal()]);
