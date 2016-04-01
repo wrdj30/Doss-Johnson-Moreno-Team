@@ -6,6 +6,7 @@
 package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.Location;
+import byui.cit260.theHeist.view.provinces.BouryView;
 import theheist.TheHeist;
 
 /**
@@ -146,8 +147,8 @@ public class MapMenuView extends View{
     }
 
     private void goBoury() {
-            this.console.println("*** loadGame function called ***");
-                    
+        BouryView bouryView = new BouryView();
+        bouryView.display();
     }
 
     private void goCelnig() {

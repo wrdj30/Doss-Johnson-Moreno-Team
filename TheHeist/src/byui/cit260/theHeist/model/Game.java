@@ -22,15 +22,15 @@ public class Game implements Serializable{
     private TransportationType transportationType;
     private Map map;
     private String[] actors;
-    private Location[] location;
+    private Location[][] locations;
     private ClueTypeScene[] clueTypeScene;
     private DialogueTypeScene[] dialogueTypeScene;
 
-    public static InventoryItem[] getInventory() {
+    public InventoryItem[] getInventory() {
         return inventory;
     }
 
-    public static void setInventory(InventoryItem[] inventory) {
+    public void setInventory(InventoryItem[] inventory) {
         Game.inventory = inventory;
     }
 
@@ -66,12 +66,12 @@ public class Game implements Serializable{
         this.actors = actors;
     }
 
-    public Location[] getLocations() {
-        return location;
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public void setLocations(Location[] location) {
-        this.location = location;
+    public void setLocations(Location[][] location) {
+        this.locations = location;
     }
 
     public ClueTypeScene[] getClueTypeScene() {

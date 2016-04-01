@@ -138,3 +138,5 @@ public class ClueControl {
     }
 
 }
+
+//create method that ca  tke one cluetype

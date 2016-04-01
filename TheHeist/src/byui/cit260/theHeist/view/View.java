@@ -17,36 +17,36 @@ import theheist.TheHeist;
  * @author wr
  */
 public abstract class View implements ViewInterface {
-    
+
     protected String displayMessage;
-    
+
     protected final BufferedReader keyboard = TheHeist.getInFile();
     protected final PrintWriter console = TheHeist.getOutFile();
-    
-    public View() {        
+
+    public View() {
     }
-    
+
     public View(String message) {
         this.displayMessage = message;
     }
 
     @Override
-    public void display() {        
-            
-    boolean done = false;
+    public void display() {
+
+        boolean done = false;
         do {
-            
+
             String value = this.getInput();
-            if (value.toUpperCase().equals("Q"))
+            if (value.toUpperCase().equals("Q")) {
                 return;
+            }
             done = this.doAction(value);
         } while (!done);
     }
-    
+
     @Override
     public String getInput() {
 
-        
         String value = "";
         boolean valid = false;
 
@@ -55,7 +55,6 @@ public abstract class View implements ViewInterface {
 
             try {
                 value = this.keyboard.readLine();
-                
 
             } catch (IOException ex) {
                 Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
@@ -68,7 +67,6 @@ public abstract class View implements ViewInterface {
             }
             break;
         }
-        return value;    
+        return value;
     }
 }
-

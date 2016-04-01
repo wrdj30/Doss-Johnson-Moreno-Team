@@ -5,19 +5,14 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.exceptions.ClueControlException;
 import byui.cit260.theHeist.model.ClueTypeScene;
-import byui.cit260.theHeist.model.Location;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import theheist.control.ClueControl;
 
 /**
  *
  * @author wr
  */
-public class ClueTypeView extends View{
-    
+public class ClueTypeView extends View {
+
     private ClueTypeScene clueScene;
 
     public ClueTypeView() {
@@ -25,52 +20,38 @@ public class ClueTypeView extends View{
 
     public ClueTypeView(ClueTypeScene clueScene) {
         this.clueScene = clueScene;
-        this.displayMessage = clueScene.getQuestion();
+        this.displayMessage = "Answer the riddle:\n" + clueScene.getQuestion()
+                + "\nPlease enter your answer.";
     }
-    
-    
-    
+
+    @Override
+    public void display() {
+
+        boolean done = false;
+        do {
+            String value = this.getInput();
+            done = this.doAction(value);
+        } while (!done);
+    }
 
     @Override
     public boolean doAction(String answer) {
-        try {
-            //is this the correct answer
-            Location nextLocation = ClueControl.clockRiddle(this.clueScene, answer);
-            
-            //when correct answer is chosen
-            if (nextLocation != null) {
-                this.console.println("Congratulations you got the correct answer");
-                ClueTypeScene nextClueScene = nextLocation.getScene();
-                ClueTypeView nextView = new ClueTypeView(nextClueScene);
-                nextView.display();
-                return true;
-            }
-            else {
-                this.console.println("Sorry wrong answer try again");
-                return false;
-            }
-            
-            //unlock the next view
-            
-            //Display congratulations message
-            
-            
-            //display the new location
-            
-            //When not correct
-        
-            //display wrong answer try again
-            
-            //return false
-            
-            
-        } catch (ClueControlException ex) {
-            Logger.getLogger(ClueTypeView.class.getName()).log(Level.SEVERE, null, ex);
+        //is this the correct answer
+
+        if (clueScene.getAnswer().toUpperCase().equals(answer.toUpperCase())) {
+            this.console.println("Congratulations you got the correct answer");
+            return true;
+        } else {
+            this.console.println("Sorry wrong answer try again");
+            return false;
         }
-        
-        try {
-            ClueControl.
-        }
+
+        //when correct answer is chosen
+        //unlock the next view
+        //Display congratulations message
+        //display the new location
+        //When not correct
+        //display wrong answer try again
+        //return false
     }
-    
 }
