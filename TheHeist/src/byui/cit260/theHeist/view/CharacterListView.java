@@ -42,9 +42,10 @@ public class CharacterListView extends View {
             case "K":
                 this.queen();
                 break;
-            case "C":
+            //not needed should be deleted    
+            /*case "C":
                 this.characterReport();
-                break;
+                break;*/
             case "Q":
                 this.quit();
                 break;
@@ -71,7 +72,9 @@ public class CharacterListView extends View {
         this.console.println("*** quit function called ***");
     }
 
-    private void characterReport() {
+    
+    //This isn't needed should be deleted
+    /*private void characterReport() {
         this.console.println("    LIST OF ACTORS    "
                     + "NAME         LOCATION"
                     + "Police          4, 4 "
@@ -102,7 +105,7 @@ public class CharacterListView extends View {
                     + "                4, 1 "
                     + "                4, 4 ");
 
-    }
+    }*/
 }
     
 
