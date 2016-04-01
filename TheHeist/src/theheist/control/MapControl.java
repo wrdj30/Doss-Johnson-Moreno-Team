@@ -52,6 +52,9 @@ public class MapControl {
         arlinScene.setTravelLength(3);
         arlinScene.setLockType("not locked");
         arlinScene.setClueType("puzzle");
+        arlinScene.setQuestion("Tear one off and scratch my head what was red is black instead.\n");
+        arlinScene.setAnswer("MATCHSTICK");
+        arlinScene.setNextLocation(new Point(0,0));
         scenes[SceneType.start.ordinal()] = arlinScene;
 
         ClueTypeScene bouryScene = new ClueTypeScene();
@@ -61,6 +64,9 @@ public class MapControl {
         bouryScene.setTravelLength(3);
         bouryScene.setLockType("locked");
         bouryScene.setClueType("puzzle");
+        bouryScene.setQuestion("The eight of us go forth not back to protect our king from a foes attack.\n");
+        bouryScene.setAnswer("CHESS PAWNS");
+        bouryScene.setNextLocation(new Point(1,3));
         scenes[SceneType.boury.ordinal()] = bouryScene;
 
         ClueTypeScene celnigScene = new ClueTypeScene();
@@ -70,6 +76,9 @@ public class MapControl {
         celnigScene.setTravelLength(3);
         celnigScene.setLockType("locked");
         celnigScene.setClueType("puzzle");
+        celnigScene.setQuestion("What room can no one enter?\n");
+        celnigScene.setAnswer("MUSHROOM");
+        celnigScene.setNextLocation(new Point(2,2));
         scenes[SceneType.celnig.ordinal()] = celnigScene;
 
         ClueTypeScene duvinScene = new ClueTypeScene();
@@ -79,7 +88,11 @@ public class MapControl {
         duvinScene.setTravelLength(3);
         duvinScene.setLockType("locked");
         duvinScene.setClueType("puzzle");
+        duvinScene.setQuestion("If you look at the number on my face you won't find thirteen anyplace.\n");
+        duvinScene.setAnswer("CLOCK");
+        duvinScene.setNextLocation(new Point(0,4));
         scenes[SceneType.duvin.ordinal()] = duvinScene;
+        
 
         ClueTypeScene estripScene = new ClueTypeScene();
         estripScene.setDescription(
@@ -88,6 +101,9 @@ public class MapControl {
         estripScene.setTravelLength(3);
         estripScene.setLockType("locked");
         estripScene.setClueType("puzzle");
+        estripScene.setQuestion("What belongs to you, but is used by others?\n");
+        estripScene.setAnswer("YOUR NAME");
+        estripScene.setNextLocation(new Point(3,1));
         scenes[SceneType.estrip.ordinal()] = estripScene;
 
         ClueTypeScene farginScene = new ClueTypeScene();
@@ -97,6 +113,9 @@ public class MapControl {
         farginScene.setTravelLength(3);
         farginScene.setLockType("locked");
         farginScene.setClueType("puzzle");
+        farginScene.setQuestion("I have billions of eyes, yet I live in darkness. I have millions of ears, yet only four lobes. I have no muscle, yet I rule two hemispheres. What am I?\n");
+        farginScene.setAnswer("BRAIN");
+        farginScene.setNextLocation(new Point(3,4));
         scenes[SceneType.fargin.ordinal()] = farginScene;
 
         ClueTypeScene goverieScene = new ClueTypeScene();
@@ -106,6 +125,9 @@ public class MapControl {
         goverieScene.setTravelLength(3);
         goverieScene.setLockType("locked");
         goverieScene.setClueType("puzzle");
+        goverieScene.setQuestion("What people are always in a hurry?\n");
+        goverieScene.setAnswer("RUSSIANS");
+        goverieScene.setNextLocation(new Point(4,0));
         scenes[SceneType.goverie.ordinal()] = goverieScene;
 
         ClueTypeScene howertyScene = new ClueTypeScene();
@@ -115,6 +137,9 @@ public class MapControl {
         howertyScene.setTravelLength(3);
         howertyScene.setLockType("locked");
         howertyScene.setClueType("puzzle");
+        howertyScene.setQuestion("What goes up white and comes down yellow and white?\n");
+        howertyScene.setAnswer("EGG");
+        howertyScene.setNextLocation(new Point(0,3));
         scenes[SceneType.howerty.ordinal()] = howertyScene;
 
         ClueTypeScene inlinScene = new ClueTypeScene();
@@ -124,6 +149,9 @@ public class MapControl {
         inlinScene.setTravelLength(3);
         inlinScene.setLockType("locked");
         inlinScene.setClueType("puzzle");
+        inlinScene.setQuestion("What has neither flesh, bone, nor nail yet has 4 fingers and a thumb?\n");
+        inlinScene.setAnswer("GLOVE");
+        inlinScene.setNextLocation(new Point(1,2));
         scenes[SceneType.inlin.ordinal()] = inlinScene;
 
         ClueTypeScene jawelScene = new ClueTypeScene();
@@ -133,6 +161,9 @@ public class MapControl {
         jawelScene.setTravelLength(3);
         jawelScene.setLockType("locked");
         jawelScene.setClueType("puzzle");
+        jawelScene.setQuestion("What kind of pins are used in soup?\n");
+        jawelScene.setAnswer("Terrapins");
+        jawelScene.setNextLocation(new Point(2,0));
         scenes[SceneType.jawel.ordinal()] = jawelScene;
 
         ClueTypeScene kinteScene = new ClueTypeScene();
@@ -142,6 +173,9 @@ public class MapControl {
         kinteScene.setTravelLength(3);
         kinteScene.setLockType("locked");
         kinteScene.setClueType("puzzle");
+        kinteScene.setQuestion("How many sides has a circle?\n");
+        kinteScene.setAnswer("TWO");
+        kinteScene.setNextLocation(new Point(3,3));
         scenes[SceneType.kinte.ordinal()] = kinteScene;
 
         ClueTypeScene lerlyScene = new ClueTypeScene();
@@ -151,6 +185,9 @@ public class MapControl {
         lerlyScene.setTravelLength(3);
         lerlyScene.setLockType("locked");
         lerlyScene.setClueType("puzzle");
+        lerlyScene.setQuestion("What won't run long without winding?\n");
+        lerlyScene.setAnswer("RIVER");
+        lerlyScene.setNextLocation(new Point(1,4));
         scenes[SceneType.lerly.ordinal()] = lerlyScene;
 
         ClueTypeScene murtanScene = new ClueTypeScene();
@@ -160,6 +197,9 @@ public class MapControl {
         murtanScene.setTravelLength(3);
         murtanScene.setLockType("locked");
         murtanScene.setClueType("puzzle");
+        murtanScene.setQuestion("What has branches and leaves and no bark?\n");
+        murtanScene.setAnswer("LIBRARY");
+        murtanScene.setNextLocation(new Point(4,2));
         scenes[SceneType.murtan.ordinal()] = murtanScene;
 
         ClueTypeScene nolafeScene = new ClueTypeScene();
@@ -169,6 +209,9 @@ public class MapControl {
         nolafeScene.setTravelLength(3);
         nolafeScene.setLockType("locked");
         nolafeScene.setClueType("puzzle");
+        nolafeScene.setQuestion("What do you find in a kitchen cabinet that is not alive?\n");
+        nolafeScene.setAnswer("DEADPANS");
+        nolafeScene.setNextLocation(new Point(1,1));
         scenes[SceneType.nolafe.ordinal()] = nolafeScene;
 
         ClueTypeScene opsteraScene = new ClueTypeScene();
@@ -178,6 +221,9 @@ public class MapControl {
         opsteraScene.setTravelLength(3);
         opsteraScene.setLockType("locked");
         opsteraScene.setClueType("puzzle");
+        opsteraScene.setQuestion("What kind of men are always above board?\n");
+        opsteraScene.setAnswer("CHESSMEN");
+        opsteraScene.setNextLocation(new Point(0,1));
         scenes[SceneType.opstera.ordinal()] = opsteraScene;
 
         ClueTypeScene parquinScene = new ClueTypeScene();
@@ -187,6 +233,9 @@ public class MapControl {
         parquinScene.setTravelLength(3);
         parquinScene.setLockType("locked");
         parquinScene.setClueType("puzzle");
+        duvinScene.setQuestion("What is it that travels on all fours in the morning, on two legs at noon, and three at twilight?\n");
+        duvinScene.setAnswer("MAN");
+        duvinScene.setNextLocation(new Point(1,0));
         scenes[SceneType.parquin.ordinal()] = parquinScene;
 
         ClueTypeScene rysterScene = new ClueTypeScene();
@@ -196,6 +245,9 @@ public class MapControl {
         rysterScene.setTravelLength(3);
         rysterScene.setLockType("locked");
         rysterScene.setClueType("puzzle");
+        duvinScene.setQuestion("What do many boats, shovels, laundries, whistles, and hot showers have in common?\n");
+        duvinScene.setAnswer("STEAM");
+        duvinScene.setNextLocation(new Point(2,3));
         scenes[SceneType.ryster.ordinal()] = rysterScene;
 
         ClueTypeScene swerlinScene = new ClueTypeScene();
@@ -205,6 +257,9 @@ public class MapControl {
         swerlinScene.setTravelLength(3);
         swerlinScene.setLockType("locked");
         swerlinScene.setClueType("puzzle");
+        duvinScene.setQuestion("What have the following in common - hemming, basting, pearling, and tagging?\n");
+        duvinScene.setAnswer("NEEDLEWORK");
+        duvinScene.setNextLocation(new Point(0,2));
         scenes[SceneType.swerlin.ordinal()] = swerlinScene;
 
         ClueTypeScene terwaltScene = new ClueTypeScene();
@@ -214,6 +269,9 @@ public class MapControl {
         terwaltScene.setTravelLength(3);
         terwaltScene.setLockType("locked");
         terwaltScene.setClueType("puzzle");
+        duvinScene.setQuestion("We're five little items of an everyday sort; you'll find us all in a tennis court.\n");
+        duvinScene.setAnswer("VOWELS");
+        duvinScene.setNextLocation(new Point(4,3));
         scenes[SceneType.terwalt.ordinal()] = terwaltScene;
 
         ClueTypeScene urtlinScene = new ClueTypeScene();
@@ -223,6 +281,9 @@ public class MapControl {
         urtlinScene.setTravelLength(3);
         urtlinScene.setLockType("locked");
         urtlinScene.setClueType("puzzle");
+        duvinScene.setQuestion("You can have me but not hold me, gain me and quickly lose me, if treated with care I can be great, and if betrayed I will break, what am I?\n");
+        duvinScene.setAnswer("TRUST");
+        duvinScene.setNextLocation(new Point(2,1));
         scenes[SceneType.urtlin.ordinal()] = urtlinScene;
 
         ClueTypeScene verluScene = new ClueTypeScene();
@@ -232,6 +293,9 @@ public class MapControl {
         verluScene.setTravelLength(3);
         verluScene.setLockType("locked");
         verluScene.setClueType("puzzle");
+        duvinScene.setQuestion("The poor have me, the rich need me, and if you eat me, you'll die.\n");
+        duvinScene.setAnswer("NOTHING");
+        duvinScene.setNextLocation(new Point(3,2));
         scenes[SceneType.verlu.ordinal()] = verluScene;
 
         ClueTypeScene webelScene = new ClueTypeScene();
@@ -241,6 +305,9 @@ public class MapControl {
         webelScene.setTravelLength(3);
         webelScene.setLockType("locked");
         webelScene.setClueType("puzzle");
+        duvinScene.setQuestion("What gets wetter and wetter the more it drys?\n");
+        duvinScene.setAnswer("TOWEL");
+        duvinScene.setNextLocation(new Point(2,4));
         scenes[SceneType.webel.ordinal()] = webelScene;
 
         ClueTypeScene xinaScene = new ClueTypeScene();
@@ -250,6 +317,9 @@ public class MapControl {
         xinaScene.setTravelLength(3);
         xinaScene.setLockType("locked");
         xinaScene.setClueType("puzzle");
+        duvinScene.setQuestion("What can travel around the world while staying in a corner?\n");
+        duvinScene.setAnswer("STAMP");
+        duvinScene.setNextLocation(new Point(3,0));
         scenes[SceneType.xina.ordinal()] = xinaScene;
 
         ClueTypeScene yasterScene = new ClueTypeScene();
@@ -259,6 +329,9 @@ public class MapControl {
         yasterScene.setTravelLength(3);
         yasterScene.setLockType("locked");
         yasterScene.setClueType("puzzle");
+        duvinScene.setQuestion("If you have me, you want to share me. If you share me, you haven't got me. What am I?\n");
+        duvinScene.setAnswer("SECRET");
+        duvinScene.setNextLocation(new Point(0,2));
         scenes[SceneType.yaster.ordinal()] = yasterScene;
 
         ClueTypeScene finishScene = new ClueTypeScene();

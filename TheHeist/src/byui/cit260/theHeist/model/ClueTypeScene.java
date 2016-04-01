@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -19,6 +20,9 @@ public class ClueTypeScene implements Serializable {
     private String clueType;
     private String lockType;
     private String mapSymbol;
+    private String question;
+    private String answer;
+    private Point nextLocation;
 
     public String getMapSymbol() {
         return mapSymbol;
@@ -62,6 +66,32 @@ public class ClueTypeScene implements Serializable {
     public void setLockType(String lockType) {
         this.lockType = lockType;
     }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public Point getNextLocation() {
+        return nextLocation;
+    }
+
+    public void setNextLocation(Point nextLocation) {
+        this.nextLocation = nextLocation;
+    }
+    
+    
 
     @Override
     public int hashCode() {
