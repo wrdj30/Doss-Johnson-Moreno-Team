@@ -5,6 +5,7 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Location;
 import theheist.TheHeist;
 
@@ -141,7 +142,13 @@ public class MapMenuView extends View{
     }
 
 
-    private void goArtlin() {
+    private void goArlin() {
+        /*CharacterListView characterListView = new CharacterListView();
+        
+            characterListView.display();*/
+        ArlinScene clueTypeScene = new ClueTypeScene();
+        
+            clueTypeScene.display();
             this.console.println("*** loadGame function called ***");
     }
 
