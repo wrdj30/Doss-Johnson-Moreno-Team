@@ -5,9 +5,13 @@
  */
 package byui.cit260.theHeist.view.provinces;
 
+import byui.cit260.theHeist.model.ClueTypeScene;
+import byui.cit260.theHeist.model.Location;
+import byui.cit260.theHeist.view.ClueTypeView;
 import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.HelpMenuView;
 import byui.cit260.theHeist.view.View;
+import theheist.TheHeist;
 
 /**
  *
@@ -55,7 +59,10 @@ public class FarginView extends View{
     }
 
     private void goToCrimeScene() {
-        this.console.println("*** goToCrimeScene function called ***");
+        Location[][] locations = TheHeist.getCurrentGame().getLocations();
+        ClueTypeScene clueTypeScene = locations[4][0].getScene();
+        ClueTypeView clueTypeView = new ClueTypeView(clueTypeScene);
+        clueTypeView.display();   
     }
 
     private void getHelp() {

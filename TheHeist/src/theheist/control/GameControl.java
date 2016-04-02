@@ -41,6 +41,8 @@ public class GameControl {
         game.setInventory(inventoryList);
 
         Map map = MapControl.createMap();
+        ClueTypeScene[] scenes = MapControl.createScenes();
+        game.setLocations(assignScenesToLocations(map, scenes));
         game.setMap(map);
 
         /*moveActorsToStartingLocation(map);*/
@@ -135,7 +137,7 @@ public class GameControl {
         return null;
     }
 
-    static void assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
+    static Location[][] assignScenesToLocations(Map map, ClueTypeScene[] scenes) {
         Location[][] locations = map.getLocations();
         
         locations[0][0].setScene(scenes[SceneType.start.ordinal()]);           
@@ -163,7 +165,7 @@ public class GameControl {
         locations[3][4].setScene(scenes[SceneType.xina.ordinal()]);
         locations[4][1].setScene(scenes[SceneType.yaster.ordinal()]);
         locations[4][4].setScene(scenes[SceneType.finish.ordinal()]);   
-        
+        return locations;
     }
     
     public static void loadGame(String filepath)

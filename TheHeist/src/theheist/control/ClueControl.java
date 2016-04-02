@@ -46,7 +46,7 @@ public class ClueControl {
             throw new ClueControlException("The third clue is incorrect.");
         }
 
-        double combo = (clueA * clueB + clueC) / clueA;
+        double combo = (clueA * clueB + clueC) - clueC;
         return combo;
     }
 
@@ -667,3 +667,5 @@ public class ClueControl {
     }
 
 }
+
+//create method that ca  tke one cluetype

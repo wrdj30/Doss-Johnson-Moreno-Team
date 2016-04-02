@@ -7,20 +7,47 @@ package byui.cit260.theHeist.view;
 
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Location;
+import byui.cit260.theHeist.view.provinces.ArtlinView;
+import byui.cit260.theHeist.view.provinces.BouryView;
+import byui.cit260.theHeist.view.provinces.CelnigView;
+import byui.cit260.theHeist.view.provinces.DuvinView;
+import byui.cit260.theHeist.view.provinces.EstripView;
+import byui.cit260.theHeist.view.provinces.FarginView;
+import byui.cit260.theHeist.view.provinces.GoverieView;
+import byui.cit260.theHeist.view.provinces.HowertyView;
+import byui.cit260.theHeist.view.provinces.InlinView;
+import byui.cit260.theHeist.view.provinces.JawelView;
+import byui.cit260.theHeist.view.provinces.KinteView;
+import byui.cit260.theHeist.view.provinces.LerlyView;
+import byui.cit260.theHeist.view.provinces.MurtanView;
+import byui.cit260.theHeist.view.provinces.NolafeView;
+import byui.cit260.theHeist.view.provinces.OpsteraView;
+import byui.cit260.theHeist.view.provinces.ParquinView;
+import byui.cit260.theHeist.view.provinces.RysterView;
+import byui.cit260.theHeist.view.provinces.SwerlinView;
+import byui.cit260.theHeist.view.provinces.TerwaltView;
+import byui.cit260.theHeist.view.provinces.UrltinView;
+import byui.cit260.theHeist.view.provinces.VerluView;
+import byui.cit260.theHeist.view.provinces.WebelView;
+import byui.cit260.theHeist.view.provinces.XinaView;
+import byui.cit260.theHeist.view.provinces.YasterView;
+import byui.cit260.theHeist.view.provinces.ZintaView;
+
 import theheist.TheHeist;
 
 /**
  *
  * @author luceromoreno
  */
-public class MapMenuView extends View{
+public class MapMenuView extends View {
+
     private String menu;
     private String promptMessage;
     private int rowCount;
     private int columnCount;
-    
-    public MapMenuView() { 
-           super( "\n"
+
+    public MapMenuView() {
+        super("\n"
                 + "\n---------------------------"
                 + "\n | Map Menu              |"
                 + "\n---------------------------"
@@ -52,12 +79,12 @@ public class MapMenuView extends View{
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
     }
-    
+
     @Override
     public boolean doAction(String choice) {
-    
+
         choice = choice.toUpperCase();
-        
+
         switch (choice) {
             case "A":
                 this.goArtlin();
@@ -117,7 +144,7 @@ public class MapMenuView extends View{
                 this.goTerwalt();
                 break;
             case "U":
-                this.goUrtlin();
+                this.goUrltin();
                 break;
             case "V":
                 this.goVerlu();
@@ -138,148 +165,163 @@ public class MapMenuView extends View{
                 ErrorView.display("MapMenuView", "*** Invalid selection*** Try again");
                 break;
         }
-    return false;
+        return false;
     }
 
+    private void goArtlin() {
+        ArtlinView artlinView = new ArtlinView();
+        artlinView.display();
 
-    private void goArlin() {
-        /*CharacterListView characterListView = new CharacterListView();
-        
-            characterListView.display();*/
-        ArlinScene clueTypeScene = new ClueTypeScene();
-        
-            clueTypeScene.display();
-            this.console.println("*** loadGame function called ***");
     }
 
     private void goBoury() {
-            this.console.println("*** loadGame function called ***");
-                    
+        BouryView bouryView = new BouryView();
+        bouryView.display();
     }
 
     private void goCelnig() {
-            this.console.println("*** loadGame function called ***");
+        CelnigView celnigView = new CelnigView();
+        celnigView.display();
     }
 
     private void goDuvin() {
-            this.console.println("*** loadGame function called ***");
+        DuvinView duvinView = new DuvinView();
+        duvinView.display();
     }
 
     private void goEstrip() {
-            this.console.println("*** loadGame function called ***");
+        EstripView estripView = new EstripView();
+        estripView.display();
     }
 
     private void goFargin() {
-            this.console.println("*** loadGame function called ***");
+        FarginView farginView = new FarginView();
+        farginView.display();
     }
 
     private void goGoverie() {
-            this.console.println("*** loadGame function called ***");
+        GoverieView goverieView = new GoverieView();
+        goverieView.display();
     }
 
     private void goHowerty() {
-            this.console.println("*** loadGame function called ***");
+        HowertyView howertyView = new HowertyView();
+        howertyView.display();
     }
 
     private void goInlin() {
-            this.console.println("*** loadGame function called ***");
+        InlinView inlinView = new InlinView();
+        inlinView.display();
     }
 
     private void goJawel() {
-            this.console.println("*** loadGame function called ***");
+        JawelView jawelView = new JawelView();
+        jawelView.display();
     }
 
     private void goKinte() {
-            this.console.println("*** loadGame function called ***");
+        KinteView kinteView = new KinteView();
+        kinteView.display();
     }
 
     private void goLerly() {
-            this.console.println("*** loadGame function called ***");
+        LerlyView lerlyView = new LerlyView();
+        lerlyView.display();
     }
 
     private void goMurtan() {
-            this.console.println("*** loadGame function called ***");
+        MurtanView murtanView = new MurtanView();
+        murtanView.display();
     }
 
     private void goNolafe() {
-            this.console.println("*** loadGame function called ***");
+        NolafeView nolafeView = new NolafeView();
+        nolafeView.display();
     }
 
     private void goOpstera() {
-            this.console.println("*** loadGame function called ***");
+        OpsteraView opsteraView = new OpsteraView();
+        opsteraView.display();
     }
 
     private void goParquin() {
-            this.console.println("*** loadGame function called ***");
-            LocationView locationView = new LocationView();
-            locationView.displayLocationView();
+        ParquinView parquinView = new ParquinView();
+        parquinView.display();
     }
 
     private void goRyster() {
-            this.console.println("*** loadGame function called ***");
+        RysterView rysterView = new RysterView();
+        rysterView.display();
     }
 
     private void goSwerlin() {
-            this.console.println("*** loadGame function called ***");
+        SwerlinView swerlinView = new SwerlinView();
+        swerlinView.display();
     }
 
     private void goTerwalt() {
-            this.console.println("*** loadGame function called ***");
+        TerwaltView terwaltView = new TerwaltView();
+        terwaltView.display();
     }
 
-    private void goUrtlin() {
-            this.console.println("*** loadGame function called ***");
+    private void goUrltin() {
+        UrltinView urltinView = new UrltinView();
+        urltinView.display();
     }
 
     private void goVerlu() {
-            this.console.println("*** loadGame function called ***");
+        VerluView verluView = new VerluView();
+        verluView.display();
     }
 
     private void goWebel() {
-            this.console.println("*** loadGame function called ***");
+        WebelView webelView = new WebelView();
+        webelView.display();
     }
 
     private void goXina() {
-            this.console.println("*** loadGame function called ***");
+        XinaView xinaView = new XinaView();
+        xinaView.display();
     }
 
     private void goYaster() {
-            this.console.println("*** loadGame function called ***");
+        YasterView yasterView = new YasterView();
+        yasterView.display();
     }
 
     private void goZinta() {
-            this.console.println("*** loadGame function called ***");
+        ZintaView zintaView = new ZintaView();
+        zintaView.display();
     }
-    
+
     private void displayMap() {
-        
+
         Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
-        
+
         int rowCount = TheHeist.getCurrentGame().getMap().getNoOfRows();
         int columnCount = TheHeist.getCurrentGame().getMap().getNoOfColumns();
-        
+
         this.console.println("\nTitle");
-             
+
         for (int row = 0; row < rowCount; row++) {
-           this.console.println("-");
-           this.console.println(row);
-           
-           for (int column = 0; column < columnCount; column++) {
-               this.console.println("|");
-               this.console.println(column);
-                             
-               
-               if (locations [row][column].getVisited())
-                this.console.println("mapSymbol");
-               
-               else 
-                this.console.println("??"); 
-               
-               this.console.println("|");               
+            this.console.println("-");
+            this.console.println(row);
+
+            for (int column = 0; column < columnCount; column++) {
+                this.console.println("|");
+                this.console.println(column);
+
+                if (locations[row][column].getVisited()) {
+                    this.console.println("mapSymbol");
+                } else {
+                    this.console.println("??");
+                }
+
+                this.console.println("|");
             }
-           this.console.println("-");
+            this.console.println("-");
         }
-        
-    }       
-    
+
+    }
+
 }

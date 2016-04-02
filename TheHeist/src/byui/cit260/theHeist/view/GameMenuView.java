@@ -88,7 +88,7 @@ public class GameMenuView extends View {
             mapMenuView.display();
     }
     private void quit() {
-        this.console.println("*** quit function called ***");
+        
     }
         
 }

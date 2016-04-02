@@ -5,44 +5,46 @@
  */
 package byui.cit260.theHeist.view.provinces;
 
+import byui.cit260.theHeist.model.ClueTypeScene;
+import byui.cit260.theHeist.model.Location;
+import byui.cit260.theHeist.view.ClueTypeView;
 import byui.cit260.theHeist.view.ErrorView;
 import byui.cit260.theHeist.view.HelpMenuView;
 import byui.cit260.theHeist.view.View;
+import theheist.TheHeist;
 
 /**
  *
  * @author wr
  */
 public class ArtlinView extends View {
-    
+
     private String menu;
-    
-    public ArtlinView() { 
-           super( "\n"
+
+    public ArtlinView() {
+        super("\n"
                 + "\n---------------------------"
                 + "\n |   Welcome to Artlin    |"
                 + "\n---------------------------"
                 + "\n C - Go To Crime scene     "
-                + "\n H - Help Menu             "              
+                + "\n H - Help Menu             "
                 + "\n Q - Quit                  "
                 + "\n---------------------------");
-           
+
     }
-    
-    
-    
+
     @Override
     public boolean doAction(String choice) {
-        
+
         choice = choice.toUpperCase();
-        
+
         switch (choice) {
             case "C":
                 this.goToCrimeScene();
                 break;
             case "H":
                 this.getHelp();
-                break;            
+                break;
             case "Q":
                 this.quit();
                 break;
@@ -50,26 +52,25 @@ public class ArtlinView extends View {
                 ErrorView.display("ArtlinView", "*** Invalid selection*** Try again");
                 break;
         }
-        
+
         return false;
     }
 
     private void goToCrimeScene() {
-        this.console.println("*** useGun function called ***");
+        Location[][] locations = TheHeist.getCurrentGame().getLocations();
+        ClueTypeScene clueTypeScene = locations[0][0].getScene();
+        ClueTypeView clueTypeView = new ClueTypeView(clueTypeScene);
+        clueTypeView.display();
     }
 
     private void getHelp() {
         HelpMenuView helpMenuView = new HelpMenuView();
-        
-            helpMenuView.display();
+
+        helpMenuView.display();
     }
-        
+
     private void quit() {
         this.console.println("*** quit function called ***");
     }
 
-    
 }
-
-    
-

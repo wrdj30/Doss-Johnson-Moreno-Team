@@ -5,9 +5,9 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.InventoryItem;
 import java.util.ArrayList;
+import theheist.TheHeist;
 import theheist.control.ClueControl;
 import theheist.control.GameControl;
 
@@ -102,7 +102,7 @@ public class AccessoryListView extends View {
     }
     private void seeInventoryCost() {
         ClueControl clueControl = new ClueControl();
-        ArrayList<InventoryItem> costList = clueControl.costOfItems(Game.getInventory());
+        ArrayList<InventoryItem> costList = clueControl.costOfItems(TheHeist.getCurrentGame().getInventory());
         this.console.println("The least expensive item " + costList.get(0).getDescription()
                 + ",costs: $" + costList.get(0).getCost());
         this.console.println("The most expensive item " + costList.get(1).getDescription()
