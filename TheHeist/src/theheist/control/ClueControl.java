@@ -366,6 +366,305 @@ public class ClueControl {
             return null;
         }
     }
+    
+    public static Location riverRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location libraryRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location deadpansRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location chessmenRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location manRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location steamRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location needleworkRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location vowelsRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location trustRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location nothingRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location towelRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location stampRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
+    
+    public static Location secretRiddle(ClueTypeScene clueScene, String answer)
+            throws ClueControlException {
+        Location newLocation = null;
+        
+        if (clueScene == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        
+        if (answer == null) {
+            throw new ClueControlException("Clue scene is invalid");
+        }
+        if (answer.equals(clueScene.getClass())) {
+            Point coordinates = clueScene.getNextLocation();
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            newLocation = locations[coordinates.x][coordinates.y];
+            newLocation.setLocked(true);
+            return newLocation;
+        }
+        else{
+            return null;
+        }
+    }
 
 }
 
