@@ -63,9 +63,11 @@ public abstract class View implements ViewInterface {
 
             if (value.length() < 1) {
                 ErrorView.display("View", "Invalid value: value can not be blank");
-                continue;
+                
             }
-            break;
+            else {
+                valid = true;
+            }
         }
         return value;
     }

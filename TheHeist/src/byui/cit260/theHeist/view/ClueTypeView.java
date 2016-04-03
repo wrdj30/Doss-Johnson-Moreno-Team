@@ -5,7 +5,15 @@
  */
 package byui.cit260.theHeist.view;
 
+import byui.cit260.theHeist.exceptions.ClueControlException;
+import byui.cit260.theHeist.exceptions.GameControlException;
 import byui.cit260.theHeist.model.ClueTypeScene;
+import byui.cit260.theHeist.model.Location;
+import java.awt.Point;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import theheist.TheHeist;
+import theheist.control.ClueControl;
 
 /**
  *
@@ -29,6 +37,7 @@ public class ClueTypeView extends View {
 
         boolean done = false;
         do {
+            //get the users answer
             String value = this.getInput();
             done = this.doAction(value);
         } while (!done);
@@ -36,22 +45,22 @@ public class ClueTypeView extends View {
 
     @Override
     public boolean doAction(String answer) {
-        //is this the correct answer
-
-        if (clueScene.getAnswer().toUpperCase().equals(answer.toUpperCase())) {
-            this.console.println("Congratulations you got the correct answer");
+        //compare users answer with the clues correct answer
+        if (answer.toUpperCase().equals(this.clueScene.getAnswer().toUpperCase())) {
+            //the answer is correct move to the next scene
+            this.console.println("Congratulations you got the correct answer");            
+            Location[][] locations = TheHeist.getCurrentGame().getMap().getLocations();
+            Point nextPoint = this.clueScene.getNextLocation();
+            Location nextLocation = locations[nextPoint.x][nextPoint.y];
+            ClueTypeScene nextClueScene = nextLocation.getScene();
+            ClueTypeView nextView = new ClueTypeView(nextClueScene);
+            nextView.display();
             return true;
-        } else {
-            this.console.println("Sorry wrong answer try again");
+        } 
+        else {
             return false;
         }
-
-        //when correct answer is chosen
-        //unlock the next view
-        //Display congratulations message
-        //display the new location
-        //When not correct
-        //display wrong answer try again
-        //return false
-    }
+                                                
+    } 
+               
 }
