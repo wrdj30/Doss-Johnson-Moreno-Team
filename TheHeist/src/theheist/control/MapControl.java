@@ -9,7 +9,6 @@ import byui.cit260.theHeist.exceptions.mapControlException;
 import byui.cit260.theHeist.model.Actor;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.SceneType;
-import byui.cit260.theHeist.model.Game;
 import byui.cit260.theHeist.model.Map;
 import java.awt.Point;
 import java.util.logging.Level;
@@ -226,9 +225,9 @@ public class MapControl {
         parquinScene.setTravelLength(3);
         parquinScene.setLockType("locked");
         parquinScene.setClueType("puzzle");
-        duvinScene.setQuestion("What is it that travels on all fours in the morning, on two legs at noon, and three at twilight?\n");
-        duvinScene.setAnswer("MAN");
-        duvinScene.setNextLocation(new Point(1, 0));
+        parquinScene.setQuestion("What is it that travels on all fours in the morning, on two legs at noon, and three at twilight?\n");
+        parquinScene.setAnswer("MAN");
+        parquinScene.setNextLocation(new Point(1, 0));
         scenes[SceneType.parquin.ordinal()] = parquinScene;
 
         ClueTypeScene rysterScene = new ClueTypeScene();
@@ -238,9 +237,9 @@ public class MapControl {
         rysterScene.setTravelLength(3);
         rysterScene.setLockType("locked");
         rysterScene.setClueType("puzzle");
-        duvinScene.setQuestion("What do many boats, shovels, laundries, whistles, and hot showers have in common?\n");
-        duvinScene.setAnswer("STEAM");
-        duvinScene.setNextLocation(new Point(2, 3));
+        rysterScene.setQuestion("What do many boats, shovels, laundries, whistles, and hot showers have in common?\n");
+        rysterScene.setAnswer("STEAM");
+        rysterScene.setNextLocation(new Point(2, 3));
         scenes[SceneType.ryster.ordinal()] = rysterScene;
 
         ClueTypeScene swerlinScene = new ClueTypeScene();
@@ -250,9 +249,9 @@ public class MapControl {
         swerlinScene.setTravelLength(3);
         swerlinScene.setLockType("locked");
         swerlinScene.setClueType("puzzle");
-        duvinScene.setQuestion("What have the following in common - hemming, basting, pearling, and tagging?\n");
-        duvinScene.setAnswer("NEEDLEWORK");
-        duvinScene.setNextLocation(new Point(0, 2));
+        swerlinScene.setQuestion("What have the following in common - hemming, basting, pearling, and tagging?\n");
+        swerlinScene.setAnswer("NEEDLEWORK");
+        swerlinScene.setNextLocation(new Point(0, 2));
         scenes[SceneType.swerlin.ordinal()] = swerlinScene;
 
         ClueTypeScene terwaltScene = new ClueTypeScene();
@@ -262,9 +261,9 @@ public class MapControl {
         terwaltScene.setTravelLength(3);
         terwaltScene.setLockType("locked");
         terwaltScene.setClueType("puzzle");
-        duvinScene.setQuestion("We're five little items of an everyday sort; you'll find us all in a tennis court.\n");
-        duvinScene.setAnswer("VOWELS");
-        duvinScene.setNextLocation(new Point(4, 3));
+        terwaltScene.setQuestion("We're five little items of an everyday sort; you'll find us all in a tennis court.\n");
+        terwaltScene.setAnswer("VOWELS");
+        terwaltScene.setNextLocation(new Point(4, 3));
         scenes[SceneType.terwalt.ordinal()] = terwaltScene;
 
         ClueTypeScene urtlinScene = new ClueTypeScene();
@@ -274,9 +273,9 @@ public class MapControl {
         urtlinScene.setTravelLength(3);
         urtlinScene.setLockType("locked");
         urtlinScene.setClueType("puzzle");
-        duvinScene.setQuestion("You can have me but not hold me, gain me and quickly lose me, if treated with care I can be great, and if betrayed I will break, what am I?\n");
-        duvinScene.setAnswer("TRUST");
-        duvinScene.setNextLocation(new Point(2, 1));
+        urtlinScene.setQuestion("You can have me but not hold me, gain me and quickly lose me, if treated with care I can be great, and if betrayed I will break, what am I?\n");
+        urtlinScene.setAnswer("TRUST");
+        urtlinScene.setNextLocation(new Point(2, 1));
         scenes[SceneType.urtlin.ordinal()] = urtlinScene;
 
         ClueTypeScene verluScene = new ClueTypeScene();
@@ -286,9 +285,9 @@ public class MapControl {
         verluScene.setTravelLength(3);
         verluScene.setLockType("locked");
         verluScene.setClueType("puzzle");
-        duvinScene.setQuestion("The poor have me, the rich need me, and if you eat me, you'll die.\n");
-        duvinScene.setAnswer("NOTHING");
-        duvinScene.setNextLocation(new Point(3, 2));
+        verluScene.setQuestion("The poor have me, the rich need me, and if you eat me, you'll die.\n");
+        verluScene.setAnswer("NOTHING");
+        verluScene.setNextLocation(new Point(3, 2));
         scenes[SceneType.verlu.ordinal()] = verluScene;
 
         ClueTypeScene webelScene = new ClueTypeScene();
@@ -298,9 +297,9 @@ public class MapControl {
         webelScene.setTravelLength(3);
         webelScene.setLockType("locked");
         webelScene.setClueType("puzzle");
-        duvinScene.setQuestion("What gets wetter and wetter the more it drys?\n");
-        duvinScene.setAnswer("TOWEL");
-        duvinScene.setNextLocation(new Point(2, 4));
+        webelScene.setQuestion("What gets wetter and wetter the more it drys?\n");
+        webelScene.setAnswer("TOWEL");
+        webelScene.setNextLocation(new Point(2, 4));
         scenes[SceneType.webel.ordinal()] = webelScene;
 
         ClueTypeScene xinaScene = new ClueTypeScene();
@@ -310,9 +309,9 @@ public class MapControl {
         xinaScene.setTravelLength(3);
         xinaScene.setLockType("locked");
         xinaScene.setClueType("puzzle");
-        duvinScene.setQuestion("What can travel around the world while staying in a corner?\n");
-        duvinScene.setAnswer("STAMP");
-        duvinScene.setNextLocation(new Point(3, 0));
+        xinaScene.setQuestion("What can travel around the world while staying in a corner?\n");
+        xinaScene.setAnswer("STAMP");
+        xinaScene.setNextLocation(new Point(3, 0));
         scenes[SceneType.xina.ordinal()] = xinaScene;
 
         ClueTypeScene yasterScene = new ClueTypeScene();
@@ -322,9 +321,9 @@ public class MapControl {
         yasterScene.setTravelLength(3);
         yasterScene.setLockType("locked");
         yasterScene.setClueType("puzzle");
-        duvinScene.setQuestion("If you have me, you want to share me. If you share me, you haven't got me. What am I?\n");
-        duvinScene.setAnswer("SECRET");
-        duvinScene.setNextLocation(new Point(0, 2));
+        yasterScene.setQuestion("If you have me, you want to share me. If you share me, you haven't got me. What am I?\n");
+        yasterScene.setAnswer("SECRET");
+        yasterScene.setNextLocation(new Point(0, 2));
         scenes[SceneType.yaster.ordinal()] = yasterScene;
 
         ClueTypeScene finishScene = new ClueTypeScene();

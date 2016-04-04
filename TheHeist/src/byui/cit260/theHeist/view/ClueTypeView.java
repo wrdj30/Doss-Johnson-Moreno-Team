@@ -5,15 +5,10 @@
  */
 package byui.cit260.theHeist.view;
 
-import byui.cit260.theHeist.exceptions.ClueControlException;
-import byui.cit260.theHeist.exceptions.GameControlException;
 import byui.cit260.theHeist.model.ClueTypeScene;
 import byui.cit260.theHeist.model.Location;
 import java.awt.Point;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import theheist.TheHeist;
-import theheist.control.ClueControl;
 
 /**
  *
@@ -32,7 +27,7 @@ public class ClueTypeView extends View {
                 + "\nPlease enter your answer.";
     }
 
-    @Override
+    /*@Override
     public void display() {
 
         boolean done = false;
@@ -41,7 +36,7 @@ public class ClueTypeView extends View {
             String value = this.getInput();
             done = this.doAction(value);
         } while (!done);
-    }
+    }*/
 
     @Override
     public boolean doAction(String answer) {
@@ -60,7 +55,7 @@ public class ClueTypeView extends View {
         else {
             return false;
         }
-                                                
+                                               
     } 
                
 }
